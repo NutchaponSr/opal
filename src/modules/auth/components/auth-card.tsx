@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,7 +34,7 @@ export const AuthCard = ({
           <h1 className="text-primary font-semibold text-lg">
             {title}
           </h1>
-          <p className="text-muted-foreground text-sm font-light">
+          <p className="text-muted-foreground text-sm">
             {description}
           </p>
         </div>
@@ -43,9 +45,9 @@ export const AuthCard = ({
       <CardFooter>
         <Button
           asChild
+          type="button"
           className="w-full font-normal"
-          variant={'link'}
-          size={'sm'}
+          variant="link"
         >
           <Link href={backButtonHref}>
             {backButtonLabel}

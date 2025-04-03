@@ -1,4 +1,5 @@
-import { AuthCard } from "@/module/auth/components/auth-card";
+import { AuthCard } from "@/modules/auth/components/auth-card";
+import { SignInForm } from "@/modules/auth/components/sign-in-form";
 
 const Page = () => {
 
