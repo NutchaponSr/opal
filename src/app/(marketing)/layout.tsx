@@ -6,14 +6,12 @@ interface MarketingLayoutProps {
 
 const MarketingLayout = ({ children }: MarketingLayoutProps) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="h-full flex-1 overflow-y-hidden">
-        <div className="max-w-[1056px] mx-auto pt-16 h-full">
-          {children}
-        </div>
+      <main className="flex-1 flex flex-col items-center justify-center">
+        {children}
       </main>
-    </>
+    </div>
   );
 }
 

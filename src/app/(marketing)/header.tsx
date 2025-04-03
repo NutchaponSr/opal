@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   return (
-    <header className="w-full fixed top-0 z-50 py-4">
+    <header className="w-full fixed top-0 z-50 py-4 px-8">
       <div className="flex items-center container mx-auto">
-        <Image src="/logo.svg" alt="Logo" width={24} height={24} />
+        <Image src="/logo.svg" alt="Logo" width={28} height={28} />
         <div className="flex items-center justify-between w-full">
 
         </div>
@@ -22,7 +22,7 @@ export const Header = () => {
               Get Opal Free
             </Link>
           </Button>
-          </div>
+        </div>
       </div>
     </header>
   );

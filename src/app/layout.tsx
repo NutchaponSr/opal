@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Opal",
   description: "Individual Development Plan System",
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo-dark.svg",
   },
 };
 
