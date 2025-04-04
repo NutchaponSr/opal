@@ -8,15 +8,17 @@ import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import { eq } from "drizzle-orm";
 import { db } from "@/db/drizzle";
 import { roles, users } from "@/db/schema";
+
 import { signInSchema } from "@/modules/auth/schema";
+
 import { env } from "@/env";
 
 const adapter = DrizzleAdapter(db);
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter,
-  // secret: env.AUTH_SECRET,
-  // trustHost: true,
+  secret: env.AUTH_SECRET,
+  trustHost: true,
   pages: {
     signIn: "/sign-in",
     error: "/sign-in",

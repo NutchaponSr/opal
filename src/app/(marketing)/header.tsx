@@ -7,9 +7,12 @@ export const Header = () => {
   return (
     <header className="w-full fixed top-0 z-50 py-4 px-8">
       <div className="flex items-center container mx-auto">
-        <Image src="/logo.svg" alt="Logo" width={28} height={28} />
+        <Link href="/" className="gap-2 flex justify-center items-center">
+          <Image src="/logo.svg" alt="Logo" width={28} height={28} />
+          <p className="text-2xl text-primary">Opal</p>
+        </Link>
         <div className="flex items-center justify-between w-full">
-
+          
         </div>
         <div className="flex items-center space-x-4">
           <Button size="sm" variant="ghost" className="text-primary hover:text-primary" asChild>
