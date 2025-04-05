@@ -3,16 +3,15 @@ import {
   pgTable,
   text,
   timestamp,
+  uniqueIndex,
   uuid
 } from "drizzle-orm/pg-core";
 
-export const roles = pgEnum("role", ["USER", "ADMIN"]);
-
 export const users = pgTable("user", {
-  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: uuid("id").primaryKey().defaultRandom(),
+  clerkId: text("clerkId").unique().notNull(),
   name: text("name").notNull(),
-  image: text("image"),
-  email: text("email").unique().notNull(),
-  password: text("password").notNull(),
-  role: roles().default("USER").notNull(),
-});
+  imageUrl: text("imageUrl").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+}, (t) => [uniqueIndex("clerk_id_idx").on(t.clerkId)]);

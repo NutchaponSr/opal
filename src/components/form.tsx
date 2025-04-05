@@ -1,4 +1,4 @@
-import { CircleCheckIcon, CircleXIcon, TriangleAlertIcon } from "lucide-react";
+import { CircleCheckIcon, CircleXIcon } from "lucide-react";
 
 export const Form = {
   Success: ({ message }: { message?: string }) => {

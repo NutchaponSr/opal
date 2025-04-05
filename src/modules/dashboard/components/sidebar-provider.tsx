@@ -5,9 +5,7 @@ import Sidebar from "@/modules/dashboard/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { Logo } from "@/components/logo";
-
-import { UserButton } from "@/modules/auth/components/user-button";
-import { ChevronRightIcon } from "lucide-react";
+import { UserButton } from "@clerk/nextjs";
 
 export const SidebarProvider = () => {
   return (

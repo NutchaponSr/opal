@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "clerk_id_idx" ON "user" USING btree ("clerkId");

@@ -1,9 +1,0 @@
-import { useSession } from "next-auth/react";
-
-export const useCurrentUser = () => {
-  const session = useSession();
-
-  return { user: session.data?.user, status: session.status };
-}
-
-export type ClientSession = Exclude<ReturnType<typeof useCurrentUser>, undefined>;

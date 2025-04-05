@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
+import { ClerkProvider } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
-import { auth } from "@/lib/auth";
 
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
+import { TRPCProvider } from "@/trpc/client";
 
 const font = Inter({
   subsets: ["latin"],
@@ -21,21 +21,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth();
-
   return (
-    <SessionProvider session={session}>
+    <ClerkProvider afterSignOutUrl="/">
       <html lang="en">
         <body className={cn(font.className, "antialiased")}>
-          {children}
-          <Toaster richColors position="top-center" />
+          <TRPCProvider>
+            {children}
+            <Toaster richColors position="top-center" />
+          </TRPCProvider>
         </body>
       </html>
-    </SessionProvider>
+    </ClerkProvider>
   );
 }

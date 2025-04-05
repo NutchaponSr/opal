@@ -8,6 +8,20 @@
       "when": 1743666140386,
       "tag": "0000_awesome_old_lace",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1743836017541,
+      "tag": "0001_nebulous_sentinel",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1743836208726,
+      "tag": "0002_nebulous_cammi",
+      "breakpoints": true
     }
   ]
 }

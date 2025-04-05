@@ -5,8 +5,8 @@ import {
 } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 interface FormGeneratorProps {
   type?: "text" | "email" | "password";
