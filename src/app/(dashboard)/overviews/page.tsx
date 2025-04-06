@@ -6,7 +6,6 @@ import { HydrateClient, trpc } from "@/trpc/server";
 import { PageClient } from "./client";
 
 const OverviewPage = async () => {
-  void trpc.hello.prefetch({ text: "Antonio" });
 
   return (
     <HydrateClient>

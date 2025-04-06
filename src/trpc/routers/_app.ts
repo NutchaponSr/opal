@@ -1,11 +1,10 @@
 import { z } from "zod";
 
 import { protectedProcedure, createTRPCRouter } from "@/trpc/init";
-
-import { usersRouter } from "@/modules/users/server/procedure"; 
+import { groupsRouter } from "@/modules/groups/server/procedure";
 
 export const appRouter = createTRPCRouter({
-  users: usersRouter,
+  groups: groupsRouter,
   hello: protectedProcedure
     .input(
       z.object({

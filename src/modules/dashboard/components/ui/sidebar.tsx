@@ -1,48 +1,49 @@
+"use client";
+
+import { useToggle } from "react-use";
 import { Icon } from "@iconify-icon/react";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon, HashIcon } from "lucide-react";
 import { cva, VariantProps } from "class-variance-authority";
+
 import { cn } from "@/lib/utils";
+
+import { Accordion } from "@/components/accordion";
 
 const iconVariant = cva("", {
   variants: {
     variant:{ 
-      default: "fill-[#91918e]",
-      pink: "fill-[#b24b78]",
-      orange: "fill-[#c37a38]",
-      blue: "fill-[#2383E2]"
+      default: "#91918e",
+      pink: "#AD1A72",
+      orange: "#D9730D",
+      blue: "#2383E2"
     },
-    size: {
-      lg: "size-8",
-      sm: "size-5",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "sm",
-  }
-})
-
-const sidebarItemVariant = cva(
-  "flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] text-[#5f5e5b]", {
-    variants: {
-      variant: {
-        default: "bg-[#37352f0f] dark:bg-[#ffffff0e]",
-        pink: "bg-[#e188b345] dark:bg-[#4e2c3c]",
-        orange: "bg-[#e07c3945] dark:bg-[#5c3b23]",
-      }
+    background: {
+      default: "bg-[#37352f0f] dark:bg-[#ffffff0e]",
+      pink: "bg-[#F4DFEB] dark:bg-[#4e2c3c]",
+      orange: "bg-[#FAEBDD] dark:bg-[#5c3b23]",
+      blue: "bg-[#DDEBF1] dark:bg-[#5c3b23]",
     }
   },
-);
+})
 
-interface SidebarItemProps extends VariantProps<typeof sidebarItemVariant> {
+interface SidebarItemProps extends VariantProps<typeof iconVariant> {
+  isOpen?: boolean;
   label: string;
-  icon: string;
-  background: Exclude<VariantProps<typeof iconVariant>["variant"], null | undefined>;
+  icon?: string;
+  emoji?: string | null;
+  className?: string;
+  action?: React.ReactNode;
+  sub?: boolean;
+  onToggle?: () => void;
+}
+
+interface SidebarSubProps extends SidebarItemProps {
+  children: React.ReactNode;
 }
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
-    <aside className="order-1 grow-0 shrink-0 relative h-full w-60 overflow-hidden shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] z-[111] bg-[#f8f8f7]">
+    <aside className="order-1 grow-0 shrink-0 relative h-full w-60 overflow-hidden shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] z-[111] bg-[#f8f8f7] select-none">
       <div className="flex flex-col h-full relative pointer-events-auto w-60">
         {children}
       </div>
@@ -95,55 +96,82 @@ Sidebar.GroupLabel = ({ children }: { children: React.ReactNode }) => {
 
 Sidebar.GroupContent = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div role="tree" className="flex flex-col gap-px">
+    <div className="flex flex-col gap-px">
       {children}
     </div>
   );
 }
 
-Sidebar.Item = ({
+Sidebar.MenuItem = ({
+  sub,
   icon,
   label,
+  emoji,
   variant,
-  background
+  isOpen,
+  action,
+  background,
+  className,
+  onToggle
 }: SidebarItemProps) => {
   return (
-    <div role="treeitem" className="flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] text-[#5f5e5b]">
-      <div className="flex items-center justify-center shrink-0 grow-0 size-6 relative">
-        <div role="button" className={cn("relative flex items-center justify-center size-6 rounded", iconVariant({ variant }))}>
-          <Icon icon={icon} width={20} height={20} style={{ color: "#ad1a72" }} />
+    <div 
+      role="menuitem" 
+      className={cn(
+        "flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] text-[#5f5e5b]",
+        sub && "group/item",
+        className,
+      )}
+    >
+      <div className="flex group-hover/item:hidden items-center justify-center shrink-0 grow-0 size-6 relative">
+        <div 
+          role="button" 
+          aria-label={`${label} menu`}
+          className={cn(iconVariant({ background }), "relative flex items-center justify-center size-6 rounded-sm")}
+        >
+          {icon ? (
+            <Icon icon={icon} width={20} height={20} style={{ color: iconVariant({ variant }) }} />
+          ) : (
+            emoji ? (
+              <span className="text-lg">{emoji}</span>
+            ) : (
+              <HashIcon className="size-5 stroke-[1.75] text-[#91918e]" />
+            )
+          )}
+        </div>
+      </div>
+      <div className="hidden group-hover/item:flex items-center justify-center shrink-0 grow-0 size-6 relative transition-all">
+         <div role="button" onClick={onToggle} className="relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] transition">
+            <ChevronRightIcon className={cn("size-4 transition duration-200 text-[#9b9c99]", isOpen && "rotate-90")} />
         </div>
       </div>
       <div className="flex-1 whitespace-nowrap overflow-hidden text-clip flex items-center">
         <span className="whitespace-nowrap overflow-hidden text-ellipsis font-medium text-sm">
           {label}
         </span>
+      </div>
+      {action && action}
+    </div>
+  );
+}
+
+Sidebar.Sub = ({
+  children,
+  ...props
+}: SidebarSubProps) => {
+  const [isOpen, toggle] = useToggle(false);
+
+   return (
+    <div className="flex flex-col gap-px">
+      <Sidebar.MenuItem {...props} isOpen={isOpen} onToggle={toggle} />
+      <div role="group" className="flex flex-col gap-px">
+        <Accordion isOpen={isOpen}>
+          {children}
+        </Accordion>
       </div>
     </div>
   );
 }
 
-Sidebar.MenuItem = ({
-  icon,
-  label
-}: {
-  icon: string;
-  label: string;  
-}) => {
-  return (
-    <div role="menuitem" className="flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] text-[#5f5e5b]">
-      <div className="flex items-center justify-center shrink-0 grow-0 size-6 relative">
-        <div role="button" className="relative flex items-center justify-center size-6 rounded">
-          <Icon icon={icon} width={20} height={20} style={{ color: "#91918e" }} />
-        </div>
-      </div>
-      <div className="flex-1 whitespace-nowrap overflow-hidden text-clip flex items-center">
-        <span className="whitespace-nowrap overflow-hidden text-ellipsis font-medium text-sm">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default Sidebar;

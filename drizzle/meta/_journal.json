@@ -22,6 +22,13 @@
       "when": 1743836208726,
       "tag": "0002_nebulous_cammi",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1743935261564,
+      "tag": "0003_absurd_malice",
+      "breakpoints": true
     }
   ]
 }

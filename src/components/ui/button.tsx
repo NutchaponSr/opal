@@ -25,7 +25,8 @@ const buttonVariants = cva(
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
+        icon: "size-8",
+        smIcon: "size-6",
       },
     },
     defaultVariants: {
@@ -54,6 +55,22 @@ function Button({
       {...props}
     />
   )
+}
+
+Button.Icon = function ButtonIcon({
+  children,
+  className,
+  disabled,
+  ...props
+}: React.ComponentProps<"button">) {
+  return (
+    <button disabled={disabled} className={cn(
+      "flex items-center justify-center shrink-0 rounded-sm transition",
+      className,
+    )} {...props}>
+      {children}
+    </button>
+  );
 }
 
 export { Button, buttonVariants }
