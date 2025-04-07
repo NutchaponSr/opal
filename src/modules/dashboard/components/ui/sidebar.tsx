@@ -1,13 +1,16 @@
 "use client";
 
-import { useToggle } from "react-use";
+import { useMedia, useToggle } from "react-use";
 import { Icon } from "@iconify-icon/react";
-import { ChevronRightIcon, HashIcon } from "lucide-react";
+import { ChevronRightIcon, ChevronsLeft, ChevronsLeftIcon, HashIcon } from "lucide-react";
 import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
 import { Accordion } from "@/components/accordion";
+import { ComponentRef, useCallback, useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 const iconVariant = cva("", {
   variants: {
@@ -19,9 +22,9 @@ const iconVariant = cva("", {
     },
     background: {
       default: "bg-[#37352f0f] dark:bg-[#ffffff0e]",
-      pink: "bg-[#F4DFEB] dark:bg-[#4e2c3c]",
-      orange: "bg-[#FAEBDD] dark:bg-[#5c3b23]",
-      blue: "bg-[#DDEBF1] dark:bg-[#5c3b23]",
+      pink: "bg-[#F4DFEB] dark:bg-[#2E1E2A]",
+      orange: "bg-[#FAEBDD] dark:bg-[#32281F]",
+      blue: "bg-[#DDEBF1] dark:bg-[#1C2A35]",
     }
   },
 })
@@ -41,11 +44,52 @@ interface SidebarSubProps extends SidebarItemProps {
   children: React.ReactNode;
 }
 
-const Sidebar = ({ children }: { children: React.ReactNode }) => {
+interface SidebarProps {
+  ref: React.RefObject<HTMLElement | null>;
+  isMobile: boolean;
+  isResetting: boolean;
+  children: React.ReactNode;
+  collapse: () => void;
+  handleMouseDown: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+}
+
+const Sidebar = ({ 
+  ref,
+  isMobile,
+  isResetting,
+  children,
+  collapse,
+  handleMouseDown
+}: SidebarProps) => {
+
   return (
-    <aside className="order-1 grow-0 shrink-0 relative h-full w-60 overflow-hidden shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] z-[111] bg-[#f8f8f7] select-none">
-      <div className="flex flex-col h-full relative pointer-events-auto w-60">
+    <aside 
+      ref={ref}
+      className={cn(
+        "grow-0 shrink-0 relative h-full w-60 overflow-hidden z-[111] group bg-[#f8f8f7] dark:bg-[#202020] select-none group/sidebar",
+        isResetting && "transition-all ease-in-out duration-300",
+        isMobile && "w-0"
+      )}
+    >
+      <Button.Icon 
+        onClick={collapse} 
+        className={cn(
+          "size-6 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] opacity-0 group-hover:opacity-100 transition-opacity absolute right-1 top-1 z-[110]",
+          isMobile && "opacity-100"
+        )}
+      >
+        <ChevronsLeftIcon className="size-4 text-[#a5a29a] stroke-[1.75]" />
+      </Button.Icon>
+      <div className="flex flex-col h-full relative pointer-events-auto w-full">
         {children}
+      </div>
+      <div className="resize-handle absolute right-0 w-0 grow-0 z-[1] top-0 bottom-0">
+        <div 
+          onMouseDown={handleMouseDown}
+          className={cn(
+            "cursor-e-resize h-full w-3 -ml-1.5",
+          )}
+        />
       </div>
     </aside>
   );
@@ -69,7 +113,7 @@ Sidebar.Header = ({ children }: { children: React.ReactNode }) => {
 
 Sidebar.Separator = () => {
   return (
-    <div className="shadow-[inset_0_-1px_0_0_rgba(55,53,37,0.09)] shrink-0 h-px w-full" />
+    <div className="shadow-[inset_0_-1px_0_0_rgba(55,53,37,0.09)] dark:shadow-[inset_0_-1px_0_0_rgba(47,47,47)] shrink-0 h-px w-full" />
   );
 }
 
@@ -85,11 +129,11 @@ Sidebar.Group = ({ children }: { children: React.ReactNode }) => {
 
 Sidebar.GroupLabel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div role="button" className="flex items-center rounded-sm hover:bg-[#00000008] px-2 h-[30px] transition group/label">
-      <span className="text-xs font-medium transition text-[#91918e] group-hover/label:text-[#37352fcc]">
+    <div role="button" className="flex items-center rounded-sm hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] px-2 h-[30px] transition group/label">
+      <span className="text-xs font-medium transition text-muted-foreground group-hover/label:text-[#37352fcc] dark:group-hover/label:text-muted-foreground">
         {children}
       </span>
-      <ChevronRightIcon className="ml-auto size-4 opacity-0 group-hover/label:opacity-100 transition-opacity text-[#91918e]" />
+      <ChevronRightIcon className="ml-auto size-4 opacity-0 group-hover/label:opacity-100 transition-opacity text-muted-foreground" />
     </div>
   );
 }
@@ -118,7 +162,7 @@ Sidebar.MenuItem = ({
     <div 
       role="menuitem" 
       className={cn(
-        "flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] text-[#5f5e5b]",
+        "flex items-center w-full font-sm min-h-[30px] h-[30px] py-1 px-2 rounded-sm cursor-pointer gap-2 hover:bg-[#00000008] dark:hover:bg-[#ffffff0e] text-muted-foreground",
         sub && "group/item",
         className,
       )}
@@ -135,14 +179,14 @@ Sidebar.MenuItem = ({
             emoji ? (
               <span className="text-lg">{emoji}</span>
             ) : (
-              <HashIcon className="size-5 stroke-[1.75] text-[#91918e]" />
+              <HashIcon className="size-5 stroke-[1.75] text-icon" />
             )
           )}
         </div>
       </div>
       <div className="hidden group-hover/item:flex items-center justify-center shrink-0 grow-0 size-6 relative transition-all">
-         <div role="button" onClick={onToggle} className="relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] transition">
-            <ChevronRightIcon className={cn("size-4 transition duration-200 text-[#9b9c99]", isOpen && "rotate-90")} />
+         <div role="button" onClick={onToggle} className="relative flex items-center justify-center size-6 rounded-sm hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] transition">
+            <ChevronRightIcon className={cn("size-4 transition duration-200 text-icon dark:text-[#ffffff48]", isOpen && "rotate-90")} />
         </div>
       </div>
       <div className="flex-1 whitespace-nowrap overflow-hidden text-clip flex items-center">

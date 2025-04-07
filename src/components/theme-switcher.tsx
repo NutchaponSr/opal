@@ -17,37 +17,37 @@ export function ThemeSwitcher() {
   if (!mounted) return null
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="bg-black/90 dark:bg-black/80 rounded-full p-1 flex items-center">
+    <div className="flex items-center justify-center ml-auto">
+      <div className="bg-background dark:bg-input/30 rounded-full p-0.5 flex items-center border dark:border-input max-h-7 min-h-7">
         <button
           onClick={() => setTheme("system")}
           className={cn(
             "rounded-full p-1.5 transition-colors",
-            theme === "system" ? "bg-gray-700" : "text-gray-400 hover:text-gray-200",
+            theme === "system" ? "bg-input/50" : "text-icon",
           )}
           aria-label="System theme"
         >
-          <Monitor className="h-4 w-4" />
+          <Monitor className="size-3" />
         </button>
         <button
           onClick={() => setTheme("light")}
           className={cn(
             "rounded-full p-1.5 transition-colors",
-            theme === "light" ? "bg-gray-700" : "text-gray-400 hover:text-gray-200",
+            theme === "light" ? "bg-input/50" : "text-icon",
           )}
           aria-label="Light theme"
         >
-          <Sun className="h-4 w-4" />
+          <Sun className="size-3" />
         </button>
         <button
           onClick={() => setTheme("dark")}
           className={cn(
             "rounded-full p-1.5 transition-colors",
-            theme === "dark" ? "bg-gray-700" : "text-gray-400 hover:text-gray-200",
+            theme === "dark" ? "bg-input/50" : "text-icon",
           )}
           aria-label="Dark theme"
         >
-          <Moon className="h-4 w-4" />
+          <Moon className="size-3" />
         </button>
       </div>
     </div>

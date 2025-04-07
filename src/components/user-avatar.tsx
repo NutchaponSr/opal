@@ -20,10 +20,10 @@ export const UserAvatar = ({
   fallbackClassName 
 }: UserAvatarProps) => {
   return (
-    <Avatar className={cn(className, "rounded-md")}>
+    <Avatar className={cn(className)}>
       {image && <AvatarImage src={image} />}
       <AvatarFallback className={cn(
-        "text-white font-medium bg-gradient-to-b from-blue-400 from-20% to-blue-500 to-80% rounded-md",
+        "text-white font-medium bg-gradient-to-b from-blue-400 from-20% to-blue-500 to-80%",
         fallbackClassName,
       )}>
         {name.charAt(0).toUpperCase()}

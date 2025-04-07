@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 import { TRPCProvider } from "@/trpc/client";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const font = Inter({
   subsets: ["latin"],
@@ -28,12 +29,20 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/">
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={cn(font.className, "antialiased")}>
-          <TRPCProvider>
-            {children}
-            <Toaster richColors position="top-center" />
-          </TRPCProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            storageKey="opal-theme"
+          >
+            <TRPCProvider>
+              {children}
+              <Toaster richColors position="top-center" />
+            </TRPCProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
