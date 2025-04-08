@@ -12,7 +12,7 @@ import { ComponentRef, useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 
-const iconVariant = cva("", {
+export const iconVariant = cva("", {
   variants: {
     variant:{ 
       default: "#91918e",
@@ -66,7 +66,7 @@ const Sidebar = ({
     <aside 
       ref={ref}
       className={cn(
-        "grow-0 shrink-0 relative h-full w-60 overflow-hidden z-[111] group bg-[#f8f8f7] dark:bg-[#202020] select-none group/sidebar",
+        "grow-0 shrink-0 relative h-full w-60 overflow-hidden z-[111] group bg-[#f8f8f7] dark:bg-[#202020] select-none group/sidebar order-1 [&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(0,0,0,0.1)] dark:[&:has(>.resize-handle:hover)]:shadow-[inset_-2px_0_0_0_rgba(255,255,255,0.1)] shadow-[inset_-1px_0_0_0_rgba(0,0,0,0.024)] dark:shadow-[inset_-1px_0_0_0_rgba(255,255,255,0.05)]",
         isResetting && "transition-all ease-in-out duration-300",
         isMobile && "w-0"
       )}
@@ -74,7 +74,7 @@ const Sidebar = ({
       <Button.Icon 
         onClick={collapse} 
         className={cn(
-          "size-6 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] opacity-0 group-hover:opacity-100 transition-opacity absolute right-1 top-1 z-[110]",
+          "size-6 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] opacity-0 group-hover:opacity-100 transition-opacity absolute right-2 top-2 z-[110]",
           isMobile && "opacity-100"
         )}
       >

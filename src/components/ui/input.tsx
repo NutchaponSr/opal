@@ -1,18 +1,41 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cva, VariantProps } from "class-variance-authority";
 
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+import { cn } from "@/lib/utils";
+
+export const inputVariants = cva(
+  "flex w-full rounded-sm text-primary transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default: "shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] focus-within:shadow-[inset_0_0_0_1px_rgba(14,165,233,0.57),0_0_0_2px_rgba(14,165,233,0.35)]",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        ghost: "bg-transparent hover:bg-accent hover:text-accent-foreground",
+        secondary: "rounded-sm shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.075)] text-sm bg-[#f2f1ee99] dark:bg-[#ffffff0e]",
+        search: "whitespace-pre-wrap break-words grow shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.075)] bg-[#f2f1ee99] focus-visible:outline-none text-primary placeholder:text-secondary dark:bg-[#ffffff0e] dark:placeholder:text-[#6F6F6F] dark:focus-within:shadow-[inset_0_0_0_1px_rgba(14,165,233,0.57),0_0_0_2px_rgba(14,165,233,0.35)]",
+        none: "border-none shadow-none"
+      },
+      area: {
+        default: "h-9 px-3 py-1 text-sm",
+        sm: "h-7 px-2 py-1 px-2.5 text-sm rounded-sm",
+        md: "h-8 px-4",
+        none: "px-1 h-6 text-xs"
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      area: "default",
+    }
+  }
+);
+
+function Input({ className, type, variant, area, ...props }: React.ComponentProps<"input"> & VariantProps<typeof inputVariants>) {
   return (
     <input
       type={type}
       data-slot="input"
-      className={cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-        className
-      )}
+      className={cn(inputVariants({ variant, area, className }))}
       {...props}
     />
   )

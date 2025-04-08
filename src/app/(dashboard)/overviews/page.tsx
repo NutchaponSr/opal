@@ -1,20 +1,12 @@
-import { Suspense } from "react";
-import { ErrorBoundary } from "react-error-boundary";
+import { Workspaces } from "@/components/workspaces";
+import { GreetingMessage } from "@/components/greeting-message";
 
-import { HydrateClient, trpc } from "@/trpc/server";
-
-import { PageClient } from "./client";
-
-const OverviewPage = async () => {
-
+const OverviewPage = () => {
   return (
-    <HydrateClient>
-      <Suspense fallback={<p>Loading...</p>}>
-        <ErrorBoundary fallback={<p>Error...</p>}>
-          <PageClient />
-        </ErrorBoundary>
-      </Suspense>
-    </HydrateClient>
+    <div className="pb-40 gap-6 grid grid-cols-[minmax(56px,1fr)_minmax(auto,900px)_minmax(56px,1fr)] w-full">
+      <GreetingMessage />
+      <Workspaces />
+    </div>
   );
 }
 

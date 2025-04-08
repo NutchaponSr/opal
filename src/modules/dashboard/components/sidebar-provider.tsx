@@ -34,7 +34,7 @@ export const SidebarProvider = () => {
     
     isResizingRef.current = true;
     document.addEventListener("mousemove", handleMouseMove);
-    // document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mouseup", handleMouseUp);
   };
   
   const handleMouseMove = (e: MouseEvent) => {
