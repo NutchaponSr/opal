@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table";
+import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 
 interface DataTableProps<TValue> {
   table: TB<TValue>;
@@ -19,14 +20,17 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => {
+              const icon = header.column.columnDef.meta?.icon;
+
               return (
                 <TableHead key={header.id} className={header.column.columnDef.meta?.headerClassName}>
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
+                  <div className="flex items-center gap-2 h-full">
+                    {icon && <Icon icon={header.column.columnDef.meta?.icon!} width={16} height={16} />}
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(header.column.columnDef.header, header.getContext())
+                    }
+                  </div>
                 </TableHead>
               )
             })}
@@ -41,7 +45,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
               data-state={row.getIsSelected() && "selected"}
             >
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>
+                <TableCell key={cell.id} className={cell.column.columnDef.meta?.cellClassName}>
                   {flexRender(
                     cell.column.columnDef.cell,
                     cell.getContext()

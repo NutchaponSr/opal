@@ -2,15 +2,13 @@
 
 import { useMedia, useToggle } from "react-use";
 import { Icon } from "@iconify-icon/react";
-import { ChevronRightIcon, ChevronsLeft, ChevronsLeftIcon, HashIcon } from "lucide-react";
+import { ChevronRightIcon, ChevronsLeftIcon, FileIcon } from "lucide-react";
 import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
 import { Accordion } from "@/components/accordion";
-import { ComponentRef, useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
 
 export const iconVariant = cva("", {
   variants: {
@@ -179,7 +177,7 @@ Sidebar.MenuItem = ({
             emoji ? (
               <span className="text-lg">{emoji}</span>
             ) : (
-              <HashIcon className="size-5 stroke-[1.75] text-icon" />
+              <FileIcon className="size-5 stroke-[1.75] text-icon" />
             )
           )}
         </div>

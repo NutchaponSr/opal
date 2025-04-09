@@ -5,5 +5,6 @@ declare module "@tanstack/react-table" {
   interface ColumnMeta {
     headerClassName?: string;
     cellClassName?: string;
+    icon?: string;
   }
 }
