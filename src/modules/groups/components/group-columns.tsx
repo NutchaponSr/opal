@@ -1,9 +1,13 @@
+import { GripVerticalIcon } from "lucide-react";
+import { ColumnDef } from "@tanstack/react-table";
+
+import { groups } from "@/db/schema";
+
+import { columnFilterOptions, columnIcons } from "@/types/column";
+
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { TableAction } from "@/components/ui/table";
-import { groups } from "@/db/schema";
-import { ColumnDef } from "@tanstack/react-table";
-import { GripVerticalIcon } from "lucide-react";
 
 type Group = typeof groups.$inferSelect;
 
@@ -50,7 +54,9 @@ export const columns: ColumnDef<Group>[] = [
     meta: {
       headerClassName: "w-[256px]",
       cellClassName: "w-[256px]",
-      icon: "famicons:text-outline",
+      icon: columnIcons["text"],
+      variant: "text",
+      options: columnFilterOptions["text"],
     }
   },
   {
@@ -64,7 +70,9 @@ export const columns: ColumnDef<Group>[] = [
     meta: {
       headerClassName: "w-[128px]",
       cellClassName: "w-[128px]",
-      icon: "famicons:text-outline",
+      icon: columnIcons["numeric"],
+      variant: "numeric",
+      options: columnFilterOptions["numeric"],
     }
   },
 ]
