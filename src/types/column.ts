@@ -1,4 +1,4 @@
-type ColumnType = "text" | "numeric" | "date" | "select";
+export type ColumnType = "text" | "numeric" | "date" | "select";
 
 export const columnIcons: Record<ColumnType, string> = {
   text: "famicons:text-outline",
@@ -9,7 +9,7 @@ export const columnIcons: Record<ColumnType, string> = {
 
 export const columnFilterOptions: Record<ColumnType, string[]> = {
   text: ["contain", "does not contain"],
-  numeric: [">", "<", "<=", ">=", "="],
-  date: ["before", "after", "on"],
+  numeric: [">", "<", "≤", "≥", "=", "≠"],
+  date: ["is", "is before", "is after", "is on or before", "is on or after", "is between"],
   select: ["is", "is not"],        
 };

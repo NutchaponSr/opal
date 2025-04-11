@@ -14,8 +14,8 @@ import { Separator } from "./ui/separator";
 import { useColumnFilterStore } from "@/stores/use-column-filter";
 import { useToggle } from "react-use";
 import { CommandPopover } from "./command-popover";
-import { FilterConditionRow } from "./filter-condition-row";
 import { Badge } from "./ui/badge";
+import { LayoutFilterProvider } from "@/modules/layouts/components/layout-filter-provider";
 
 const font = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -64,7 +64,7 @@ export const LayoutFilter = <TData,>({ table }: LayoutFilter<TData>) => {
                   </span>
                 </div>
                 {firstColumnId && table.getColumn(firstColumnId) && (
-                  <FilterConditionRow column={table.getColumn(firstColumnId)!} />
+                  <LayoutFilterProvider column={table.getColumn(firstColumnId)!} />
                 )}
               </div>
               {columnFilter.size > 1  && (
@@ -73,11 +73,11 @@ export const LayoutFilter = <TData,>({ table }: LayoutFilter<TData>) => {
                     And 
                   </Badge>
                   <div className="absolute border-l border-dashed border-primary h-full left-5" />
-                  <div className="flex flex-1 flex-col pl-12">
+                  <div className="flex flex-1 flex-col pl-12 gap-2">
                     {table.getAllColumns()
                       .filter((column) => column.getCanFilter() && column.id !== firstColumnId && columnFilter.has(column.id))
                       .map((column) => (
-                        <FilterConditionRow key={column.id} column={column} />
+                        <LayoutFilterProvider key={column.id} column={column} />
                       ))}
                   </div>
                 </div>

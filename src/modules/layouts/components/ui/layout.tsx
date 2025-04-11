@@ -14,13 +14,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 interface LayoutTableProps<TValue> {
   table: Table<TValue>;
 }
-
-Layout.Table = <TValue,>({ ...props }: LayoutTableProps<TValue>) => {
+Layout.Table = function Table<TValue,>({ ...props }: LayoutTableProps<TValue>) {
   return (
     <Layout>
       <DataTable {...props} />
     </Layout>
   );
-}
+} as React.FC
+Layout.Table.displayName = "Layout.Table";
 
 export default Layout;

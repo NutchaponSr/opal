@@ -23,9 +23,9 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
               const icon = header.column.columnDef.meta?.icon;
 
               return (
-                <TableHead key={header.id} className={header.column.columnDef.meta?.headerClassName}>
+                <TableHead key={header.id} className={header.column.columnDef.meta?.width}>
                   <div className="flex items-center gap-2 h-full">
-                    {icon && <Icon icon={header.column.columnDef.meta?.icon!} width={16} height={16} />}
+                    {icon && <Icon icon={icon} width={16} height={16} />}
                     {header.isPlaceholder
                       ? null
                       : flexRender(header.column.columnDef.header, header.getContext())
@@ -45,7 +45,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
               data-state={row.getIsSelected() && "selected"}
             >
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id} className={cell.column.columnDef.meta?.cellClassName}>
+                <TableCell key={cell.id} className={cell.column.columnDef.meta?.width}>
                   {flexRender(
                     cell.column.columnDef.cell,
                     cell.getContext()

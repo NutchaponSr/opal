@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { GripVerticalIcon } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
 
@@ -51,9 +52,10 @@ export const columns: ColumnDef<Group>[] = [
         {row.original.icon} {row.original.name}
       </div>
     ),
+    filterFn: "custom",
+    enableColumnFilter: true,
     meta: {
-      headerClassName: "w-[256px]",
-      cellClassName: "w-[256px]",
+      width: "w-[256px]",
       icon: columnIcons["text"],
       variant: "text",
       options: columnFilterOptions["text"],
@@ -67,12 +69,26 @@ export const columns: ColumnDef<Group>[] = [
         {row.original.year}
       </div>
     ),
+    filterFn: "custom",
+    enableColumnFilter: true,
     meta: {
-      headerClassName: "w-[128px]",
-      cellClassName: "w-[128px]",
+      width: "w-[128px]",
       icon: columnIcons["numeric"],
       variant: "numeric",
       options: columnFilterOptions["numeric"],
+    }
+  },
+  {
+    accessorKey: "createdAt",
+    header: "Created At",
+    cell: ({ row }) => format(row.getValue("createdAt"), "MMMM d, yyyy"),
+    filterFn: "custom",
+    enableColumnFilter: true,
+    meta: {
+      width: "w-[196px]",
+      icon: columnIcons["date"],
+      variant: "date",
+      options: columnFilterOptions["date"],
     }
   },
 ]

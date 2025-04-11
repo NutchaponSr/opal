@@ -1,13 +1,19 @@
 import { create } from "zustand";
+import { Table } from "@tanstack/react-table";
 
-type ColumnFilterStore = {
+type ColumnFilterStore<TData> = {
   columnFilter: Set<string>;
+  table: Table<TData> | null;
+  setTable: (table: Table<TData>) => void;
   setColumnFilter: (column: string) => void;
   onRemove: (column: string) => void;
 };
 
-export const useColumnFilterStore = create<ColumnFilterStore>((set) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const useColumnFilterStore = create<ColumnFilterStore<any>>((set) => ({
   columnFilter: new Set<string>(),
+  table: null, // Initial value
+  setTable: (table) => set({ table }),
   setColumnFilter: (column: string) => set((state) => {
     const newSet = new Set(state.columnFilter);
     if (newSet.has(column)) {
@@ -19,7 +25,15 @@ export const useColumnFilterStore = create<ColumnFilterStore>((set) => ({
   }),
   onRemove: (column: string) => set((state) => {
     const newSet = new Set(state.columnFilter);
-    newSet.delete(column); 
+      if (newSet.has(column)) {
+        if (state.table) {
+          const columnObj = state.table.getColumn(column);
+          if (columnObj) {
+            columnObj.setFilterValue(undefined);
+          }
+        }
+        newSet.delete(column);
+      }
     return { columnFilter: newSet };
   }),
 }));
