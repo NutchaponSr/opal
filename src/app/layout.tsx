@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider afterSignOutUrl="/">
       <html lang="en">
-        <body className={cn(font.className, "antialiased")}>
+        <body className={cn(font.className, "antialiased h-screen")}>
           {children}
         </body>
       </html>
