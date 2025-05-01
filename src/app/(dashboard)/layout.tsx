@@ -3,6 +3,7 @@ import { Merriweather_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 
 import { getQueryClient, trpc } from "@/trpc/server";
@@ -27,12 +28,14 @@ const Layout = async ({ children }: Props) => {
     <div className={cn(font.className, "w-screen h-full relative flex bg-white")}>
       <HydrationBoundary state={dehydrate(queryClient)}>
         <Suspense fallback={<SidebarSkeleton />}>
-          <SidebarClient /> 
+          <ErrorBoundary fallback={<SidebarSkeleton />}>
+            <SidebarClient /> 
+          </ErrorBoundary>
         </Suspense>
       </HydrationBoundary>
       <div className="order-3 flex flex-col w-full overflow-hidden isolation-auto bg-transparent">
         <MenuBar />
-        <main>
+        <main className="grow-0 shrink flex flex-col bg-white h-full min-h-full w-full">
           {children}
         </main>
       </div>

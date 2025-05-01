@@ -1,18 +1,13 @@
-import { getQueryClient, trpc } from "@/trpc/server";
-import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import { Suspense } from "react";
-import { Client } from "./client";
+import { Workspaces } from "@/components/workspaces";
+import { GreetingMessage } from "@/components/greeting-message";
 
-const Page = async () => {
-  const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(trpc.greeting.queryOptions());
+const Page = () => {
 
   return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Client />
-      </Suspense>
-    </HydrationBoundary>
+    <div className="pb-40 gap-[26px] grid grid-cols-[[minmax(56px,1fr)_minmax(auto,900px)_minmax(56px,1fr)] w-full">
+      <GreetingMessage />
+      <Workspaces />
+    </div>
   );
 }
 
