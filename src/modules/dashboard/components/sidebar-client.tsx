@@ -80,7 +80,7 @@ export const SidebarClient = () => {
             <SidebarGroupContent isOpen={open.workspace}>
               <GroupWorkspace />
               <SidebarSubMenuItem>
-                <SidebarIcon sub icon="solar:file-text-bold-duotone" variant="mikan" />
+                <SidebarIcon sub icon="solar:file-text-bold-duotone" variant="orange" />
                 Competency
               </SidebarSubMenuItem>
               <SidebarSubMenuItem>
