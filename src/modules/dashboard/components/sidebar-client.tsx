@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import {
+  Sidebar,
   SidebarContent, 
   SidebarFooter, 
   SidebarGroup, 
@@ -23,19 +24,9 @@ import {
   SidebarSubMenuItem 
 } from "@/modules/dashboard/components/ui/sidebar";
 import { UserButton } from "@/modules/auth/components/user-button";
-// import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
+import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
 
 import { useSidebarStore } from "@/modules/dashboard/store/use-sidebar-store";
-
-const Sidebar = dynamic(
-  () => import("@/modules/dashboard/components/ui/sidebar").then(
-    (mod) => mod.Sidebar,
-  ),
-  {
-    ssr: false,
-    loading: () => <SidebarSkeleton />
-  }
-);
 
 export const SidebarClient = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -87,7 +78,7 @@ export const SidebarClient = () => {
           <SidebarGroup>
             <SidebarGroupLabel onOpen={() => setOpen(prev => ({ ...prev, workspace: !prev.workspace }))}>Workspace</SidebarGroupLabel>
             <SidebarGroupContent isOpen={open.workspace}>
-              {/* <GroupWorkspace /> */}
+              <GroupWorkspace />
               <SidebarSubMenuItem>
                 <SidebarIcon sub icon="solar:file-text-bold-duotone" variant="mikan" />
                 Competency
