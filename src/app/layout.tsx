@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 
+import { cn } from "@/lib/utils";
+
+import "./globals.css";
 const font = Inter({
   subsets: ["latin"],
 })
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <ClerkProvider afterSignOutUrl="/">
       <html lang="en">
-        <body className={cn(font.className, "antialiased")}>
+        <body className={cn(font.className, "antialiased h-screen")}>
           {children}
         </body>
       </html>
