@@ -3,13 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev:all": "concurrently \"bun run dev:webhook\" \"bun run dev\"",
+    "dev:webhook": "ngrok http --url=lemming-quick-koala.ngrok-free.app 3000",
     "dev": "next dev",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.18.2",
     "@hookform/resolvers": "^5.0.1",
+    "@prisma/client": "^6.7.0",
     "@radix-ui/react-avatar": "^1.1.7",
     "@radix-ui/react-checkbox": "^1.2.3",
     "@radix-ui/react-dialog": "^1.1.11",
@@ -22,6 +30,7 @@
     "@radix-ui/react-tooltip": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "concurrently": "^9.1.2",
     "lucide-react": "^0.503.0",
     "next": "15.2.4",
     "next-themes": "^0.4.6",
@@ -29,19 +38,22 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.1",
     "sonner": "^2.0.3",
+    "svix": "^1.64.1",
     "tailwind-merge": "^3.2.0",
     "tw-animate-css": "^1.2.8",
-    "zod": "^3.24.3"
+    "zod": "^3.24.3",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "prisma": "^6.7.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
