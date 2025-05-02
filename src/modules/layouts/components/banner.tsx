@@ -33,9 +33,9 @@ export const Banner = ({ workspace }: Props) => {
             size="sm"
             variant="ghost"
             onClick={() => setShow((prev) => !prev)}
-            className="group-hover:opacity-100 opacity-0 transition-all"
+            className="group-hover:opacity-100 opacity-0 transition-all text-[#b9b9b7] hover:text-[#b9b9b7]"
           >
-            <CircleAlertIcon className="text-primary" />
+            <CircleAlertIcon />
             {show ? "Hide" : "Show"} description
           </Button>
         </div>
