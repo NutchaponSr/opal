@@ -1,23 +1,15 @@
 "use client";
 
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel
-} from "@/components/ui/form";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { organizationSchema, OrganizationSchema } from "@/schema";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useTRPC } from "@/trpc/client";
 import { toast } from "sonner";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+import { useTRPC } from "@/trpc/client";
+
+import { organizationSchema } from "@/schema";
+
+import { useZodForm } from "@/hooks/use-zod-form";
+import { FormGenerator } from "./form-generator";
+import { Button } from "./ui/button";
 
 export const OrganizationInitial = () => {
   const trpc = useTRPC();
@@ -33,56 +25,50 @@ export const OrganizationInitial = () => {
     }
   }));
 
-  const form = useForm<OrganizationSchema>({
-    resolver: zodResolver(organizationSchema),
-    defaultValues: {
+  const {
+    errors,
+    register,
+    onFormSubmit,
+  } = useZodForm(
+    organizationSchema, 
+    createOrganization.mutate, 
+    {
       name: "",
       slugUrl: "",
     }
-  });
-
-  const onSubmit = (values: OrganizationSchema) => {
-    createOrganization.mutate({ ...values });
-  }
+  );
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Create Organization</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input {...field} className="bg-white" />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="slugUrl"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Slug-url</FormLabel>
-                  <FormControl>
-                    <Input {...field} className="bg-white" />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <Button>
-              Continue
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
+    <form 
+      onSubmit={onFormSubmit}
+      className="w-full flex flex-col gap-4"
+    >
+      <h1 className="text-3xl lg:text-4xl font-semibold mb-4">
+        Create organization
+      </h1>
+      <FormGenerator 
+        register={register}
+        name="name"
+        label="Organization name"
+        errors={errors}
+        inputType="input"
+        type="text"
+        className="h-10 bg-white"
+        disabled={createOrganization.isPending}
+        />
+      <FormGenerator 
+        register={register}
+        name="slugUrl"
+        label="slug url"
+        errors={errors}
+        inputType="input"
+        type="text"
+        className="h-10 bg-white"
+        disabled={createOrganization.isPending}
+      />
+      <Button size="lg" disabled={createOrganization.isPending}>
+        Continue
+      </Button>
+    </form>
   );
 }

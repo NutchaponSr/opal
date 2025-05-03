@@ -25,3 +25,9 @@ export function generateInviteCode(lenght: number = 6) {
 
   return inviteCode;
 }
+
+export function generateOrganizationId() {
+  const timestamp = Date.now().toString(36);
+  const randomPart = Math.random().toString(36).substring(2, 8);
+  return `org_${timestamp}_${randomPart}`;
+}

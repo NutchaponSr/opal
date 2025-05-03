@@ -12,7 +12,7 @@ export interface Workspace extends VariantProps<typeof iconVariant> {
 
 export const group: Workspace = {
   label: "Group",
-  href: "/groups",
+  href: "groups",
   description: "Combining diverse skills to achieve shared goals.",
   icon: "solar:library-bold-duotone",
   className: "bg-[#f5e0e9] dark:bg-[#4e2c3c]",
@@ -21,7 +21,7 @@ export const group: Workspace = {
 
 export const competency: Workspace = {
   label: "Competency",
-  href: "/competencies",
+  href: "competencies",
   description: "Diverse skills and competencies to achieve shared goals.",
   icon: "solar:bookmark-square-bold-duotone",
   className: "bg-[#fadec9] dark:bg-[#5c3b23]",
@@ -30,7 +30,7 @@ export const competency: Workspace = {
 
 export const employee: Workspace = {
   label: "Employee",
-  href: "/employees",
+  href: "employees",
   description: "Manage employees with diverse competencies to achieve goals.",
   icon: "solar:users-group-rounded-bold-duotone",
   className: "bg-[#d8e5ee] dark:bg-[#143a4e]",

@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { generateInviteCode } from "@/lib/utils";
+import { generateInviteCode, generateOrganizationId } from "@/lib/utils";
 import { organizationSchema } from "@/schema";
 
 import { createTRPCRouter, protectedProcedure } from "@/trpc/init";
@@ -22,6 +22,7 @@ export const organizationRouter = createTRPCRouter({
 
       const organization = await db.organization.create({
         data: {
+          id: generateOrganizationId(),
           name: input.name,
           organizationSlug: input.slugUrl,
           inviteCode: generateInviteCode(),

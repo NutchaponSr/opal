@@ -1,19 +1,25 @@
 "use client";
 
+import { Icon } from "@iconify/react";
+import { redirect } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+
 import { OrganizationInitial } from "@/components/organization-initial";
 import { useTRPC } from "@/trpc/client";
-import { useQuery } from "@tanstack/react-query";
-import { redirect } from "next/navigation";
 
 export const OrganizationView = () => {
   const trpc = useTRPC();
 
   const { data, isLoading } = useQuery(trpc.organizations.getOne.queryOptions());
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return (
+      <Icon icon="svg-spinners:bars-rotate-fade" className="size-10 text-primary" />
+    )
+  };
 
   if (data) {
-    redirect(`/org/${data.id}`);
+    redirect(`/${data.id}`);
   }
 
   return (

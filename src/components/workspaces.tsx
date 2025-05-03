@@ -5,11 +5,17 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { SquareDashedKanbanIcon } from "lucide-react";
 
-import { competency, employee, group, Workspace } from "@/types/workspace";
 import { cn } from "@/lib/utils";
+
+import { competency, employee, group, Workspace } from "@/types/workspace";
+
 import { iconVariant } from "@/modules/dashboard/types";
 
-export const Workspaces = () => {
+interface Props {
+  organizationId: string;
+}
+
+export const Workspaces = ({ ...props }: Props) => {
   return (
     <div className="min-w-0 col-start-2 select-none">
       <div className="shrink-0 flex justify-between items-center h-12 ml-2">
@@ -24,19 +30,25 @@ export const Workspaces = () => {
       </div>
       <div className="relative min-h-36">
         <div className="grid grid-cols-3 gap-6">
-          <WorkspaceCard workspace={group} />
-          <WorkspaceCard workspace={competency} />
-          <WorkspaceCard workspace={employee} />
+          <WorkspaceCard workspace={group} {...props} />
+          <WorkspaceCard workspace={competency} {...props} />
+          <WorkspaceCard workspace={employee} {...props} />
         </div>
       </div>
     </div>
   );
 }
 
-const WorkspaceCard = ({ workspace }: { workspace: Workspace }) => {
+const WorkspaceCard = ({ 
+  workspace,
+  organizationId
+}: { 
+  workspace: Workspace;
+  organizationId: string; 
+}) => {
   return (
     <div className="relative group">
-      <Link href={workspace.href}
+      <Link href={`/${organizationId}/${workspace.href}`}
         className="flex flex-col transition cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-[#ffffff0d] relative h-40 justify-stretch"
       >
         <div className="relative mb-4">
