@@ -57,7 +57,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
     <tr
       data-slot="table-row"
       className={cn(
-        "data-[state=selected]:bg-muted border-b transition-colors flex h-[34px] border-border relative group",
+        "border-b transition-colors flex h-[34px] border-border relative group",
         className
       )}
       {...props}
@@ -107,16 +107,18 @@ function TableCaption({
 function TableAction({
   children,
   className,
-  position
+  position,
+  isChecked,
 }: {
   children: React.ReactNode; 
   className?: string;
   position: string;
+  isChecked?: boolean;
 }) {
   return (
     <div className={cn("sticky flex", position)}>
       <div className={cn("absolute", position)}>
-        <div className="h-full transition opacity-0 group-hover:opacity-100">
+        <div className={cn("h-full transition opacity-0 group-hover:opacity-100", isChecked && "opacity-100")}>
           <div className="h-full items-center justify-center flex cursor-pointer">
             <div className={cn("flex items-center justify-center", className)}>
               {children}

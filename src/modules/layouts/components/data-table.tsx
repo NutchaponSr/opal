@@ -51,13 +51,16 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
                   )}
                 </TableCell>
               ))}
+              {row.getIsSelected() && (
+                <div className="absolute inset-0 top-[0.75px] bottom-0 bg-marine/14 rounded pointer-events-none" />
+              )}
             </TableRow>
           ))
         ) : (
-          <TableRow>
+          <TableRow className="px-2 py-1">
             <TableCell
               colSpan={table.getColumn.length}
-              className="h-24 text-center"
+              className="flex items-center text-center"
             >
               No results.
             </TableCell>
