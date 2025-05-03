@@ -4,8 +4,9 @@ import { Icon } from "@iconify/react";
 import { redirect } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 
-import { OrganizationInitial } from "@/components/organization-initial";
 import { useTRPC } from "@/trpc/client";
+
+import { OrganizationForm } from "@/modules/organization/ui/components/organization-form";
 
 export const OrganizationView = () => {
   const trpc = useTRPC();
@@ -23,6 +24,6 @@ export const OrganizationView = () => {
   }
 
   return (
-    <OrganizationInitial />
+    <OrganizationForm />
   );
 }

@@ -8,10 +8,12 @@ import { useTRPC } from "@/trpc/client";
 import { organizationSchema } from "@/schema";
 
 import { useZodForm } from "@/hooks/use-zod-form";
-import { FormGenerator } from "./form-generator";
-import { Button } from "./ui/button";
 
-export const OrganizationInitial = () => {
+import { Button } from "@/components/ui/button";
+
+import { FormGenerator } from "@/components/form-generator";
+
+export const OrganizationForm = () => {
   const trpc = useTRPC();
   const queryClient = useQueryClient();
 
