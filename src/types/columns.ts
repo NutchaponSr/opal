@@ -1,3 +1,4 @@
+import { Column } from "@tanstack/react-table";
 import { 
   CalendarDaysIcon,
   HashIcon,
@@ -16,8 +17,23 @@ export const columnIcons: Record<ColumnType, LucideIcon> = {
 }
 
 export const columnFilterOptions: Record<ColumnType, string[]> = {
-  text: ["contain", "does not contain"],
+  text: ["contains", "does not contain"],
   numeric: [">", "<", "≤", "≥", "=", "≠"],
   date: ["is", "is before", "is after", "is on or before", "is on or after", "is between"],
   select: ["is", "is not"],        
 };
+
+export interface Filter<T> {
+  id: number;
+  column: Column<T>;
+  operator: string;
+  value: string;
+  columnType: ColumnType;
+}
+
+export interface FilterGroup<T> {
+  id: number;
+  filters: Filter<T>[];
+  groups: FilterGroup<T>[];
+  connector: "AND" | "OR";
+}

@@ -2,6 +2,7 @@ import "@tanstack/react-table";
 
 import { FilterFn } from "@tanstack/react-table";
 import { LucideIcon } from "lucide-react";
+import { ColumnType } from "./columns";
 declare module "@tanstack/react-table" {
   interface ColumnMeta {
     width?: string;

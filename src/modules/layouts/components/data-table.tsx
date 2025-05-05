@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 
 interface DataTableProps<TValue> {
   table: TB<TValue>;
@@ -41,7 +42,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
           table.getRowModel().rows.map((row) => (
             <TableRow
               key={row.id}
-              data-state={row.getIsSelected() && "selected"}
+              className={cn("relative", row.getIsSelected() && "bg-marine/14 rounded")}
             >
               {row.getVisibleCells().map((cell) => (
                 <TableCell key={cell.id} className={cell.column.columnDef.meta?.width}>
@@ -51,9 +52,6 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
                   )}
                 </TableCell>
               ))}
-              {row.getIsSelected() && (
-                <div className="absolute inset-0 top-[0.75px] bottom-0 bg-marine/14 rounded pointer-events-none" />
-              )}
             </TableRow>
           ))
         ) : (

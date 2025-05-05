@@ -55,4 +55,19 @@ export const columns: ColumnDef<Group>[] = [
       options: columnFilterOptions["text"],
     }
   },
+  {
+    accessorKey: "year",
+    header: "Year",
+    cell: ({ row }) => (
+      row.getValue("year")
+    ),
+    filterFn: "custom",
+    enableColumnFilter: true,
+    meta: {
+      width: "w-[256px]",
+      icon: columnIcons["numeric"],
+      variant: "numeric",
+      options: columnFilterOptions["numeric"],
+    }
+  },
 ]
