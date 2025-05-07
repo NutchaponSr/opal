@@ -1,8 +1,5 @@
-import { useToggle } from "usehooks-ts";
 import { FilterIcon } from "lucide-react";
 import { Column } from "@tanstack/react-table";
-
-import { ColumnType } from "@/types/columns";
 
 import {
   Popover,
@@ -10,32 +7,23 @@ import {
   PopoverTrigger
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { CommandSearch } from "@/components/command-search";
+import { FilterFields } from "@/modules/layouts/components/filter-fields";
 
-import { ColumnSelector } from "./column-selector";
-import { FilterFields } from "./filter-fields";
-
-import { useLayoutFilterStore } from "../store/use-layout-filter-store";
+import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
 
 interface Props<T> {
   columns: Column<T>[];
 }
 
 export const LayoutFilterPopover = <T,>({ columns }: Props<T>) => {
-  const { filterGroup, addFilter } = useLayoutFilterStore();
-
-  const [isAdd, toggle, setIsAdd] = useToggle(false);
+  const { filterGroup } = useLayoutFilterStore();
 
   const hasActiveFilters = filterGroup.filters.some((f) => f.column && f.operator) || filterGroup.groups.length > 0;
 
-  const handleSelect = (column: Column<T>, columnType: ColumnType) => {
-    addFilter(column, columnType);
-    setIsAdd(false);
-  }
-
   return (
-    <Popover onOpenChange={() => setTimeout(() => setIsAdd(false), 100)}>
+    <Popover>
       <PopoverTrigger asChild>
         <Button
           size="sm"
@@ -50,16 +38,17 @@ export const LayoutFilterPopover = <T,>({ columns }: Props<T>) => {
         className="p-0 w-auto"
         align="end"
       >
-        {(!isAdd && hasActiveFilters) ? (
-          <FilterFields filters={filterGroup} onAdd={toggle} />
-        ) : (
-          <CommandSearch placeholder="Filter by...">
-            <ColumnSelector 
-              data={columns}
-              onSelect={handleSelect}
-            />
-          </CommandSearch>
-        )}
+        <div className="px-2 pt-2 text-xs">
+          {hasActiveFilters
+            ? "In the view, show records"
+            : "No filter conditions are applied"
+          }
+        </div>
+        <ScrollArea className="flex flex-1 flex-col overflow-auto p-2 pt-0 h-full">
+          <FilterFields 
+            data={columns}
+          />
+        </ScrollArea>
       </PopoverContent>
     </Popover>
   );

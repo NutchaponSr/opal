@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { redirect } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
@@ -11,7 +12,11 @@ import { OrganizationForm } from "@/modules/organization/ui/components/organizat
 export const OrganizationView = () => {
   const trpc = useTRPC();
 
-  const { data, isLoading } = useQuery(trpc.organizations.getOne.queryOptions());
+  const { data, isLoading, refetch } = useQuery(trpc.organizations.getOne.queryOptions());
+
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
 
   if (isLoading) {
     return (

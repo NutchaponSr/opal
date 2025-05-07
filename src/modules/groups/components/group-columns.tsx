@@ -58,13 +58,11 @@ export const columns: ColumnDef<Group>[] = [
   {
     accessorKey: "year",
     header: "Year",
-    cell: ({ row }) => (
-      row.getValue("year")
-    ),
-    filterFn: "custom",
+    cell: (info) => info.getValue() as number,
+    filterFn: "custom", 
     enableColumnFilter: true,
     meta: {
-      width: "w-[256px]",
+      width: "w-[128px]",
       icon: columnIcons["numeric"],
       variant: "numeric",
       options: columnFilterOptions["numeric"],

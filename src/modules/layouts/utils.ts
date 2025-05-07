@@ -18,6 +18,21 @@ export function compareValues(
       default:
         return true;
     }
+  } else if (columnType === "numeric") {
+    const numValue = parseFloat(String(value));
+    const numFilter = parseFloat(filterValue);
+
+    if (isNaN(numValue) || isNaN(numFilter)) return false;
+
+    switch (operator) {
+      case ">": return numValue > numFilter;
+      case "<": return numValue < numFilter;
+      case "≤": return numValue <= numFilter;
+      case "≥": return numValue >= numFilter;
+      case "=": return numValue === numFilter;
+      case "≠": return numValue !== numFilter;
+      default: return true;
+    }
   }
 
   return true;
