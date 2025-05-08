@@ -7,7 +7,6 @@ type FilterStore<T> = {
   filterGroup: FilterGroup<T>;
   setFilterGroup: (filterGroup: FilterGroup<T>) => void;
   addFilter: (column: Column<T>, columnType: ColumnType) => void;
-  addFilterToGroup: (groupId: number, column: Column<T>, columnType: ColumnType) => void;
   updateFilter: (filterId: number, updateFilter: Filter<T>) => void;
   removeFilter: (filterId: number) => void;
   addFilterGroup: () => void;
@@ -69,38 +68,6 @@ export const useLayoutFilterStore = create<FilterStore<any>>((set) => ({
       ],
     },
   })),
-  addFilterToGroup: (groupId, column, columnType) => set((state) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const updateGroupsRecursively = (groups: FilterGroup<any>[]): FilterGroup<any>[] => {
-      return groups.map(group => {
-        if (group.id === groupId) {
-          // Found the target group, add filter to it
-          return {
-            ...group,
-            filters: [...group.filters, {
-              id: Date.now(),
-              column,
-              operator: columnFilterOptions[columnType][0],
-              value: "",
-              columnType,
-            }],
-          };
-        } else {
-          return {
-            ...group,
-            groups: updateGroupsRecursively(group.groups),
-          };
-        }
-      });
-    };
-  
-    return {
-      filterGroup: {
-        ...state.filterGroup,
-        groups: updateGroupsRecursively(state.filterGroup.groups),
-      },
-    };
-  }),
   updateGroup: (groupId, updateGroup) => set((state) => ({
     filterGroup: {
       ...state.filterGroup,

@@ -247,8 +247,6 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
   
   const hasActiveFilters = filterGroup.filters.some((f) => f.column && f.operator) || filterGroup.groups.length > 0;
   
-  console.log(allFilters);
-
   return (
     <>
       {hasActiveFilters && (
@@ -317,7 +315,7 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
           </div>
         </div>
       )}
-      <div className="flex flex-row items-center gap-0.5 my-1">
+      <div className="flex flex-row items-center gap-0.5 mt-1">
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="sm">

@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { getCoreRowModel, getFilteredRowModel, Row, useReactTable } from "@tanstack/react-table";
+import { getCoreRowModel, getFilteredRowModel, getSortedRowModel, Row, SortingState, useReactTable } from "@tanstack/react-table";
 
 import { Group } from "@prisma/client";
 
@@ -23,6 +24,8 @@ export const GroupView = () => {
   const { filterGroup } = useLayoutFilterStore();
 
   const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions());
+
+  const [sorting, setSorting] = useState<SortingState>([]);
 
   const evaluateGroup = (group: FilterGroup<Group>, row: Row<Group>): boolean => {
     const filterResults = group.filters
@@ -56,14 +59,17 @@ export const GroupView = () => {
     columns,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    getSortedRowModel: getSortedRowModel(),
     filterFns: {
       custom: (row, columnId, filterValue) => {
         const cellValue = row.getValue(columnId);
         return String(cellValue).toLowerCase().includes(String(filterValue).toLowerCase());
       }
     },
+    onSortingChange: setSorting,
     globalFilterFn: filterData,
     state: {
+      sorting,
       globalFilter: filterGroup,
     }
   });
@@ -71,7 +77,7 @@ export const GroupView = () => {
   return (
     <div className="flex flex-col grow relative overflow-auto">
       <Banner workspace={group} />
-      <Toolbar columns={table.getAllColumns().filter((col) => col.getCanFilter())} />
+      <Toolbar table={table} columns={table.getAllColumns().filter((col) => col.getCanFilter())} />
       <LayoutProvider table={table} />
     </div>
   );

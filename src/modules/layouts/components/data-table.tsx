@@ -25,7 +25,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
               return (
                 <TableHead key={header.id} className={header.column.columnDef.meta?.width}>
                   <div className="flex items-center gap-2 h-full">
-                    {Icon && <Icon className="size-5" />}
+                    {Icon && <Icon className="size-5 stroke-[1.5]" />}
                     {header.isPlaceholder
                       ? null
                       : flexRender(header.column.columnDef.header, header.getContext())

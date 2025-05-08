@@ -15,4 +15,11 @@ declare module "@tanstack/react-table" {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     custom: FilterFn<any>;
   }
+
+  interface ColumnSort {
+    desc: boolean;
+    id: string;
+    type: ColumnType;
+    icon?: LucideIcon;
+  }
 }

@@ -1,9 +1,11 @@
-import { Column } from "@tanstack/react-table";
+import { Column, Table } from "@tanstack/react-table";
 
 import { LayoutFilterPopover } from "./layout-filter-popover";
+import { LayoutSortPopover } from "./layout-sort-popover";
 
 interface Props<T> {
   columns: Column<T>[];
+  table: Table<T>;
 }
 
 export const Toolbar = <T,>({ ...props }: Props<T>) => {
@@ -14,6 +16,7 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
         
         <div className="flex items-center justify-end gap-px">
           <LayoutFilterPopover {...props} />
+          <LayoutSortPopover {...props} />
         </div>
       </div>
     </section>

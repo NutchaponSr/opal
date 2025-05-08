@@ -23,6 +23,13 @@ export const columnFilterOptions: Record<ColumnType, string[]> = {
   select: ["is", "is not"],        
 };
 
+export const columnSortOptions: Record<ColumnType, string[]> = {
+  text: ["A ➝ Z", "Z ➝ A"],
+  numeric: ["1 ➝ 9", "9 ➝ 1"],
+  date: [],
+  select: [],        
+};
+
 export interface Filter<T> {
   id: number;
   column: Column<T>;

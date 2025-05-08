@@ -1,4 +1,10 @@
-import { Merriweather_Sans } from "next/font/google";
+// import { Merriweather_Sans } from "next/font/google";
+import localFont from 'next/font/local'
+
+const sfPro = localFont({
+  src: '../../../public/fonts/sf-pro-display.woff2',
+  variable: '--font-sf-pro'
+})
 
 import { cn } from "@/lib/utils";
 
@@ -12,9 +18,7 @@ import { MenuBar } from "@/modules/dashboard/components/menu-bar";
 import { SidebarSkeleton } from "@/modules/dashboard/components/ui/sidebar";
 import { SidebarClient } from "@/modules/dashboard/components/sidebar-client";
 
-const font = Merriweather_Sans({
-  subsets: ["latin"],
-})
+const font = sfPro;
 
 interface Props {
   children: React.ReactNode;
