@@ -19,11 +19,15 @@ import { LayoutProvider } from "@/modules/layouts/components/layout-provider";
 import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
 import { compareValues } from "@/modules/layouts/utils";
 
-export const GroupView = () => {
+interface Props {
+  organizationId: string;
+}
+
+export const GroupView = ({ organizationId }: Props) => {
   const trpc = useTRPC();
   const { filterGroup } = useLayoutFilterStore();
 
-  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions());
+  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   const [sorting, setSorting] = useState<SortingState>([]);
 

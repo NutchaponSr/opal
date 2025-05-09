@@ -1,9 +1,4 @@
-import localFont from 'next/font/local'
-
-const sfPro = localFont({
-  src: '../../../public/fonts/sf-pro-display.woff2',
-  variable: '--font-sf-pro'
-});
+import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
 
@@ -17,22 +12,29 @@ import { MenuBar } from "@/modules/dashboard/components/menu-bar";
 import { SidebarSkeleton } from "@/modules/dashboard/components/ui/sidebar";
 import { SidebarClient } from "@/modules/dashboard/components/sidebar-client";
 
-const font = sfPro;
+
+const sfPro = localFont({
+  src: '../../../../public/fonts/sf-pro-display.woff2',
+  variable: '--font-sf-pro'
+});
 
 interface Props {
   children: React.ReactNode;
+  params: Promise<{ organizationId: string }>;
 }
 
-const Layout = async ({ children }: Props) => {
+const Layout = async ({ children, params }: Props) => {
+  const { organizationId } = await params;
+
   const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(trpc.groups.getMany.queryOptions());
+  void queryClient.prefetchQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   return (
-    <div className={cn(font.className, "w-screen h-full relative flex bg-white")}>
+    <div className={cn(sfPro.className, "w-screen h-full relative flex bg-white")}>
       <HydrationBoundary state={dehydrate(queryClient)}>
         <Suspense fallback={<SidebarSkeleton />}>
           <ErrorBoundary fallback={<SidebarSkeleton />}>
-            <SidebarClient /> 
+            <SidebarClient organizationId={organizationId} /> 
           </ErrorBoundary>
         </Suspense>
       </HydrationBoundary>

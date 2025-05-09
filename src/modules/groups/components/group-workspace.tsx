@@ -1,14 +1,31 @@
 "use client";
 
-import { SidebarIcon, SidebarMenuItem, SidebarSub, SidebarSubContent, SidebarSubMenuItem } from "@/modules/dashboard/components/ui/sidebar";
-import { useTRPC } from "@/trpc/client";
-import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
-import { PlusIcon } from "lucide-react";
-import { useState } from "react";
+import { 
+  useMutation, 
+  useQueryClient, 
+  useSuspenseQuery 
+} from "@tanstack/react-query";
 import { toast } from "sonner";
+import { useState } from "react";
+import { PlusIcon } from "lucide-react";
 import { useToggle } from "usehooks-ts";
 
-export const GroupWorkspace = () => {
+import { useTRPC } from "@/trpc/client";
+
+import { 
+  SidebarIcon, 
+  SidebarMenuItem, 
+  SidebarSub, 
+  SidebarSubContent, 
+  SidebarSubMenuItem 
+} from "@/modules/dashboard/components/ui/sidebar";
+import { GroupActions } from "@/modules/groups/components/group-actions";
+
+interface Props {
+  organizationId: string;
+}
+
+export const GroupWorkspace = ({ organizationId }: Props) => {
   const currentYear = new Date().getFullYear();
 
   const trpc = useTRPC();
@@ -18,10 +35,12 @@ export const GroupWorkspace = () => {
   const [toggledYears, setToggledYears] = useState<Record<string, boolean>>({});
   const [toggledGroups, setToggledGroups] = useState<Record<string, boolean>>({});
 
-  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions());
+  const [open, setOpen] = useState<boolean>(false);
+
+  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
   const createGroup = useMutation(trpc.groups.craete.mutationOptions({
     onSuccess: () => {
-      queryClient.invalidateQueries(trpc.groups.getMany.queryOptions());
+      queryClient.invalidateQueries(trpc.groups.getMany.queryOptions({ organizationId }));
       toast.success("Group created");
     }
   }));
@@ -65,9 +84,10 @@ export const GroupWorkspace = () => {
                 icon="solar:calendar-bold-duotone" 
               />
               {year}
+
               <button 
                 onClick={() => {
-                  createGroup.mutate({ year });
+                  createGroup.mutate({ year, organizationId });
                 }}
                 className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-6 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
               >
@@ -86,6 +106,13 @@ export const GroupWorkspace = () => {
                         icon="lucide:file"
                       />
                       {item.name}
+
+                      <GroupActions 
+                        group={item} 
+                        open={open}
+                        onClose={() => setOpen(false)}
+                        onOpen={() => setOpen(true)}
+                      />
                     </SidebarSubMenuItem>
                     <SidebarSubContent isOpen={toggledGroups[item.id]}>
                       <SidebarMenuItem indent={32}>
