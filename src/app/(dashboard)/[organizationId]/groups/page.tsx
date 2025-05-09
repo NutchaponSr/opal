@@ -1,8 +1,17 @@
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+
+import { trpc, getQueryClient } from "@/trpc/server";
+
 import { GroupView } from "@/modules/groups/components/views/group-view";
 
-const Page = () => {
+const Page = async () => {
+  const queryClient = getQueryClient();
+  void queryClient.prefetchQuery(trpc.groups.getMany.queryOptions());
+
   return (
-    <GroupView />
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <GroupView />
+    </HydrationBoundary>
   );
 }
 

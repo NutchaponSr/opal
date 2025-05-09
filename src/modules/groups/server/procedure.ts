@@ -21,6 +21,7 @@ export const groupProcedure = createTRPCRouter({
         data: {
           name: "Untitled",
           year: input.year,
+          icon: "lucide:file",
           createdBy: ctx.user.clerkId,
           updatedBy: ctx.user.clerkId,
         }

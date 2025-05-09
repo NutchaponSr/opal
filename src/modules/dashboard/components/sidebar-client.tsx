@@ -3,8 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import dynamic from "next/dynamic";
-
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect, useState } from "react";
 
@@ -13,26 +11,24 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent, 
-  SidebarFooter, 
   SidebarGroup, 
   SidebarGroupContent, 
   SidebarGroupLabel, 
-  SidebarHeader, 
   SidebarIcon, 
   SidebarMenuItem, 
-  SidebarSkeleton, 
   SidebarSubMenuItem 
 } from "@/modules/dashboard/components/ui/sidebar";
 import { UserButton } from "@/modules/auth/components/user-button";
 import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
 
 import { useSidebarStore } from "@/modules/dashboard/store/use-sidebar-store";
+import { Button } from "@/components/ui/button";
 
 export const SidebarClient = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const { resetWidth, collapse } = useSidebarStore();
-  
+
   const [open, setOpen] = useState<Record<string, boolean>>({
     workspace: true,
   });
@@ -46,15 +42,15 @@ export const SidebarClient = () => {
       resetWidth();
     }
   }, [isMobile, resetWidth, collapse]);
-
+  
   return (  
     <Sidebar {...sidebar}>
-      <SidebarHeader className="min-h-12 max-h-12">
-        <Link href="/" className="flex items-center gap-2 h-full hover:bg-[#00000008] p-1.5 rounded-sm">
-          <Image src="/logo.svg" alt="Logo" width={26} height={26} />
-          <span className="text-lg font-semibold text-primary">Opal</span>
-        </Link>
-      </SidebarHeader>
+      <SidebarContent>
+        {/* TODO: Organization switcher */}
+        <Button variant="item" className="w-full hover:bg-[#00000008]">
+          Organization
+        </Button>
+      </SidebarContent>
       <SidebarContent>
         <SidebarMenuItem>
           <SidebarIcon icon="solar:magnifer-bold-duotone" />
@@ -91,9 +87,9 @@ export const SidebarClient = () => {
           </SidebarGroup>
         </SidebarContent>
       </ScrollArea>
-      <SidebarFooter>
+      <SidebarContent>
         <UserButton />
-      </SidebarFooter>
+      </SidebarContent>
     </Sidebar>
   );
 }
