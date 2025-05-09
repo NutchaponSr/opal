@@ -21,7 +21,7 @@ export const Workspaces = ({ ...props }: Props) => {
       <div className="shrink-0 flex justify-between items-center h-12 ml-2">
         <div className="flex items-center text-xs font-medium text-[#7f7f7f] shrink-0 max-w-full gap-2">
           <div className="flex items-center justify-center">
-            <SquareDashedKanbanIcon className="size-4" />
+            <SquareDashedKanbanIcon className="size-4 stroke-[1.75]" />
           </div>
           <span className="whitespace-nowrap overflow-hidden text-ellipsis">
             Workspace

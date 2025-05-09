@@ -37,7 +37,7 @@ interface Props<T> {
 
 export const SortItem = <T,>({ 
   column, 
-  columns, 
+  columns,
   onSelect,
   onChange,
   onRemove
@@ -60,9 +60,13 @@ export const SortItem = <T,>({
   }
 
   return (
-    <div ref={setNodeRef} style={style} className="flex h-7 items-center rounded-sm border border-border shadow-xs bg-background text-xs w-fit">
+    <div 
+      ref={setNodeRef} 
+      style={style} 
+      className="flex h-7 items-center rounded-sm border border-border shadow-xs bg-background text-xs w-fit"
+    >
       <div {...attributes} {...listeners} className="flex items-center justify-center size-7 cursor-grab">
-        <GripVerticalIcon className="size-3.5" />
+        <GripVerticalIcon className="size-4 stroke-[1.5] fill-primary stroke-primary" />
       </div>
       <Separator orientation="vertical" />
       <Popover>
@@ -72,13 +76,13 @@ export const SortItem = <T,>({
               {column.icon && <column.icon className="size-4" />}             
               {column.id}
             </span>
-            <ChevronDownIcon className="size-4" />
+            <ChevronDownIcon className="size-3" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-48">
+        <PopoverContent className="p-1 w-40">
           <CommandSearch placeholder="Sort by...">
             <SortSelector 
-              data={columns.filter((col) => col.id !== column.id)}
+              data={columns}
               onSelect={onSelect}
             />
           </CommandSearch>
@@ -93,7 +97,7 @@ export const SortItem = <T,>({
               ? columnSortOptions[column.type][0]
               : columnSortOptions[column.type][1]
             }
-            <ChevronDownIcon className="size-4" />
+            <ChevronDownIcon className="size-3" />
           </Button> 
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-auto p-1">

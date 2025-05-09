@@ -50,7 +50,7 @@ const LayoutFilter = <T,>({
   return (
     <div className="flex h-7 items-center rounded-sm border border-border shadow-xs bg-background text-xs w-fit">
       <span className="flex select-none items-center gap-1 whitespace-nowrap px-2 font-medium capitalize">
-        <Icon className="size-4" />              
+        <Icon className="size-4 stroke-[1.5]" />              
         {filter.column.id}
       </span>
       <Separator orientation="vertical" />
@@ -60,14 +60,14 @@ const LayoutFilter = <T,>({
             {filter.operator}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-auto">
+        <PopoverContent className="p-1 w-auto">
           <CommandSearch placeholder="Search...">
             <Command.Group>
               {columnFilterOptions[filter.columnType].map((option, index) => (
                 <Command.Item 
                   key={index}
                   onSelect={() => onUpdate({ ...filter, operator: option })}
-                  className="flex items-center gap-2 px-2 py-1 text-sm text-primary rounded-sm h-7 data-[selected=true]:bg-[#37352f0f] capitalize cursor-pointer"
+                  className="flex items-center gap-2 px-2 py-1 text-sm text-primary rounded-sm h-7 data-[selected=true]:bg-[#37352f0f] cursor-pointer"
                 >
                   {option}
                 </Command.Item>

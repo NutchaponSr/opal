@@ -22,6 +22,7 @@ import { ColumnSelector } from "@/modules/layouts/components/column-selector";
 import { LayoutFilterProvider } from "@/modules/layouts/components/layout-filter-provider";
 
 import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Props<T> {
   data: Column<T>[];
@@ -192,7 +193,7 @@ const FilterGroupFields = <T,>({
               Add filter
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="p-0 w-auto">
+          <PopoverContent className="p-1 w-auto">
             <CommandSearch placeholder="Filter by...">
               <ColumnSelector 
                 data={data}
@@ -250,72 +251,74 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
   return (
     <>
       {hasActiveFilters && (
-        <div className="my-1 flex w-full items-center gap-2">
-            <div className="shrink-0 min-w-16 text-center box-border">
-              <span className="text-sm text-primary px-1">Where</span>
-            </div>
-          {allFilters[0] && (
-            "column" in allFilters[0] ? (
-            <LayoutFilterProvider 
-              filter={allFilters[0]} 
-              onRemove={() => removeFilter(allFilters[0].id)}
-              onUpdate={(filter) => updateFilter(allFilters[0].id, filter)}
-            />
-          ) : (
-            <FilterGroupFields 
-              group={allFilters[0]}
-              data={data}
-              onRemove={removeGroup}
-              onUpdate={(updated) => updateGroup(allFilters[0].id, updated)}
-            />
-          )
-          )}
-        </div>
-      )}
-      {allFilters.length > 1 && (
-        <div className="h-full w-full flex relative gap-2">
-          <div className="w-16 min-w-16 relative">
-            <div className="absolute border-l border-dashed border-border h-full left-1/2" />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button size="xs" variant="primary" className="h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-xs rounded px-2">
-                  {filterGroup.connector}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => setConnector("AND")}>And</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setConnector("OR")}>Or</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+        <ScrollArea className="flex flex-1 flex-col overflow-auto p-1 h-full">
+          <div className="my-1 flex w-full items-center gap-2">
+              <div className="shrink-0 min-w-16 text-center box-border">
+                <span className="text-sm text-primary px-1">Where</span>
+              </div>
+            {allFilters[0] && (
+              "column" in allFilters[0] ? (
+              <LayoutFilterProvider 
+                filter={allFilters[0]} 
+                onRemove={() => removeFilter(allFilters[0].id)}
+                onUpdate={(filter) => updateFilter(allFilters[0].id, filter)}
+              />
+            ) : (
+              <FilterGroupFields 
+                group={allFilters[0]}
+                data={data}
+                onRemove={removeGroup}
+                onUpdate={(updated) => updateGroup(allFilters[0].id, updated)}
+              />
+            )
+            )}
           </div>
+        {allFilters.length > 1 && (
+          <div className="h-full w-full flex relative gap-2">
+            <div className="w-16 min-w-16 relative">
+              <div className="absolute border-l border-dashed border-border h-full left-1/2" />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button size="xs" variant="primary" className="h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-[10px] rounded px-2">
+                    {filterGroup.connector}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => setConnector("AND")}>And</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setConnector("OR")}>Or</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
 
-          <div className="flex flex-col gap-1 w-[calc(100%-64px)]">
-            {allFilters.slice(1).map((filter) => {
-              if ("column" in filter) {
-                return (
-                  <LayoutFilterProvider 
+            <div className="flex flex-col gap-1 w-[calc(100%-64px)]">
+              {allFilters.slice(1).map((filter) => {
+                if ("column" in filter) {
+                  return (
+                    <LayoutFilterProvider 
                     key={filter.id}
                     filter={filter} 
                     onRemove={() => removeFilter(filter.id)}
                     onUpdate={(filter) => updateFilter(filter.id, filter)}
-                  />
-                )
-              } else {
-                return (
-                  <FilterGroupFields 
+                    />
+                  )
+                } else {
+                  return (
+                    <FilterGroupFields 
                     key={filter.id}
                     group={filter}
                     data={data}
                     onRemove={removeGroup}
                     onUpdate={(updated) => updateGroup(filter.id, updated)}
-                  />
-                );
-              }
-            })}
+                    />
+                  );
+                }
+              })}
+            </div>
           </div>
-        </div>
+        )}
+        </ScrollArea>
       )}
-      <div className="flex flex-row items-center gap-0.5 mt-1">
+      <div className="flex flex-row items-center p-1 gap-0.5">
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="sm">
@@ -323,7 +326,7 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
               Add filter
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="p-0 w-auto">
+          <PopoverContent className="p-1 w-auto">
             <CommandSearch placeholder="Filter by...">
               <ColumnSelector 
                 data={data}

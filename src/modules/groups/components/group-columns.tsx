@@ -5,6 +5,7 @@ import { columnFilterOptions, columnIcons } from "@/types/columns";
 import { Group } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { GripVerticalIcon } from "lucide-react";
+import { LucideFile } from "@/components/assets/icons";
 
 export const columns: ColumnDef<Group>[] = [
   {
@@ -42,7 +43,8 @@ export const columns: ColumnDef<Group>[] = [
     header: "Name",
     cell: ({ row }) => (
       <div className="flex items-center gap-2">
-        <Icon icon={row.original.icon ?? "lucide:file"} className="size-4" />
+        {/* <Icon icon={row.original.icon ?? "lucide:file"} className="size-4" /> */}
+        <LucideFile className="size-4 stroke-[1.75]" />
         {row.original.name}
       </div>
     ),

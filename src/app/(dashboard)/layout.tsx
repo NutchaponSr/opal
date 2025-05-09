@@ -1,10 +1,9 @@
-// import { Merriweather_Sans } from "next/font/google";
 import localFont from 'next/font/local'
 
 const sfPro = localFont({
   src: '../../../public/fonts/sf-pro-display.woff2',
   variable: '--font-sf-pro'
-})
+});
 
 import { cn } from "@/lib/utils";
 
@@ -39,7 +38,7 @@ const Layout = async ({ children }: Props) => {
       </HydrationBoundary>
       <div className="order-3 flex flex-col w-full overflow-hidden isolation-auto bg-transparent">
         <MenuBar />
-        <main className="grow-0 shrink flex flex-col bg-white h-full min-h-full w-full pt-3">
+        <main className="grow-0 shrink flex flex-col bg-white h-full min-h-full w-full">
           {children}
         </main>
       </div>

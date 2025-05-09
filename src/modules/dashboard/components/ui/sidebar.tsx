@@ -3,7 +3,7 @@
 import { RefObject } from "react";
 import { Icon } from "@iconify/react";
 import { useMediaQuery } from "usehooks-ts";
-import { ChevronRightIcon, ChevronsLeftIcon } from "lucide-react";
+import { ChevronRightIcon, FileIcon, SidebarIcon as LucideSidebar } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -63,7 +63,7 @@ const Sidebar = ({
           isMobile && "opacity-100"
         )}
       >
-        <ChevronsLeftIcon />
+        <LucideSidebar />
       </Button>
       <div className="flex flex-col h-full relative pointer-events-auto w-full text-[#5f5e5b]">
         {children}
@@ -151,11 +151,14 @@ function SidebarIcon({
         iconVariant({ background: variant }),
         sub && "group-hover/item:opacity-0 opacity-100 group-hover/item:hidden"
       )}>
-        <Icon icon={icon} className={cn(iconVariant({ color: variant }), "size-5")} />
+        {icon === "lucide:file" 
+          ? <FileIcon className="size-5 stroke-[1.5]" />
+          : <Icon icon={icon} className={cn(iconVariant({ color: variant }), "size-5")} />
+        }
       </div>
       {sub && (
         <div onClick={onClick} className="shrink-0 grow-0 rounded-sm size-6 hidden items-center justify-center transition-opacity group-hover/item:opacity-100 opacity-0 group-hover/item:flex hover:bg-[#37352f0f]">
-          <ChevronRightIcon className={cn(iconVariant({ color: "default" }), isOpen ? "rotate-90" : "rotate-0", "size-5 transition duration-300")} />
+          <ChevronRightIcon className={cn(iconVariant({ color: "default" }), isOpen ? "rotate-90" : "rotate-0", "size-5 transition duration-300 stroke-[1.5]")} />
         </div>
       )}
     </>

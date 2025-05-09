@@ -71,7 +71,7 @@ export const GroupWorkspace = () => {
                 }}
                 className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-6 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
               >
-                <PlusIcon className="text-[#91918e] size-5" />
+                <PlusIcon className="text-[#91918e] size-5 stroke-[1.5]" />
               </button>
             </SidebarSubMenuItem>
             <SidebarSubContent isOpen={toggledYears[year]}>

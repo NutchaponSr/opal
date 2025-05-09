@@ -17,7 +17,7 @@ import {
   SortableContext,
   verticalListSortingStrategy
 } from "@dnd-kit/sortable";
-import { restrictToFirstScrollableAncestor } from "@dnd-kit/modifiers"
+import { restrictToFirstScrollableAncestor, restrictToVerticalAxis } from "@dnd-kit/modifiers"
 import { useToggle } from "usehooks-ts";
 import { Column, Table } from "@tanstack/react-table";
 
@@ -82,6 +82,8 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
     }
   }
 
+  const data = columns.filter((col) => !table.getState().sorting.some((s) => s.id === col.id))
+
   return (
     <Popover onOpenChange={() => setTimeout(() => setToggle(true), 100)}>
       <PopoverTrigger asChild>
@@ -97,67 +99,70 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
       <PopoverContent align="end" className="p-0 w-auto">
         {(isAdd && table.getState().sorting.length > 0) ? (
           <>
-          
-            <div className="flex flex-col p-2 gap-1 relative w-80 h-[200px] overflow-auto">
-            <DndContext 
-              sensors={sensors}
-              collisionDetection={closestCenter} 
-              onDragEnd={onDragEnd}
-              modifiers={[restrictToFirstScrollableAncestor]}
-            >
-              <SortableContext 
-                items={table.getState().sorting.map((s) => s.id)} 
-                strategy={verticalListSortingStrategy}
-              >
-                  {table.getState().sorting.map((column) => (
-                    <SortItem 
-                      key={column.id}
-                      column={column}
-                      columns={columns}
-                      onSelect={(col) => {
-                        table.setSorting((currentSorting) => 
-                          currentSorting.map((item) => 
-                            item.id === column.id
-                              ? {
-                                id: col.id,
-                                icon: col.columnDef.meta?.icon,
-                                type: col.columnDef.meta?.variant ?? "text",
-                                desc: item.desc,
-                              } : item
-                          )
-                        )
-                      }}
-                      onChange={() => 
-                        table.setSorting((prev) => prev.map((item) => 
-                          item.id === column.id ? { ...item, desc: !item.desc } : item
+            <div>
+              <div className="flex flex-col p-1 gap-1 overflow-auto">
+                <DndContext 
+                  sensors={sensors}
+                  collisionDetection={closestCenter} 
+                  onDragEnd={onDragEnd}
+                  modifiers={[restrictToFirstScrollableAncestor, restrictToVerticalAxis]}
+                >
+                  <SortableContext 
+                    items={table.getState().sorting.map((s) => s.id)} 
+                    strategy={verticalListSortingStrategy}
+                  >
+                      {table.getState().sorting.map((column) => (
+                        <SortItem 
+                          key={column.id}
+                          column={column}
+                          columns={data}
+                          onSelect={(col) => {
+                            table.setSorting((currentSorting) => 
+                              currentSorting.map((item) => 
+                                item.id === column.id
+                                  ? {
+                                    id: col.id,
+                                    icon: col.columnDef.meta?.icon,
+                                    type: col.columnDef.meta?.variant ?? "text",
+                                    desc: item.desc,
+                                  } : item
+                              )
+                            )
+                          }}
+                          onChange={() => 
+                            table.setSorting((prev) => prev.map((item) => 
+                              item.id === column.id ? { ...item, desc: !item.desc } : item
+                          ))}
+                          onRemove={() => table.setSorting((prev) => prev.filter((item) => item.id !== column.id))}
+                        />
                       ))}
-                      onRemove={() => table.setSorting((prev) => prev.filter((item) => item.id !== column.id))}
-                    />
-                  ))}
-              </SortableContext>
-            </DndContext>
-            </div>
-            <Separator orientation="horizontal" />
-            <div className="flex flex-col p-2">
-              <Button variant="item" size="sm" onClick={toggle}>
-                <PlusIcon />
-                Add sort
-              </Button>
+                  </SortableContext>
+                </DndContext>
+              </div>
+              <Separator orientation="horizontal" />
+              <div className="flex flex-col p-1">
+                <Button variant="item" size="sm" onClick={toggle}>
+                  <PlusIcon />
+                  Add sort
+                </Button>
+              </div>
             </div>
           </>
         ) : (
           <>
-            <CommandSearch placeholder="Sort by...">
-              <SortSelector 
-                data={columns.filter((col) => !table.getState().sorting.some((s) => s.id === col.id))}
-                onSelect={onSelect}
-              />
-            </CommandSearch>
+            <div className="flex flex-col p-1">
+              <CommandSearch placeholder="Sort by...">
+                <SortSelector 
+                  data={data}
+                  onSelect={onSelect}
+                />
+              </CommandSearch>
+            </div>
 
             {table.getState().sorting.length > 0 && (
               <>
                 <Separator />
-                <div className="flex flex-col p-2">
+                <div className="flex flex-col p-1">
                   <Button variant="item" size="sm" onClick={toggle}>
                     <ArrowLeftIcon />
                     Go back

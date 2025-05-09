@@ -7,11 +7,12 @@ import {
   PopoverTrigger
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { FilterFields } from "@/modules/layouts/components/filter-fields";
 
 import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 interface Props<T> {
   columns: Column<T>[];
@@ -28,7 +29,7 @@ export const LayoutFilterPopover = <T,>({ columns }: Props<T>) => {
         <Button
           size="sm"
           variant="ghost"
-          className="text-[#9B9A97] hover:text-[#9B9A97]"
+          className={cn("text-[#9B9A97] hover:text-[#9B9A97]", hasActiveFilters && "text-marine hover:text-marine")}
         >
           <FilterIcon />
           Filter
@@ -38,17 +39,18 @@ export const LayoutFilterPopover = <T,>({ columns }: Props<T>) => {
         className="p-0 w-auto"
         align="end"
       >
-        <div className="px-2 pt-2 text-xs">
-          {hasActiveFilters
-            ? "In the view, show records"
-            : "No filter conditions are applied"
-          }
+        <div className="px-1 py-0.5 min-h-6">
+          <span className="mx-1 text-xs text-primary">
+            {hasActiveFilters
+              ? "In the view, show records"
+              : "No filter conditions are applied"
+            }
+          </span>
         </div>
-        <ScrollArea className="flex flex-1 flex-col overflow-auto p-2 pt-0 h-full">
-          <FilterFields 
-            data={columns}
-          />
-        </ScrollArea>
+        <Separator orientation="horizontal" />
+        <FilterFields 
+          data={columns}
+        />
       </PopoverContent>
     </Popover>
   );
