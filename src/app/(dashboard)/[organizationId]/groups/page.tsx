@@ -4,13 +4,19 @@ import { trpc, getQueryClient } from "@/trpc/server";
 
 import { GroupView } from "@/modules/groups/components/views/group-view";
 
-const Page = async () => {
+interface Props {
+  params: Promise<{ organizationId: string; }>;
+}
+
+const Page = async ({ params }: Props) => {
+  const { organizationId } = await params;
+
   const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(trpc.groups.getMany.queryOptions());
+  await queryClient.prefetchQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <GroupView />
+      <GroupView organizationId={organizationId} />
     </HydrationBoundary>
   );
 }

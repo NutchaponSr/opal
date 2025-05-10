@@ -30,7 +30,6 @@ export const organizationRouter = createTRPCRouter({
           members: {
             create: {
               userId: ctx.user.clerkId,
-              role: "admin",
             },
           },
         },

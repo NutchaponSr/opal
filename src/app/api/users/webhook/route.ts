@@ -43,11 +43,13 @@ export async function POST(req: Request) {
   if (eventType === "user.created") {
     const { data } = evt;
 
+    console.log(data);
+
     await db.user.create({
       data: {
         clerkId: data.id,
         imageUrl: data.image_url,
-        name: `${data.first_name} ${data.last_name}`,
+        name: `${data.first_name} ${data.last_name ? data.last_name : ""}`,
         email: data.email_addresses[0].email_address,
       }
     });
@@ -62,7 +64,7 @@ export async function POST(req: Request) {
       },
       data: {
         imageUrl: data.image_url,
-        name: `${data.first_name} ${data.last_name}`,
+        name: `${data.first_name} ${data.last_name ? data.last_name : ""}`,
       },
     });
   }
