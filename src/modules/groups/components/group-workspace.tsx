@@ -19,7 +19,8 @@ import {
   SidebarSubContent, 
   SidebarSubMenuItem 
 } from "@/modules/dashboard/components/ui/sidebar";
-import { GroupActions } from "@/modules/groups/components/group-actions";
+
+import { GroupItem } from "@/modules/groups/components/group-item";
 
 interface Props {
   organizationId: string;
@@ -33,9 +34,6 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
 
   const [isToggled, toggle] = useToggle(false);
   const [toggledYears, setToggledYears] = useState<Record<string, boolean>>({});
-  const [toggledGroups, setToggledGroups] = useState<Record<string, boolean>>({});
-
-  const [open, setOpen] = useState<boolean>(false);
 
   const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
   const createGroup = useMutation(trpc.groups.craete.mutationOptions({
@@ -51,13 +49,6 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
     setToggledYears((prev) => ({
       ...prev,
       [year]: !prev[year],
-    }));
-  };
-
-  const toggleGroup = (groupId: string) => {
-    setToggledGroups((prev) => ({
-      ...prev,
-      [groupId]: !prev[groupId],
     }));
   };
 
@@ -96,35 +87,8 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
             </SidebarSubMenuItem>
             <SidebarSubContent isOpen={toggledYears[year]}>
               {data?.filter((f) => f.year === year)
-                .map((item) => (
-                  <SidebarSub key={item.id}>
-                    <SidebarSubMenuItem indent={24}>
-                      <SidebarIcon 
-                        sub
-                        isOpen={toggledGroups[item.id]}
-                        onClick={() => toggleGroup(item.id)}
-                        icon="lucide:file"
-                      />
-                      {item.name}
-
-                      <GroupActions 
-                        group={item} 
-                        open={open}
-                        onClose={() => setOpen(false)}
-                        onOpen={() => setOpen(true)}
-                      />
-                    </SidebarSubMenuItem>
-                    <SidebarSubContent isOpen={toggledGroups[item.id]}>
-                      <SidebarMenuItem indent={32}>
-                        <SidebarIcon icon="radix-icons:dot-filled" />
-                        Competency
-                      </SidebarMenuItem>
-                      <SidebarMenuItem indent={32}>
-                        <SidebarIcon icon="radix-icons:dot-filled" />
-                        Employee
-                      </SidebarMenuItem>
-                    </SidebarSubContent>
-                  </SidebarSub>
+                .map((group) => (
+                  <GroupItem key={group.id} group={group} />
                 ))
               }
             </SidebarSubContent>

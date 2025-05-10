@@ -74,7 +74,7 @@ model Group {
   name String
   year String
   cover String?
-  icon String?
+  icon String
   inTrash Boolean @default(false)
 
   createdAt DateTime @default(now())
@@ -82,8 +82,8 @@ model Group {
   updatedBy String
   updatedAt DateTime @updatedAt()
 
-  origanizationId String? 
-  origanization Organization? @relation(fields: [origanizationId], references: [id], onDelete: Cascade)
+  organizationId String? 
+  organization Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
-  @@index([origanizationId])
+  @@index([organizationId])
 }

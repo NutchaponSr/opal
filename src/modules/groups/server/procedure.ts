@@ -16,7 +16,7 @@ export const groupProcedure = createTRPCRouter({
       const groups = await db.group.findMany({
         where: {
           inTrash: false,
-          origanizationId: input.organizationId,
+          organizationId: input.organizationId,
         },
       });
 
@@ -56,7 +56,7 @@ export const groupProcedure = createTRPCRouter({
           icon: "lucide:file",
           createdBy: ctx.user.clerkId,
           updatedBy: ctx.user.clerkId,
-          origanizationId: input.organizationId,
+          organizationId: input.organizationId,
         }
       });
 
