@@ -15,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 import { TabMenus } from "@/components/tab-menus";
+import { emojiCategories } from "@/constants/emojis";
+import { splitIntoRows } from "@/lib/utils";
 
 interface Props {
   children: React.ReactNode;
@@ -51,27 +53,33 @@ export const EmojiPicker = ({ children } : Props) => {
           </div>
           <TabsContent value="emoji">
             <div className="flex flex-col w-full h-full max-h-[calc(208px+45px)]">
-              <div className="bg-amber-400 h-full flex-1">
+              <div className="h-full flex-1">
                 <div className="w-full grow max-h-52 overflow-x-hidden overflow-y-auto custom-scrollbar pb-1.5">
-                  {Array.from({ length: 2 }).map((_, i) => (
-                    <div key={i} className="flex flex-col items-stretch">
+                  {emojiCategories.map((category, i) => {
+                    const rows = splitIntoRows(category.emojis, 10);
+
+                    return (
+                    <div key={i} className="flex flex-col gap-0.5 items-stretch">
                       <div className="flex p-2 text-[#37352fa6] text-xs">
                         <p className="self-center whitespace-nowrap overflow-hidden text-ellipsis">
-                          {i}
+                          {category.label}
                         </p>
                       </div>
-                      <div className="flex flex-row justify-start gap-[6.5px] pl-2">
-                        {Array.from({ length: 9 }).map((_, i) => (
-                          <button
-                            key={i}
-                            className="transition flex items-center justify-center size-7 rounded-sm hover:bg-[#37352f0f] shrink-0 text-2xl"
-                          >
-                            <div className="size-4 relative overflow-hidden inline-flex rounded-full bg-yellow-400 after:rounded-full after:bg-linear-[at_50%_75%] after:from-[#fff3] after:to-[#0000] after:border after:border-[#000]/80 after:absolute after:inset-0 after:shadow-[inset_0_-2px_3px_0_rgba(0,0,0),inset_0_1px_2px_0_rgba(255,255,255)] after:mix-blend-overlay" />
-                          </button>
+                        {rows.map((emojis, i) => (
+                          <div key={i} className="flex flex-row gap-[2.7px] px-2">
+                          {emojis.map((emoji) => (
+                            <button
+                              key={emoji.slug}
+                              className="transition flex items-center justify-center size-7 rounded-sm hover:bg-[#37352f0f] shrink-0 text-2xl"
+                            >
+                              <Icon icon={emoji.icon} className="size-[22px]" />
+                            </button>
+                          ))}
+                          </div>
                         ))}
-                      </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
               </div>
@@ -81,6 +89,9 @@ export const EmojiPicker = ({ children } : Props) => {
                 </Button>
                 <Button variant="ghost" size="smIcon">
                   <Icon icon="solar:smile-circle-outline" />
+                </Button>
+                <Button variant="ghost" size="smIcon">
+                  <Icon icon="solar:user-outline" />
                 </Button>
                 <Button variant="ghost" size="smIcon">
                   <Icon icon="solar:cat-outline" />

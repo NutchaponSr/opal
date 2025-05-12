@@ -2,6 +2,7 @@ import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 import { timesOfDay } from "@/types/date";
+import { Emoji } from "@/types/emoji";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -30,4 +31,14 @@ export function generateOrganizationId() {
   const timestamp = Date.now().toString(36);
   const randomPart = Math.random().toString(36).substring(2, 8);
   return `org_${timestamp}_${randomPart}`;
+}
+
+export function splitIntoRows(array: Emoji[], itemPerRow: number) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i += itemPerRow) {
+    result.push(array.slice(i, i + itemPerRow));
+  }
+
+  return result;
 }
