@@ -4617,6 +4617,6677 @@ export const emojiCategories: Category[] = [
         name: "guide dog",
         icon: "twemoji:guide-dog",
       },
+      {
+        slug: "service-dog",
+        name: "service dog",
+        icon: "twemoji:service-dog",
+      },
+      {
+        slug: "poodle",
+        name: "poodle",
+        icon: "twemoji:poodle",
+      },
+      {
+        slug: "wolf",
+        name: "wolf",
+        icon: "twemoji:wolf",
+      },
+      {
+        slug: "fox",
+        name: "fox",
+        icon: "twemoji:fox",
+      },
+      {
+        slug: "raccoon",
+        name: "raccoon",
+        icon: "twemoji:raccoon",
+      },
+      {
+        slug: "cat-face",
+        name: "cat face",
+        icon: "twemoji:cat-face",
+      },
+      {
+        slug: "cat",
+        name: "cat",
+        icon: "twemoji:cat",
+      },
+      {
+        slug: "black-cat",
+        name: "black cat",
+        icon: "twemoji:black-cat",
+      },
+      {
+        slug: "lion",
+        name: "lion",
+        icon: "twemoji:lion",
+      },
+      {
+        slug: "tiger-face",
+        name: "tiger face",
+        icon: "twemoji:tiger-face",
+      },
+      {
+        slug: "tiger",
+        name: "tiger",
+        icon: "twemoji:tiger",
+      },
+      {
+        slug: "leopard",
+        name: "leopard",
+        icon: "twemoji:leopard",
+      },
+      {
+        slug: "horse-face",
+        name: "horse face",
+        icon: "twemoji:horse-face",
+      },
+      {
+        slug: "horse",
+        name: "horse",
+        icon: "twemoji:horse",
+      },
+      {
+        slug: "unicorn",
+        name: "unicorn",
+        icon: "twemoji:unicorn",
+      },
+      {
+        slug: "zebra",
+        name: "zebra",
+        icon: "twemoji:zebra",
+      },
+      {
+        slug: "deer",
+        name: "deer",
+        icon: "twemoji:deer",
+      },
+      {
+        slug: "bison",
+        name: "bison",
+        icon: "twemoji:bison",
+      },
+      {
+        slug: "cow-face",
+        name: "cow face",
+        icon: "twemoji:cow-face",
+      },
+      {
+        slug: "ox",
+        name: "ox",
+        icon: "twemoji:ox",
+      },
+      {
+        slug: "water-buffalo",
+        name: "water buffalo",
+        icon: "twemoji:water-buffalo",
+      },
+      {
+        slug: "cow",
+        name: "cow",
+        icon: "twemoji:cow",
+      },
+      {
+        slug: "pig-face",
+        name: "pig face",
+        icon: "twemoji:pig-face",
+      },
+      {
+        slug: "pig",
+        name: "pig",
+        icon: "twemoji:pig",
+      },
+      {
+        slug: "boar",
+        name: "boar",
+        icon: "twemoji:boar",
+      },
+      {
+        slug: "pig-nose",
+        name: "pig nose",
+        icon: "twemoji:pig-nose",
+      },
+      {
+        slug: "ram",
+        name: "ram",
+        icon: "twemoji:ram",
+      },
+      {
+        slug: "ewe",
+        name: "ewe",
+        icon: "twemoji:ewe",
+      },
+      {
+        slug: "goat",
+        name: "goat",
+        icon: "twemoji:goat",
+      },
+      {
+        slug: "camel",
+        name: "camel",
+        icon: "twemoji:camel",
+      },
+      {
+        slug: "two-hump-camel",
+        name: "two hump camel",
+        icon: "twemoji:two-hump-camel",
+      },
+      {
+        slug: "llama",
+        name: "llama",
+        icon: "twemoji:llama",
+      },
+      {
+        slug: "giraffe",
+        name: "giraffe",
+        icon: "twemoji:giraffe",
+      },
+      {
+        slug: "elephant",
+        name: "elephant",
+        icon: "twemoji:elephant",
+      },
+      {
+        slug: "mammoth",
+        name: "mammoth",
+        icon: "twemoji:mammoth",
+      },
+      {
+        slug: "rhinoceros",
+        name: "rhinoceros",
+        icon: "twemoji:rhinoceros",
+      },
+      {
+        slug: "hippopotamus",
+        name: "hippopotamus",
+        icon: "twemoji:hippopotamus",
+      },
+      {
+        slug: "mouse-face",
+        name: "mouse face",
+        icon: "twemoji:mouse-face",
+      },
+      {
+        slug: "mouse",
+        name: "mouse",
+        icon: "twemoji:mouse",
+      },
+      {
+        slug: "rat",
+        name: "rat",
+        icon: "twemoji:rat",
+      },
+      {
+        slug: "hamster",
+        name: "hamster",
+        icon: "twemoji:hamster",
+      },
+      {
+        slug: "rabbit-face",
+        name: "rabbit face",
+        icon: "twemoji:rabbit-face",
+      },
+      {
+        slug: "rabbit",
+        name: "rabbit",
+        icon: "twemoji:rabbit",
+      },
+      {
+        slug: "chipmunk",
+        name: "chipmunk",
+        icon: "twemoji:chipmunk",
+      },
+      {
+        slug: "beaver",
+        name: "beaver",
+        icon: "twemoji:beaver",
+      },
+      {
+        slug: "hedgehog",
+        name: "hedgehog",
+        icon: "twemoji:hedgehog",
+      },
+      {
+        slug: "bat",
+        name: "bat",
+        icon: "twemoji:bat",
+      },
+      {
+        slug: "bear",
+        name: "bear",
+        icon: "twemoji:bear",
+      },
+      {
+        slug: "polar-bear",
+        name: "polar bear",
+        icon: "twemoji:polar-bear",
+      },
+      {
+        slug: "koala",
+        name: "koala",
+        icon: "twemoji:koala",
+      },
+      {
+        slug: "panda",
+        name: "panda",
+        icon: "twemoji:panda",
+      },
+      {
+        slug: "sloth",
+        name: "sloth",
+        icon: "twemoji:sloth",
+      },
+      {
+        slug: "otter",
+        name: "otter",
+        icon: "twemoji:otter",
+      },
+      {
+        slug: "skunk",
+        name: "skunk",
+        icon: "twemoji:skunk",
+      },
+      {
+        slug: "kangaroo",
+        name: "kangaroo",
+        icon: "twemoji:kangaroo",
+      },
+      {
+        slug: "badger",
+        name: "badger",
+        icon: "twemoji:badger",
+      },
+      {
+        slug: "paw-prints",
+        name: "paw-prints",
+        icon: "twemoji:paw-prints",
+      },
+      {
+        slug: "turkey",
+        name: "turkey",
+        icon: "twemoji:turkey",
+      },
+      {
+        slug: "chicken",
+        name: "chicken",
+        icon: "twemoji:chicken",
+      },
+      {
+        slug: "rooster",
+        name: "rooster",
+        icon: "twemoji:rooster",
+      },
+      {
+        slug: "hatching-chick",
+        name: "hatching chick",
+        icon: "twemoji:hatching-chick",
+      },
+      {
+        slug: "baby-chick",
+        name: "baby-chick",
+        icon: "twemoji:baby-chick",
+      },
+      {
+        slug: "front-facing-baby-chick",
+        name: "front-facing-baby-chick",
+        icon: "twemoji:front-facing-baby-chick",
+      },
+      {
+        slug: "bird",
+        name: "bird",
+        icon: "twemoji:bird",
+      },
+      {
+        slug: "penguin",
+        name: "penguin",
+        icon: "twemoji:penguin",
+      },
+      {
+        slug: "dove",
+        name: "dove",
+        icon: "twemoji:dove",
+      },
+      {
+        slug: "eagle",
+        name: "eagle",
+        icon: "twemoji:eagle",
+      },
+      {
+        slug: "duck",
+        name: "duck",
+        icon: "twemoji:duck",
+      },
+      {
+        slug: "swan",
+        name: "swan",
+        icon: "twemoji:swan",
+      },
+      {
+        slug: "owl",
+        name: "owl",
+        icon: "twemoji:owl",
+      },
+      {
+        slug: "dodo",
+        name: "dodo",
+        icon: "twemoji:dodo",
+      },
+      {
+        slug: "feather",
+        name: "feather",
+        icon: "twemoji:feather",
+      },
+      {
+        slug: "flamingo",
+        name: "flamingo",
+        icon: "twemoji:flamingo",
+      },
+      {
+        slug: "peacock",
+        name: "peacock",
+        icon: "twemoji:peacock",
+      },
+      {
+        slug: "parrot",
+        name: "parrot",
+        icon: "twemoji:parrot",
+      },
+      {
+        slug: "frog",
+        name: "frog",
+        icon: "twemoji:frog",
+      },
+      {
+        slug: "crocodile",
+        name: "crocodile",
+        icon: "twemoji:crocodile",
+      },
+      {
+        slug: "turtle",
+        name: "turtle",
+        icon: "twemoji:turtle",
+      },
+      {
+        slug: "lizard",
+        name: "lizard",
+        icon: "twemoji:lizard",
+      },
+      {
+        slug: "snake",
+        name: "snake",
+        icon: "twemoji:snake",
+      },
+      {
+        slug: "dragon-face",
+        name: "dragon face",
+        icon: "twemoji:dragon-face",
+      },
+      {
+        slug: "dragon",
+        name: "dragon",
+        icon: "twemoji:dragon",
+      },
+      {
+        slug: "sauropod",
+        name: "sauropod",
+        icon: "twemoji:sauropod",
+      },
+      {
+        slug: "t-rex",
+        name: "t rex",
+        icon: "twemoji:t-rex",
+      },
+      {
+        slug: "spouting-whale",
+        name: "spouting whale",
+        icon: "twemoji:spouting-whale",
+      },
+      {
+        slug: "whale",
+        name: "whale",
+        icon: "twemoji:whale",
+      },
+      {
+        slug: "dolphin",
+        name: "dolphin",
+        icon: "twemoji:dolphin",
+      },
+      {
+        slug: "seal",
+        name: "seal",
+        icon: "twemoji:seal",
+      },
+      {
+        slug: "fish",
+        name: "fish",
+        icon: "twemoji:fish",
+      },
+      {
+        slug: "tropical-fish",
+        name: "tropical fish",
+        icon: "twemoji:tropical-fish",
+      },
+      {
+        slug: "blowfish",
+        name: "blowfish",
+        icon: "twemoji:blowfish",
+      },
+      {
+        slug: "shark",
+        name: "shark",
+        icon: "twemoji:shark",
+      },
+      {
+        slug: "octopus",
+        name: "octopus",
+        icon: "twemoji:octopus",
+      },
+      {
+        slug: "spiral-shell",
+        name: "spiral shell",
+        icon: "twemoji:spiral-shell",
+      },
+      {
+        slug: "coral",
+        name: "coral",
+        icon: "twemoji:coral",
+      },
+      {
+        slug: "snail",
+        name: "snail",
+        icon: "twemoji:snail",
+      },
+      {
+        slug: "butterfly",
+        name: "butterfly",
+        icon: "twemoji:butterfly",
+      },
+      {
+        slug: "bug",
+        name: "bug",
+        icon: "twemoji:bug",
+      },
+      {
+        slug: "ant",
+        name: "ant",
+        icon: "twemoji:ant",
+      },
+      {
+        slug: "honeybee",
+        name: "honeybee",
+        icon: "twemoji:honeybee",
+      },
+      {
+        slug: "beetle",
+        name: "beetle",
+        icon: "twemoji:beetle",
+      },
+      {
+        slug: "lady-beetle",
+        name: "lady beetle",
+        icon: "twemoji:lady-beetle",
+      },
+      {
+        slug: "cricket",
+        name: "cricket",
+        icon: "twemoji:cricket",
+      },
+      {
+        slug: "cockroach",
+        name: "cockroach",
+        icon: "twemoji:cockroach",
+      },
+      {
+        slug: "spider",
+        name: "spider",
+        icon: "twemoji:spider",
+      },
+      {
+        slug: "spider-web",
+        name: "spider web",
+        icon: "twemoji:spider-web",
+      },
+      {
+        slug: "scorpion",
+        name: "scorpion",
+        icon: "twemoji:scorpion",
+      },
+      {
+        slug: "mosquito",
+        name: "mosquito",
+        icon: "twemoji:mosquito",
+      },
+      {
+        slug: "fly",
+        name: "fly",
+        icon: "twemoji:fly",
+      },
+      {
+        slug: "worm",
+        name: "worm",
+        icon: "twemoji:worm",
+      },
+      {
+        slug: "microbe",
+        name: "microbe",
+        icon: "twemoji:microbe",
+      },
+      {
+        slug: "bouquet",
+        name: "bouquet",
+        icon: "twemoji:bouquet",
+      },
+      {
+        slug: "cherry-blossom",
+        name: "cherry blossom",
+        icon: "twemoji:cherry-blossom",
+      },
+      {
+        slug: "white-flower",
+        name: "white flower",
+        icon: "twemoji:white-flower",
+      },
+      {
+        slug: "lotus",
+        name: "lotus",
+        icon: "twemoji:lotus",
+      },
+      {
+        slug: "rosette",
+        name: "rosette",
+        icon: "twemoji:rosette",
+      },
+      {
+        slug: "rose",
+        name: "rose",
+        icon: "twemoji:rose",
+      },
+      {
+        slug: "wilted-flower",
+        name: "wilted flower",
+        icon: "twemoji:wilted-flower",
+      },
+      {
+        slug: "hibiscus",
+        name: "hibiscus",
+        icon: "twemoji:hibiscus",
+      },
+      {
+        slug: "sunflower",
+        name: "sunflower",
+        icon: "twemoji:sunflower",
+      },
+      {
+        slug: "blossom",
+        name: "blossom",
+        icon: "twemoji:blossom",
+      },
+      {
+        slug: "tulip",
+        name: "tulip",
+        icon: "twemoji:tulip",
+      },
+      {
+        slug: "seedling",
+        name: "seedling",
+        icon: "twemoji:seedling",
+      },
+      {
+        slug: "potted-plant",
+        name: "potted plant",
+        icon: "twemoji:potted-plant",
+      },
+      {
+        slug: "evergreen-tree",
+        name: "evergreen tree",
+        icon: "twemoji:evergreen-tree",
+      },
+      {
+        slug: "deciduous-tree",
+        name: "deciduous tree",
+        icon: "twemoji:deciduous-tree",
+      },
+      {
+        slug: "palm-tree",
+        name: "palm tree",
+        icon: "twemoji:palm-tree",
+      },
+      {
+        slug: "cactus",
+        name: "cactus",
+        icon: "twemoji:cactus",
+      },
+      {
+        slug: "sheaf-of-rice",
+        name: "sheaf of rice",
+        icon: "twemoji:sheaf-of-rice",
+      },
+      {
+        slug: "herb",
+        name: "herb",
+        icon: "twemoji:herb",
+      },
+      {
+        slug: "shamrock",
+        name: "shamrock",
+        icon: "twemoji:shamrock",
+      },
+      {
+        slug: "four-leaf-clover",
+        name: "four leaf clover",
+        icon: "twemoji:four-leaf-clover",
+      },
+      {
+        slug: "maple-leaf",
+        name: "maple leaf",
+        icon: "twemoji:maple-leaf",
+      },
+      {
+        slug: "fallen-leaf",
+        name: "fallen leaf",
+        icon: "twemoji:fallen-leaf",
+      },
+      {
+        slug: "leaf-fluttering-in-wind",
+        name: "leaf fluttering in wind",
+        icon: "twemoji:leaf-fluttering-in-wind",
+      },
+      {
+        slug: "empty-nest",
+        name: "empty nest",
+        icon: "twemoji:empty-nest",
+      },
+      {
+        slug: "nest-with-eggs",
+        name: "nest with eggs",
+        icon: "twemoji:nest-with-eggs",
+      },
+    ]
+  },
+  {
+    label: "Food and drink",
+    icon: "hugeicons:cheese-cake-01",
+    emojis: [
+      {
+        slug: "grapes",
+        name: "grapes",
+        icon: "twemoji:grapes",
+      },
+      {
+        slug: "melon",
+        name: "melon",
+        icon: "twemoji:melon",
+      },
+      {
+        slug: "watermelon",
+        name: "watermelon",
+        icon: "twemoji:watermelon",
+      },
+      {
+        slug: "tangerine",
+        name: "tangerine",
+        icon: "twemoji:tangerine",
+      },
+      {
+        slug: "lemon",
+        name: "lemon",
+        icon: "twemoji:lemon",
+      },
+      {
+        slug: "banana",
+        name: "banana",
+        icon: "twemoji:banana",
+      },
+      {
+        slug: "pineapple",
+        name: "pineapple",
+        icon: "twemoji:pineapple",
+      },
+      {
+        slug: "mango",
+        name: "mango",
+        icon: "twemoji:mango",
+      },
+      {
+        slug: "red-apple",
+        name: "red apple",
+        icon: "twemoji:red-apple",
+      },
+      {
+        slug: "green-apple",
+        name: "green apple",
+        icon: "twemoji:green-apple",
+      },
+      {
+        slug: "pear",
+        name: "pear",
+        icon: "twemoji:pear",
+      },
+      {
+        slug: "peach",
+        name: "peach",
+        icon: "twemoji:peach",
+      },
+      {
+        slug: "cherries",
+        name: "cherries",
+        icon: "twemoji:cherries",
+      },
+      {
+        slug: "strawberry",
+        name: "strawberry",
+        icon: "twemoji:strawberry",
+      },
+      {
+        slug: "blueberries",
+        name: "blueberries",
+        icon: "twemoji:blueberries",
+      },
+      {
+        slug: "kiwi-fruit",
+        name: "kiwi fruit",
+        icon: "twemoji:kiwi-fruit",
+      },
+      {
+        slug: "eggplant",
+        name: "eggplant",
+        icon: "twemoji:eggplant",
+      },
+      {
+        slug: "potato",
+        name: "potato",
+        icon: "twemoji:potato",
+      },
+      {
+        slug: "carrot",
+        name: "carrot",
+        icon: "twemoji:carrot",
+      },
+      {
+        slug: "ear-of-corn",
+        name: "ear of corn",
+        icon: "twemoji:ear-of-corn",
+      },
+      {
+        slug: "hot-pepper",
+        name: "hot pepper",
+        icon: "twemoji:hot-pepper",
+      },
+      {
+        slug: "bell-pepper",
+        name: "bell pepper",
+        icon: "twemoji:bell-pepper",
+      },
+      {
+        slug: "cucumber",
+        name: "cucumber",
+        icon: "twemoji:cucumber",
+      },
+      {
+        slug: "leafy-green",
+        name: "leafy green",
+        icon: "twemoji:leafy-green",
+      },
+      {
+        slug: "broccoli",
+        name: "broccoli",
+        icon: "twemoji:broccoli",
+      },
+      {
+        slug: "garlic",
+        name: "garlic",
+        icon: "twemoji:garlic",
+      },
+      {
+        slug: "onion",
+        name: "onion",
+        icon: "twemoji:onion",
+      },
+      {
+        slug: "mushroom",
+        name: "mushroom",
+        icon: "twemoji:mushroom",
+      },
+      {
+        slug: "peanuts",
+        name: "peanuts",
+        icon: "twemoji:peanuts",
+      },
+      {
+        slug: "beans",
+        name: "beans",
+        icon: "twemoji:beans",
+      },
+      {
+        slug: "chestnut",
+        name: "chestnut",
+        icon: "twemoji:chestnut",
+      },
+      {
+        slug: "bread",
+        name: "bread",
+        icon: "twemoji:bread",
+      },
+      {
+        slug: "croissant",
+        name: "croissant",
+        icon: "twemoji:croissant",
+      },
+      {
+        slug: "baguette-bread",
+        name: "baguette bread",
+        icon: "twemoji:baguette-bread",
+      },
+      {
+        slug: "flatbread",
+        name: "flatbread",
+        icon: "twemoji:flatbread",
+      },
+      {
+        slug: "pretzel",
+        name: "pretzel",
+        icon: "twemoji:pretzel",
+      },
+      {
+        slug: "bagel",
+        name: "bagel",
+        icon: "twemoji:bagel",
+      },
+      {
+        slug: "pancakes",
+        name: "pancakes",
+        icon: "twemoji:pancakes",
+      },
+      {
+        slug: "waffle",
+        name: "waffle",
+        icon: "twemoji:waffle",
+      },
+      {
+        slug: "cheese-wedge",
+        name: "cheese wedge",
+        icon: "twemoji:cheese-wedge",
+      },
+      {
+        slug: "meat-on-bone",
+        name: "meat on bone",
+        icon: "twemoji:meat-on-bone",
+      },
+      {
+        slug: "poultry-leg",
+        name: "poultry leg",
+        icon: "twemoji:poultry-leg",
+      },
+      {
+        slug: "cut-of-meat",
+        name: "cut of meat",
+        icon: "twemoji:cut-of-meat",
+      },
+      {
+        slug: "bacon",
+        name: "bacon",
+        icon: "twemoji:bacon",
+      },
+      {
+        slug: "hamburger",
+        name: "hamburger",
+        icon: "twemoji:hamburger",
+      },
+      {
+        slug: "french-fries",
+        name: "french fries",
+        icon: "twemoji:french-fries",
+      },
+      {
+        slug: "pizza",
+        name: "pizza",
+        icon: "twemoji:pizza",
+      },
+      {
+        slug: "hot-dog",
+        name: "hot dog",
+        icon: "twemoji:hot-dog",
+      },
+      {
+        slug: "sandwich",
+        name: "sandwich",
+        icon: "twemoji:sandwich",
+      },
+      {
+        slug: "taco",
+        name: "taco",
+        icon: "twemoji:taco",
+      },
+      {
+        slug: "burrito",
+        name: "burrito",
+        icon: "twemoji:burrito",
+      },
+      {
+        slug: "tamale",
+        name: "tamale",
+        icon: "twemoji:tamale",
+      },
+      {
+        slug: "stuffed-flatbread",
+        name: "stuffed flatbread",
+        icon: "twemoji:stuffed-flatbread",
+      },
+      {
+        slug: "falafel",
+        name: "falafel",
+        icon: "twemoji:falafel",
+      },
+      {
+        slug: "egg",
+        name: "egg",
+        icon: "twemoji:egg",
+      },
+      {
+        slug: "cooking",
+        name: "cooking",
+        icon: "twemoji:cooking",
+      },
+      {
+        slug: "shallow-pan-of-food",
+        name: "shallow pan of food",
+        icon: "twemoji:shallow-pan-of-food",
+      },
+      {
+        slug: "pot-of-food",
+        name: "pot of food",
+        icon: "twemoji:pot-of-food",
+      },
+      {
+        slug: "fondue",
+        name: "fondue",
+        icon: "twemoji:fondue",
+      },
+      {
+        slug: "bowl-with-spoon",
+        name: "bowl with spoon",
+        icon: "twemoji:bowl-with-spoon",
+      },
+      {
+        slug: "green-salad",
+        name: "green salad",
+        icon: "twemoji:green-salad",
+      },
+      {
+        slug: "popcorn",
+        name: "popcorn",
+        icon: "twemoji:popcorn",
+      },
+      {
+        slug: "butter",
+        name: "butter",
+        icon: "twemoji:butter",
+      },
+      {
+        slug: "salt",
+        name: "salt",
+        icon: "twemoji:salt",
+      },
+      {
+        slug: "canned-food",
+        name: "canned food",
+        icon: "twemoji:canned-food",
+      },
+      {
+        slug: "bento-box",
+        name: "bento box",
+        icon: "twemoji:bento-box",
+      },
+      {
+        slug: "rice-cracker",
+        name: "rice cracker",
+        icon: "twemoji:rice-cracker",
+      },
+      {
+        slug: "rice-ball",
+        name: "rice ball",
+        icon: "twemoji:rice-ball",
+      },
+      {
+        slug: "cooked-rice",
+        name: "cooked rice",
+        icon: "twemoji:cooked-rice",
+      },
+      {
+        slug: "curry-rice",
+        name: "curry-rice",
+        icon: "twemoji:curry-rice",
+      },
+      {
+        slug: "steaming-bowl",
+        name: "steaming-bowl",
+        icon: "twemoji:steaming-bowl",
+      },
+      {
+        slug: "spaghetti",
+        name: "spaghetti",
+        icon: "twemoji:spaghetti",
+      },
+      {
+        slug: "roasted-sweet-potato",
+        name: "roasted sweet potato",
+        icon: "twemoji:roasted-sweet-potato",
+      },
+      {
+        slug: "oden",
+        name: "oden",
+        icon: "twemoji:oden",
+      },
+      {
+        slug: "sushi",
+        name: "sushi",
+        icon: "twemoji:sushi",
+      },
+      {
+        slug: "fried-shrimp",
+        name: "fried shrimp",
+        icon: "twemoji:fried-shrimp",
+      },
+      {
+        slug: "fish-cake-with-swirl",
+        name: "fish cake with swirl",
+        icon: "twemoji:fish-cake-with-swirl",
+      },
+      {
+        slug: "moon-cake",
+        name: "moon cake",
+        icon: "twemoji:moon-cake",
+      },
+      {
+        slug: "dango",
+        name: "dango",
+        icon: "twemoji:dango",
+      },
+      {
+        slug: "dumpling",
+        name: "dumpling",
+        icon: "twemoji:dumpling",
+      },
+      {
+        slug: "fortune-cookie",
+        name: "fortune cookie",
+        icon: "twemoji:fortune-cookie",
+      },
+      {
+        slug: "takeout-box",
+        name: "takeout box",
+        icon: "twemoji:takeout-box",
+      },
+      {
+        slug: "crab",
+        name: "crab",
+        icon: "twemoji:crab",
+      },
+      {
+        slug: "lobster",
+        name: "lobster",
+        icon: "twemoji:lobster",
+      },
+      {
+        slug: "shrimp",
+        name: "shrimp",
+        icon: "twemoji:shrimp",
+      },
+      {
+        slug: "squid",
+        name: "squid",
+        icon: "twemoji:squid",
+      },
+      {
+        slug: "oyster",
+        name: "oyster",
+        icon: "twemoji:oyster",
+      },
+      {
+        slug: "soft-ice-cream",
+        name: "soft ice cream",
+        icon: "twemoji:soft-ice-cream",
+      },
+      {
+        slug: "shaved-ice",
+        name: "shaved ice",
+        icon: "twemoji:shaved-ice",
+      },
+      {
+        slug: "ice-cream",
+        name: "ice cream",
+        icon: "twemoji:ice-cream",
+      },
+      {
+        slug: "doughnut",
+        name: "doughnut",
+        icon: "twemoji:doughnut",
+      },
+      {
+        slug: "cookie",
+        name: "cookie",
+        icon: "twemoji:cookie",
+      },
+      {
+        slug: "birthday-cake",
+        name: "birthday-cake",
+        icon: "twemoji:birthday-cake",
+      },
+      {
+        slug: "shortcake",
+        name: "shortcake",
+        icon: "twemoji:shortcake",
+      },
+      {
+        slug: "cupcake",
+        name: "cupcake",
+        icon: "twemoji:cupcake",
+      },
+      {
+        slug: "pie",
+        name: "pie",
+        icon: "twemoji:pie",
+      },
+      {
+        slug: "chocolate-bar",
+        name: "chocolate bar",
+        icon: "twemoji:chocolate-bar",
+      },
+      {
+        slug: "candy",
+        name: "candy",
+        icon: "twemoji:candy",
+      },
+      {
+        slug: "lollipop",
+        name: "lollipop",
+        icon: "twemoji:lollipop",
+      },
+      {
+        slug: "custard",
+        name: "custard",
+        icon: "twemoji:custard",
+      },
+      {
+        slug: "honey-pot",
+        name: "honey pot",
+        icon: "twemoji:honey-pot",
+      },
+      {
+        slug: "baby-bottle",
+        name: "baby bottle",
+        icon: "twemoji:baby-bottle",
+      },
+      {
+        slug: "glass-of-milk",
+        name: "glass of milk",
+        icon: "twemoji:glass-of-milk",
+      },
+      {
+        slug: "hot-beverage",
+        name: "hot beverage",
+        icon: "twemoji:hot-beverage",
+      },
+      {
+        slug: "teapot",
+        name: "teapot",
+        icon: "twemoji:teapot",
+      },
+      {
+        slug: "teacup-without-handle",
+        name: "teacup without handle",
+        icon: "twemoji:teacup-without-handle",
+      },
+      {
+        slug: "sake",
+        name: "sake",
+        icon: "twemoji:sake",
+      },
+      {
+        slug: "bottle-with-popping-cork",
+        name: "bottle with popping cork",
+        icon: "twemoji:bottle-with-popping-cork",
+      },
+      {
+        slug: "wine-glass",
+        name: "wine glass",
+        icon: "twemoji:wine-glass",
+      },
+      {
+        slug: "cocktail-glass",
+        name: "cocktail glass",
+        icon: "twemoji:cocktail-glass",
+      },
+      {
+        slug: "tropical-drink",
+        name: "tropical drink",
+        icon: "twemoji:tropical-drink",
+      },
+      {
+        slug: "beer-mug",
+        name: "beer mug",
+        icon: "twemoji:beer-mug",
+      },
+      {
+        slug: "clinking-beer-mugs",
+        name: "clinking beer mugs",
+        icon: "twemoji:clinking-beer-mugs",
+      },
+      {
+        slug: "clinking-glasses",
+        name: "clinking glasses",
+        icon: "twemoji:clinking-glasses",
+      },
+      {
+        slug: "tumbler-glass",
+        name: "tumbler glass",
+        icon: "twemoji:tumbler-glass",
+      },
+      {
+        slug: "pouring-liquid",
+        name: "pouring liquid",
+        icon: "twemoji:pouring-liquid",
+      },
+      {
+        slug: "cup-with-straw",
+        name: "cup with straw",
+        icon: "twemoji:cup-with-straw",
+      },
+      {
+        slug: "bubble-tea",
+        name: "bubble tea",
+        icon: "twemoji:bubble-tea",
+      },
+      {
+        slug: "beverage-box",
+        name: "beverage box",
+        icon: "twemoji:beverage-box",
+      },
+      {
+        slug: "mate",
+        name: "mate",
+        icon: "twemoji:mate",
+      },
+      {
+        slug: "ice",
+        name: "ice",
+        icon: "twemoji:ice",
+      },
+      {
+        slug: "chopsticks",
+        name: "chopsticks",
+        icon: "twemoji:chopsticks",
+      },
+      {
+        slug: "fork-and-knife-with-plate",
+        name: "fork-and-knife-with-plate",
+        icon: "twemoji:fork-and-knife-with-plate",
+      },
+      {
+        slug: "fork-and-knife",
+        name: "fork and knife",
+        icon: "twemoji:fork-and-knife",
+      },
+      {
+        slug: "spoon",
+        name: "spoon",
+        icon: "twemoji:spoon",
+      },
+      {
+        slug: "kitchen-knife",
+        name: "kitchen knife",
+        icon: "twemoji:kitchen-knife",
+      },
+      {
+        slug: "jar",
+        name: "jar",
+        icon: "twemoji:jar",
+      },
+      {
+        slug: "amphora",
+        name: "amphora",
+        icon: "twemoji:amphora",
+      },
+    ],
+  },
+  {
+    label: "Activity",
+    icon: "solar:football-outline",
+    emojis: [
+      {
+        slug: "jack-o-lantern",
+        name: "jack-o-lantern",
+        icon: "twemoji:jack-o-lantern",
+      },
+      {
+        slug: "christmas-tree",
+        name: "christmas tree",
+        icon: "twemoji:christmas-tree",
+      },
+      {
+        slug: "fireworks",
+        name: "fireworks",
+        icon: "twemoji:fireworks",
+      },
+      {
+        slug: "sparkler",
+        name: "sparkler",
+        icon: "twemoji:sparkler",
+      },
+      {
+        slug: "firecracker",
+        name: "firecracker",
+        icon: "twemoji:firecracker",
+      },
+      {
+        slug: "sparkles",
+        name: "sparkles",
+        icon: "twemoji:sparkles",
+      },
+      {
+        slug: "balloon",
+        name: "balloon",
+        icon: "twemoji:balloon",
+      },
+      {
+        slug: "party-popper",
+        name: "party popper",
+        icon: "twemoji:party-popper",
+      },
+      {
+        slug: "confetti-ball",
+        name: "confetti ball",
+        icon: "twemoji:confetti-ball",
+      },
+      {
+        slug: "tanabata-tree",
+        name: "tanabata tree",
+        icon: "twemoji:tanabata-tree",
+      },
+      {
+        slug: "pine-decoration",
+        name: "pine decoration",
+        icon: "twemoji:pine-decoration",
+      },
+      {
+        slug: "japanese-dolls",
+        name: "japanese dolls",
+        icon: "twemoji:japanese-dolls",
+      },
+      {
+        slug: "carp-streamer",
+        name: "carp streamer",
+        icon: "twemoji:carp-streamer",
+      },
+      {
+        slug: "wind-chime",
+        name: "wind chime",
+        icon: "twemoji:wind-chime",
+      },
+      {
+        slug: "moon-viewing-ceremony",
+        name: "moon viewing ceremony",
+        icon: "twemoji:moon-viewing-ceremony",
+      },
+      {
+        slug: "red-envelope",
+        name: "red envelope",
+        icon: "twemoji:red-envelope",
+      },
+      {
+        slug: "ribbon",
+        name: "ribbon",
+        icon: "twemoji:ribbon",
+      },
+      {
+        slug: "wrapped-gift",
+        name: "wrapped gift",
+        icon: "twemoji:wrapped-gift",
+      },
+      {
+        slug: "reminder-ribbon",
+        name: "reminder ribbon",
+        icon: "twemoji:reminder-ribbon",
+      },
+      {
+        slug: "admission-tickets",
+        name: "admission tickets",
+        icon: "twemoji:admission-tickets",
+      },
+      {
+        slug: "ticket",
+        name: "ticket",
+        icon: "twemoji:ticket",
+      },
+      {
+        slug: "military-medal",
+        name: "military medal",
+        icon: "twemoji:military-medal",
+      },
+      {
+        slug: "trophy",
+        name: "trophy",
+        icon: "twemoji:trophy",
+      },
+      {
+        slug: "sports-medal",
+        name: "sports medal",
+        icon: "twemoji:sports-medal",
+      },
+      {
+        slug: "1st-place-medal",
+        name: "1st place medal",
+        icon: "twemoji:1st-place-medal",
+      },
+      {
+        slug: "2nd-place-medal",
+        name: "2nd place medal",
+        icon: "twemoji:2nd-place-medal",
+      },
+      {
+        slug: "3rd-place-medal",
+        name: "3rd place medal",
+        icon: "twemoji:3rd-place-medal",
+      },
+      {
+        slug: "soccer-ball",
+        name: "soccer ball",
+        icon: "twemoji:soccer-ball",
+      },
+      {
+        slug: "baseball",
+        name: "baseball",
+        icon: "twemoji:baseball",
+      },
+      {
+        slug: "softball",
+        name: "softball",
+        icon: "twemoji:softball",
+      },
+      {
+        slug: "volleyball",
+        name: "volleyball",
+        icon: "twemoji:volleyball",
+      },
+      {
+        slug: "american-football",
+        name: "american football",
+        icon: "twemoji:american-football",
+      },
+      {
+        slug: "rugby-football",
+        name: "rugby football",
+        icon: "twemoji:rugby-football",
+      },
+      {
+        slug: "tennis",
+        name: "tennis",
+        icon: "twemoji:tennis",
+      },
+      {
+        slug: "flying-disc",
+        name: "flying disc",
+        icon: "twemoji:flying-disc",
+      },
+      {
+        slug: "bowling",
+        name: "bowling",
+        icon: "twemoji:bowling",
+      },
+      {
+        slug: "cricket-game",
+        name: "cricket game",
+        icon: "twemoji:cricket-game",
+      },
+      {
+        slug: "field-hockey",
+        name: "field hockey",
+        icon: "twemoji:field-hockey",
+      },
+      {
+        slug: "ice-hockey",
+        name: "ice hockey",
+        icon: "twemoji:ice-hockey",
+      },
+      {
+        slug: "lacrosse",
+        name: "lacrosse",
+        icon: "twemoji:lacrosse",
+      },
+      {
+        slug: "ping-pong",
+        name: "ping pong",
+        icon: "twemoji:ping-pong",
+      },
+      {
+        slug: "badminton",
+        name: "badminton",
+        icon: "twemoji:badminton",
+      },
+      {
+        slug: "boxing-glove",
+        name: "boxing glove",
+        icon: "twemoji:boxing-glove",
+      },
+      {
+        slug: "martial-arts-uniform",
+        name: "martial arts uniform",
+        icon: "twemoji:martial-arts-uniform",
+      },
+      {
+        slug: "goal-net",
+        name: "goal net",
+        icon: "twemoji:goal-net",
+      },
+      {
+        slug: "flag-in-hole",
+        name: "flag in hole",
+        icon: "twemoji:flag-in-hole",
+      },
+      {
+        slug: "ice-skate",
+        name: "ice skate",
+        icon: "twemoji:ice-skate",
+      },
+      {
+        slug: "fishing-pole",
+        name: "fishing pole",
+        icon: "twemoji:fishing-pole",
+      },
+      {
+        slug: "diving-mask",
+        name: "diving mask",
+        icon: "twemoji:diving-mask",
+      },
+      {
+        slug: "running-shirt",
+        name: "running shirt",
+        icon: "twemoji:running-shirt",
+      },
+      {
+        slug: "skis",
+        name: "skis",
+        icon: "twemoji:skis",
+      },
+      {
+        slug: "sled",
+        name: "sled",
+        icon: "twemoji:sled",
+      },
+      {
+        slug: "curling-stone",
+        name: "curling stone",
+        icon: "twemoji:curling-stone",
+      },
+      {
+        slug: "bullseye",
+        name: "bullseye",
+        icon: "twemoji:bullseye",
+      },
+      {
+        slug: "yo-yo",
+        name: "yo yo",
+        icon: "twemoji:yo-yo",
+      },
+      {
+        slug: "kite",
+        name: "kite",
+        icon: "twemoji:kite",
+      },
+      {
+        slug: "pool-8-ball",
+        name: "pool 8 ball",
+        icon: "twemoji:pool-8-ball",
+      },
+      {
+        slug: "crystal-ball",
+        name: "crystal ball",
+        icon: "twemoji:crystal-ball",
+      },
+      {
+        slug: "magic-wand",
+        name: "magic wand",
+        icon: "twemoji:magic-wand",
+      },
+      {
+        slug: "nazar-amulet",
+        name: "nazar amulet",
+        icon: "twemoji:nazar-amulet",
+      },
+      {
+        slug: "hamsa",
+        name: "hamsa",
+        icon: "twemoji:hamsa",
+      },
+      {
+        slug: "video-game",
+        name: "video game",
+        icon: "twemoji:video-game",
+      },
+      {
+        slug: "joystick",
+        name: "joystick",
+        icon: "twemoji:joystick",
+      },
+      {
+        slug: "slot-machine",
+        name: "slot machine",
+        icon: "twemoji:slot-machine",
+      },
+      {
+        slug: "game-die",
+        name: "game die",
+        icon: "twemoji:game-die",
+      },
+      {
+        slug: "puzzle-piece",
+        name: "puzzle piece",
+        icon: "twemoji:puzzle-piece",
+      },
+      {
+        slug: "teddy-bear",
+        name: "teddy bear",
+        icon: "twemoji:teddy-bear",
+      },
+      {
+        slug: "pinata",
+        name: "pinata",
+        icon: "twemoji:pinata",
+      },
+      {
+        slug: "mirror-ball",
+        name: "mirror ball",
+        icon: "twemoji:mirror-ball",
+      },
+      {
+        slug: "nesting-dolls",
+        name: "nesting dolls",
+        icon: "twemoji:nesting-dolls",
+      },
+      {
+        slug: "spade-suit",
+        name: "spade suit",
+        icon: "twemoji:spade-suit",
+      },
+      {
+        slug: "heart-suit",
+        name: "heart suit",
+        icon: "twemoji:heart-suit",
+      },
+      {
+        slug: "diamond-suit",
+        name: "diamond suit",
+        icon: "twemoji:diamond-suit",
+      },
+      {
+        slug: "club-suit",
+        name: "club suit",
+        icon: "twemoji:club-suit",
+      },
+      {
+        slug: "chess-pawn",
+        name: "chess pawn",
+        icon: "twemoji:chess-pawn",
+      },
+      {
+        slug: "joker",
+        name: "joker",
+        icon: "twemoji:joker",
+      },
+      {
+        slug: "mahjong-red-dragon",
+        name: "mahjong red dragon",
+        icon: "twemoji:mahjong-red-dragon",
+      },
+      {
+        slug: "flower-playing-cards",
+        name: "flower playing cards",
+        icon: "twemoji:flower-playing-cards",
+      },
+      {
+        slug: "performing-arts",
+        name: "performing arts",
+        icon: "twemoji:performing-arts",
+      },
+      {
+        slug: "thread",
+        name: "thread",
+        icon: "twemoji:thread",
+      },
+      {
+        slug: "sewing-needle",
+        name: "sewing needle",
+        icon: "twemoji:sewing-needle",
+      },
+      {
+        slug: "yarn",
+        name: "yarn",
+        icon: "twemoji:yarn",
+      },
+      {
+        slug: "knot",
+        name: "knot",
+        icon: "twemoji:knot",
+      },
+    ]
+  },
+  {
+    label: "Travel and places",
+    icon: "hugeicons:airplane-02",
+    emojis: [
+      {
+        slug: "globe-showing-europe-africa",
+        name: "globe showing europe africa",
+        icon: "twemoji:globe-showing-europe-africa",
+      },
+      {
+        slug: "globe-showing-americas",
+        name: "globe showing americas",
+        icon: "twemoji:globe-showing-americas",
+      },
+      {
+        slug: "globe-showing-asia-australia",
+        name: "globe showing asia australia",
+        icon: "twemoji:globe-showing-asia-australia",
+      },
+      {
+        slug: "globe-with-meridians",
+        name: "globe with meridians",
+        icon: "twemoji:globe-with-meridians",
+      },
+      {
+        slug: "world-map",
+        name: "world map",
+        icon: "twemoji:world-map",
+      },
+      {
+        slug: "map-of-japan",
+        name: "map of japan",
+        icon: "twemoji:map-of-japan",
+      },
+      {
+        slug: "compass",
+        name: "compass",
+        icon: "twemoji:compass",
+      },
+      {
+        slug: "snow-capped-mountain",
+        name: "snow capped mountain",
+        icon: "twemoji:snow-capped-mountain",
+      },
+      {
+        slug: "mountain",
+        name: "mountain",
+        icon: "twemoji:mountain",
+      },
+      {
+        slug: "volcano",
+        name: "volcano",
+        icon: "twemoji:volcano",
+      },
+      {
+        slug: "mount-fuji",
+        name: "mount fuji",
+        icon: "twemoji:mount-fuji",
+      },
+      {
+        slug: "camping",
+        name: "camping",
+        icon: "twemoji:camping",
+      },
+      {
+        slug: "beach-with-umbrella",
+        name: "beach with umbrella",
+        icon: "twemoji:beach-with-umbrella",
+      },
+      {
+        slug: "desert",
+        name: "desert",
+        icon: "twemoji:desert",
+      },
+      {
+        slug: "desert-island",
+        name: "desert island",
+        icon: "twemoji:desert-island",
+      },
+      {
+        slug: "stadium",
+        name: "stadium",
+        icon: "twemoji:stadium",
+      },
+      {
+        slug: "classical-building",
+        name: "classical building",
+        icon: "twemoji:classical-building",
+      },
+      {
+        slug: "building-construction",
+        name: "building construction",
+        icon: "twemoji:building-construction",
+      },
+      {
+        slug: "brick",
+        name: "brick",
+        icon: "twemoji:brick",
+      },
+      {
+        slug: "rock",
+        name: "rock",
+        icon: "twemoji:rock",
+      },
+      {
+        slug: "wood",
+        name: "wood",
+        icon: "twemoji:wood",
+      },
+      {
+        slug: "hut",
+        name: "hut",
+        icon: "twemoji:hut",
+      },
+      {
+        slug: "houses",
+        name: "houses",
+        icon: "twemoji:houses",
+      },
+      {
+        slug: "derelict-house",
+        name: "derelict house",
+        icon: "twemoji:derelict-house",
+      },
+      {
+        slug: "house",
+        name: "house",
+        icon: "twemoji:house",
+      },
+      {
+        slug: "house-with-garden",
+        name: "house with garden",
+        icon: "twemoji:house-with-garden",
+      },
+      {
+        slug: "office-building",
+        name: "office building",
+        icon: "twemoji:office-building",
+      },
+      {
+        slug: "japanese-post-office",
+        name: "japanese post office",
+        icon: "twemoji:japanese-post-office",
+      },
+      {
+        slug: "post-office",
+        name: "post office",
+        icon: "twemoji:post-office",
+      },
+      {
+        slug: "hospital",
+        name: "hospital",
+        icon: "twemoji:hospital",
+      },
+      {
+        slug: "bank",
+        name: "bank",
+        icon: "twemoji:bank",
+      },
+      {
+        slug: "hotel",
+        name: "hotel",
+        icon: "twemoji:hotel",
+      },
+      {
+        slug: "love-hotel",
+        name: "love hotel",
+        icon: "twemoji:love-hotel",
+      },
+      {
+        slug: "convenience-store",
+        name: "convenience store",
+        icon: "twemoji:convenience-store",
+      },
+      {
+        slug: "school",
+        name: "school",
+        icon: "twemoji:school",
+      },
+      {
+        slug: "department-store",
+        name: "department store",
+        icon: "twemoji:department-store",
+      },
+      {
+        slug: "factory",
+        name: "factory",
+        icon: "twemoji:factory",
+      },
+      {
+        slug: "japanese-castle",
+        name: "japanese castle",
+        icon: "twemoji:japanese-castle",
+      },
+      {
+        slug: "castle",
+        name: "castle",
+        icon: "twemoji:castle",
+      },
+      {
+        slug: "wedding",
+        name: "wedding",
+        icon: "twemoji:wedding",
+      },
+      {
+        slug: "tokyo-tower",
+        name: "tokyo tower",
+        icon: "twemoji:tokyo-tower",
+      },
+      {
+        slug: "statue-of-liberty",
+        name: "statue of liberty",
+        icon: "twemoji:statue-of-liberty",
+      },
+      {
+        slug: "church",
+        name: "church",
+        icon: "twemoji:church",
+      },
+      {
+        slug: "mosque",
+        name: "mosque",
+        icon: "twemoji:mosque",
+      },
+      {
+        slug: "hindu-temple",
+        name: "hindu temple",
+        icon: "twemoji:hindu-temple",
+      },
+      {
+        slug: "synagogue",
+        name: "synagogue",
+        icon: "twemoji:synagogue",
+      },
+      {
+        slug: "shinto-shrine",
+        name: "shinto shrine",
+        icon: "twemoji:shinto-shrine",
+      },
+      {
+        slug: "kaaba",
+        name: "kaaba",
+        icon: "twemoji:kaaba",
+      },
+      {
+        slug: "fountain",
+        name: "fountain",
+        icon: "twemoji:fountain",
+      },
+      {
+        slug: "tent",
+        name: "tent",
+        icon: "twemoji:tent",
+      },
+      {
+        slug: "foggy",
+        name: "foggy",
+        icon: "twemoji:foggy",
+      },
+      {
+        slug: "night-with-stars",
+        name: "night with stars",
+        icon: "twemoji:night-with-stars",
+      },
+      {
+        slug: "cityscape",
+        name: "cityscape",
+        icon: "twemoji:cityscape",
+      },
+      {
+        slug: "sunrise-over-mountains",
+        name: "sunrise over mountains",
+        icon: "twemoji:sunrise-over-mountains",
+      },
+      {
+        slug: "sunrise",
+        name: "sunrise",
+        icon: "twemoji:sunrise",
+      },
+      {
+        slug: "cityscape-at-dusk",
+        name: "cityscape at dusk",
+        icon: "twemoji:cityscape-at-dusk",
+      },
+      {
+        slug: "sunset",
+        name: "sunset",
+        icon: "twemoji:sunset",
+      },
+      {
+        slug: "bridge-at-night",
+        name: "bridge at night",
+        icon: "twemoji:bridge-at-night",
+      },
+      {
+        slug: "hot-springs",
+        name: "hot springs",
+        icon: "twemoji:hot-springs",
+      },
+      {
+        slug: "carousel-horse",
+        name: "carousel-horse",
+        icon: "twemoji:carousel-horse",
+      },
+      {
+        slug: "playground-slide",
+        name: "playground-slide",
+        icon: "twemoji:playground-slide",
+      },
+      {
+        slug: "ferris-wheel",
+        name: "ferris wheel",
+        icon: "twemoji:ferris-wheel",
+      },
+      {
+        slug: "roller-coaster",
+        name: "roller coaster",
+        icon: "twemoji:roller-coaster",
+      },
+      {
+        slug: "barber-pole",
+        name: "barber pole",
+        icon: "twemoji:barber-pole",
+      },
+      {
+        slug: "circus-tent",
+        name: "circus tent",
+        icon: "twemoji:circus-tent",
+      },
+      {
+        slug: "locomotive",
+        name: "locomotive",
+        icon: "twemoji:locomotive",
+      },
+      {
+        slug: "railway-car",
+        name: "railway car",
+        icon: "twemoji:railway-car",
+      },
+      {
+        slug: "high-speed-train",
+        name: "high speed train",
+        icon: "twemoji:high-speed-train",
+      },
+      {
+        slug: "high-speed-train-with-bullet-nose",
+        name: "high speed train with bullet nose",
+        icon: "twemoji:high-speed-train-with-bullet-nose",
+      },
+      {
+        slug: "train",
+        name: "train",
+        icon: "twemoji:train",
+      },
+      {
+        slug: "metro",
+        name: "metro",
+        icon: "twemoji:metro",
+      },
+      {
+        slug: "light-rail",
+        name: "light-rail",
+        icon: "twemoji:light-rail",
+      },
+      {
+        slug: "station",
+        name: "station",
+        icon: "twemoji:station",
+      },
+      {
+        slug: "tram",
+        name: "tram",
+        icon: "twemoji:tram",
+      },
+      {
+        slug: "monorail",
+        name: "monorail",
+        icon: "twemoji:monorail",
+      },
+      {
+        slug: "mountain-railway",
+        name: "mountai railway",
+        icon: "twemoji:mountain-railway",
+      },
+      {
+        slug: "tram-car",
+        name: "tram car",
+        icon: "twemoji:tram-car",
+      },
+      {
+        slug: "bus",
+        name: "bus",
+        icon: "twemoji:bus",
+      },
+      {
+        slug: "oncoming-bus",
+        name: "oncoming bus",
+        icon: "twemoji:oncoming-bus",
+      },
+      {
+        slug: "trolleybus",
+        name: "trolleybus",
+        icon: "twemoji:trolleybus",
+      },
+      {
+        slug: "minibus",
+        name: "minibus",
+        icon: "twemoji:minibus",
+      },
+      {
+        slug: "ambulance",
+        name: "ambulance",
+        icon: "twemoji:ambulance",
+      },
+      {
+        slug: "fire-engine",
+        name: "fire engine",
+        icon: "twemoji:fire-engine",
+      },
+      {
+        slug: "police-car",
+        name: "police car",
+        icon: "twemoji:police-car",
+      },
+      {
+        slug: "oncoming-police-car",
+        name: "oncoming police car",
+        icon: "twemoji:oncoming-police-car",
+      },
+      {
+        slug: "taxi",
+        name: "taxi",
+        icon: "twemoji:taxi",
+      },
+      {
+        slug: "oncoming-taxi",
+        name: "oncoming taxi",
+        icon: "twemoji:oncoming-taxi",
+      },
+      {
+        slug: "automobile",
+        name: "automobile",
+        icon: "twemoji:automobile",
+      },
+      {
+        slug: "oncoming-automobile",
+        name: "oncoming automobile",
+        icon: "twemoji:oncoming-automobile",
+      },
+      {
+        slug: "pickup-truck",
+        name: "pickup truck",
+        icon: "twemoji:pickup-truck",
+      },
+      {
+        slug: "delivery-truck",
+        name: "delivery truck",
+        icon: "twemoji:delivery-truck",
+      },
+      {
+        slug: "articulated-lorry",
+        name: "articulated lorry",
+        icon: "twemoji:articulated-lorry",
+      },
+      {
+        slug: "tractor",
+        name: "tractor",
+        icon: "twemoji:tractor",
+      },
+      {
+        slug: "racing-car",
+        name: "racing car",
+        icon: "twemoji:racing-car",
+      },
+      {
+        slug: "motorcycle",
+        name: "motorcycle",
+        icon: "twemoji:motorcycle",
+      },
+      {
+        slug: "motor-scooter",
+        name: "motor scooter",
+        icon: "twemoji:motor-scooter",
+      },
+      {
+        slug: "manual-wheelchair",
+        name: "manual wheelchair",
+        icon: "twemoji:manual-wheelchair",
+      },
+      {
+        slug: "motorized-wheelchair",
+        name: "motorized wheelchair",
+        icon: "twemoji:motorized-wheelchair",
+      },
+      {
+        slug: "auto-rickshaw",
+        name: "auto rickshaw",
+        icon: "twemoji:auto-rickshaw",
+      },
+      {
+        slug: "bicycle",
+        name: "bicycle",
+        icon: "twemoji:bicycle",
+      },
+      {
+        slug: "kick-scooter",
+        name: "kick scooter",
+        icon: "twemoji:kick-scooter",
+      },
+      {
+        slug: "skateboard",
+        name: "skateboard",
+        icon: "twemoji:skateboard",
+      },
+      {
+        slug: "roller-skate",
+        name: "roller skate",
+        icon: "twemoji:roller-skate",
+      },
+      {
+        slug: "bus-stop",
+        name: "bus stop",
+        icon: "twemoji:bus-stop",
+      },
+      {
+        slug: "motorway",
+        name: "motorway",
+        icon: "twemoji:motorway",
+      },
+      {
+        slug: "railway-track",
+        name: "railway track",
+        icon: "twemoji:railway-track",
+      },
+      {
+        slug: "oil-drum",
+        name: "oil drum",
+        icon: "twemoji:oil-drum",
+      },
+      {
+        slug: "fuel-pump",
+        name: "fuel pump",
+        icon: "twemoji:fuel-pump",
+      },
+      {
+        slug: "wheel",
+        name: "wheel",
+        icon: "twemoji:wheel",
+      },
+      {
+        slug: "police-car-light",
+        name: "police car light",
+        icon: "twemoji:police-car-light",
+      },
+      {
+        slug: "horizontal-traffic-light",
+        name: "horizontal traffic light",
+        icon: "twemoji:horizontal-traffic-light",
+      },
+      {
+        slug: "vertical-traffic-light",
+        name: "vertical traffic light",
+        icon: "twemoji:vertical-traffic-light",
+      },
+      {
+        slug: "stop-sign",
+        name: "stop sign",
+        icon: "twemoji:stop-sign",
+      },
+      {
+        slug: "construction",
+        name: "construction",
+        icon: "twemoji:construction",
+      },
+      {
+        slug: "anchor",
+        name: "anchor",
+        icon: "twemoji:anchor",
+      },
+      {
+        slug: "ring-buoy",
+        name: "ring buoy",
+        icon: "twemoji:ring-buoy",
+      },
+      {
+        slug: "sailboat",
+        name: "sailboat",
+        icon: "twemoji:sailboat",
+      },
+      {
+        slug: "canoe",
+        name: "canoe",
+        icon: "twemoji:canoe",
+      },
+      {
+        slug: "speedboat",
+        name: "speedboat",
+        icon: "twemoji:speedboat",
+      },
+      {
+        slug: "passenger-ship",
+        name: "passenger ship",
+        icon: "twemoji:passenger-ship",
+      },
+      {
+        slug: "ferry",
+        name: "ferry",
+        icon: "twemoji:ferry",
+      },
+      {
+        slug: "motor-boat",
+        name: "motor boat",
+        icon: "twemoji:motor-boat",
+      },
+      {
+        slug: "ship",
+        name: "ship",
+        icon: "twemoji:ship",
+      },
+      {
+        slug: "airplane",
+        name: "airplane",
+        icon: "twemoji:airplane",
+      },
+      {
+        slug: "small-airplane",
+        name: "small airplane",
+        icon: "twemoji:small-airplane",
+      },
+      {
+        slug: "airplane-departure",
+        name: "airplane departure",
+        icon: "twemoji:airplane-departure",
+      },
+      {
+        slug: "airplane-arrival",
+        name: "airplane arrival",
+        icon: "twemoji:airplane-arrival",
+      },
+      {
+        slug: "parachute",
+        name: "parachute",
+        icon: "twemoji:parachute",
+      },
+      {
+        slug: "seat",
+        name: "seat",
+        icon: "twemoji:seat",
+      },
+      {
+        slug: "helicopter",
+        name: "helicopter",
+        icon: "twemoji:helicopter",
+      },
+      {
+        slug: "suspension-railway",
+        name: "suspension railway",
+        icon: "twemoji:suspension-railway",
+      },
+      {
+        slug: "mountain-cableway",
+        name: "mountain cableway",
+        icon: "twemoji:mountain-cableway",
+      },
+      {
+        slug: "aerial-tramway",
+        name: "aerial tramway",
+        icon: "twemoji:aerial-tramway",
+      },
+      {
+        slug: "satellite",
+        name: "satellite",
+        icon: "twemoji:satellite",
+      },
+      {
+        slug: "rocket",
+        name: "rocket",
+        icon: "twemoji:rocket",
+      },
+      {
+        slug: "flying-saucer",
+        name: "flying saucer",
+        icon: "twemoji:flying-saucer",
+      },
+      {
+        slug: "bellhop-bell",
+        name: "bellhop bell",
+        icon: "twemoji:bellhop-bell",
+      },
+      {
+        slug: "luggage",
+        name: "luggage",
+        icon: "twemoji:luggage",
+      },
+      {
+        slug: "hourglass-done",
+        name: "hourglass done",
+        icon: "twemoji:hourglass-done",
+      },
+      {
+        slug: "hourglass-not-done",
+        name: "hourglass not done",
+        icon: "twemoji:hourglass-not-done",
+      },
+      {
+        slug: "watch",
+        name: "watch",
+        icon: "twemoji:watch",
+      },
+      {
+        slug: "alarm-clock",
+        name: "alarm clock",
+        icon: "twemoji:alarm-clock",
+      },
+      {
+        slug: "stopwatch",
+        name: "stopwatch",
+        icon: "twemoji:stopwatch",
+      },
+      {
+        slug: "timer-clock",
+        name: "timer clock",
+        icon: "twemoji:timer-clock",
+      },
+      {
+        slug: "mantelpiece-clock",
+        name: "mantelpiece clock",
+        icon: "twemoji:mantelpiece-clock",
+      },
+      {
+        slug: "twelve-oclock",
+        name: "twelve oclock",
+        icon: "twemoji:twelve-oclock",
+      },
+      {
+        slug: "twelve-thirty",
+        name: "twelve thirty",
+        icon: "twemoji:twelve-thirty",
+      },
+      {
+        slug: "one-oclock",
+        name: "one oclock",
+        icon: "twemoji:one-oclock",
+      },
+      {
+        slug: "one-thirty",
+        name: "one thirty",
+        icon: "twemoji:one-thirty",
+      },
+      {
+        slug: "two-oclock",
+        name: "two oclock",
+        icon: "twemoji:two-oclock",
+      },
+      {
+        slug: "two-thirty",
+        name: "two thirty",
+        icon: "twemoji:two-thirty",
+      },
+      {
+        slug: "three-oclock",
+        name: "three oclock",
+        icon: "twemoji:three-oclock",
+      },
+      {
+        slug: "three-thirty",
+        name: "three thirty",
+        icon: "twemoji:three-thirty",
+      },
+      {
+        slug: "four-oclock",
+        name: "four oclock",
+        icon: "twemoji:four-oclock",
+      },
+      {
+        slug: "four-thirty",
+        name: "four thirty",
+        icon: "twemoji:four-thirty",
+      },
+      {
+        slug: "five-oclock",
+        name: "five oclock",
+        icon: "twemoji:five-oclock",
+      },
+      {
+        slug: "five-thirty",
+        name: "five thirty",
+        icon: "twemoji:five-thirty",
+      },
+      {
+        slug: "six-oclock",
+        name: "six oclock",
+        icon: "twemoji:six-oclock",
+      },
+      {
+        slug: "six-thirty",
+        name: "six thirty",
+        icon: "twemoji:six-thirty",
+      },
+      {
+        slug: "seven-oclock",
+        name: "seven oclock",
+        icon: "twemoji:seven-oclock",
+      },
+      {
+        slug: "seven-thirty",
+        name: "seven thirty",
+        icon: "twemoji:seven-thirty",
+      },
+      {
+        slug: "eight-oclock",
+        name: "eight oclock",
+        icon: "twemoji:eight-oclock",
+      },
+      {
+        slug: "eight-thirty",
+        name: "eight thirty",
+        icon: "twemoji:eight-thirty",
+      },
+      {
+        slug: "nine-oclock",
+        name: "nine oclock",
+        icon: "twemoji:nine-oclock",
+      },
+      {
+        slug: "nine-thirty",
+        name: "nine thirty",
+        icon: "twemoji:nine-thirty",
+      },
+      {
+        slug: "ten-oclock",
+        name: "ten oclock",
+        icon: "twemoji:ten-oclock",
+      },
+      {
+        slug: "ten-thirty",
+        name: "ten thirty",
+        icon: "twemoji:ten-thirty",
+      },
+      {
+        slug: "eleven-oclock",
+        name: "eleven oclock",
+        icon: "twemoji:eleven-oclock",
+      },
+      {
+        slug: "eleven-thirty",
+        name: "eleven thirty",
+        icon: "twemoji:eleven-thirty",
+      },
+      {
+        slug: "new-moon",
+        name: "new moon",
+        icon: "twemoji:new-moon",
+      },
+      {
+        slug: "waxing-crescent-moon",
+        name: "waxing crescent moon",
+        icon: "twemoji:waxing-crescent-moon",
+      },
+      {
+        slug: "first-quarter-moon",
+        name: "first quarter moon",
+        icon: "twemoji:first-quarter-moon",
+      },
+      {
+        slug: "waxing-gibbous-moon",
+        name: "waxing gibbous moon",
+        icon: "twemoji:waxing-gibbous-moon",
+      },
+      {
+        slug: "full-moon",
+        name: "full moon",
+        icon: "twemoji:full-moon",
+      },
+      {
+        slug: "waning-gibbous-moon",
+        name: "waning gibbous moon",
+        icon: "twemoji:waning-gibbous-moon",
+      },
+      {
+        slug: "last-quarter-moon",
+        name: "last quarter moon",
+        icon: "twemoji:last-quarter-moon",
+      },
+      {
+        slug: "waning-crescent-moon",
+        name: "waning crescent moon",
+        icon: "twemoji:waning-crescent-moon",
+      },
+      {
+        slug: "crescent-moon",
+        name: "crescent moon",
+        icon: "twemoji:crescent-moon",
+      },
+      {
+        slug: "new-moon-face",
+        name: "new moon face",
+        icon: "twemoji:new-moon-face",
+      },
+      {
+        slug: "first-quarter-moon-face",
+        name: "first quarter moon face",
+        icon: "twemoji:first-quarter-moon-face",
+      },
+      {
+        slug: "last-quarter-moon-face",
+        name: "last quarter moon face",
+        icon: "twemoji:last-quarter-moon-face",
+      },
+      {
+        slug: "thermometer",
+        name: "thermometer",
+        icon: "twemoji:thermometer",
+      },
+      {
+        slug: "sun",
+        name: "sun",
+        icon: "twemoji:sun",
+      },
+      {
+        slug: "full-moon-face",
+        name: "full moon face",
+        icon: "twemoji:full-moon-face",
+      },
+      {
+        slug: "sun-with-face",
+        name: "sun with face",
+        icon: "twemoji:sun-with-face",
+      },
+      {
+        slug: "ringed-planet",
+        name: "ringed planet",
+        icon: "twemoji:ringed-planet",
+      },
+      {
+        slug: "star",
+        name: "star",
+        icon: "twemoji:star",
+      },
+      {
+        slug: "glowing-star",
+        name: "glowing star",
+        icon: "twemoji:glowing-star",
+      },
+      {
+        slug: "shooting-star",
+        name: "shooting star",
+        icon: "twemoji:shooting-star",
+      },
+      {
+        slug: "milky-way",
+        name: "milky way",
+        icon: "twemoji:milky-way",
+      },
+      {
+        slug: "cloud",
+        name: "cloud",
+        icon: "twemoji:cloud",
+      },
+      {
+        slug: "sun-behind-cloud",
+        name: "sun behind cloud",
+        icon: "twemoji:sun-behind-cloud",
+      },
+      {
+        slug: "cloud-with-lightning-and-rain",
+        name: "cloud with lightning and rain",
+        icon: "twemoji:cloud-with-lightning-and-rain",
+      },
+      {
+        slug: "sun-behind-small-cloud",
+        name: "sun behind small cloud",
+        icon: "twemoji:sun-behind-small-cloud",
+      },
+      {
+        slug: "sun-behind-large-cloud",
+        name: "sun behind large cloud",
+        icon: "twemoji:sun-behind-large-cloud",
+      },
+      {
+        slug: "cloud-with-rain",
+        name: "cloud with rain",
+        icon: "twemoji:cloud-with-rain",
+      },
+      {
+        slug: "cloud-with-snow",
+        name: "cloud with snow",
+        icon: "twemoji:cloud-with-snow",
+      },
+      {
+        slug: "cloud-with-lightning",
+        name: "cloud with lightning",
+        icon: "twemoji:cloud-with-lightning",
+      },
+      {
+        slug: "tornado",
+        name: "tornado",
+        icon: "twemoji:tornado",
+      },
+      {
+        slug: "fog",
+        name: "fog",
+        icon: "twemoji:fog",
+      },
+      {
+        slug: "wind-face",
+        name: "wind face",
+        icon: "twemoji:wind-face",
+      },
+      {
+        slug: "cyclone",
+        name: "cyclone",
+        icon: "twemoji:cyclone",
+      },
+      {
+        slug: "rainbow",
+        name: "rainbow",
+        icon: "twemoji:rainbow",
+      },
+      {
+        slug: "closed-umbrella",
+        name: "closed umbrella",
+        icon: "twemoji:closed-umbrella",
+      },
+      {
+        slug: "umbrella",
+        name: "umbrella",
+        icon: "twemoji:umbrella",
+      },
+      {
+        slug: "umbrella-with-rain-drops",
+        name: "umbrella with rain drops",
+        icon: "twemoji:umbrella-with-rain-drops",
+      },
+      {
+        slug: "umbrella-on-ground",
+        name: "umbrella on ground",
+        icon: "twemoji:umbrella-on-ground",
+      },
+      {
+        slug: "high-voltage",
+        name: "high voltage",
+        icon: "twemoji:high-voltage",
+      },
+      {
+        slug: "snowflake",
+        name: "snowflake",
+        icon: "twemoji:snowflake",
+      },
+      {
+        slug: "snowman",
+        name: "snowman",
+        icon: "twemoji:snowman",
+      },
+      {
+        slug: "snowman-without-snow",
+        name: "snowman without snow",
+        icon: "twemoji:snowman-without-snow",
+      },
+      {
+        slug: "comet",
+        name: "comet",
+        icon: "twemoji:comet",
+      },
+      {
+        slug: "fire",
+        name: "fire",
+        icon: "twemoji:fire",
+      },
+      {
+        slug: "droplet",
+        name: "droplet",
+        icon: "twemoji:droplet",
+      },
+      {
+        slug: "water-wave",
+        name: "water wave",
+        icon: "twemoji:water-wave",
+      },
+    ],
+  },
+  {
+    label: "Objects",
+    icon: "solar:lightbulb-minimalistic-outline",
+    emojis: [
+      {
+        slug: "glasses",
+        name: "glasses",
+        icon: "twemoji:glasses",
+      },
+      {
+        slug: "sunglasses",
+        name: "sunglasses",
+        icon: "twemoji:sunglasses",
+      },
+      {
+        slug: "goggles",
+        name: "goggles",
+        icon: "twemoji:goggles",
+      },
+      {
+        slug: "lab-coat",
+        name: "lab coat",
+        icon: "twemoji:lab-coat",
+      },
+      {
+        slug: "safety-vest",
+        name: "safety vest",
+        icon: "twemoji:safety-vest",
+      },
+      {
+        slug: "necktie",
+        name: "necktie",
+        icon: "twemoji:necktie",
+      },
+      {
+        slug: "t-shirt",
+        name: "t shirt",
+        icon: "twemoji:t-shirt",
+      },
+      {
+        slug: "jeans",
+        name: "jeans",
+        icon: "twemoji:jeans",
+      },
+      {
+        slug: "scarf",
+        name: "scarf",
+        icon: "twemoji:scarf",
+      },
+      {
+        slug: "gloves",
+        name: "gloves",
+        icon: "twemoji:gloves",
+      },
+      {
+        slug: "coat",
+        name: "coat",
+        icon: "twemoji:coat",
+      },
+      {
+        slug: "socks",
+        name: "socks",
+        icon: "twemoji:socks",
+      },
+      {
+        slug: "dress",
+        name: "dress",
+        icon: "twemoji:dress",
+      },
+      {
+        slug: "kimono",
+        name: "kimono",
+        icon: "twemoji:kimono",
+      },
+      {
+        slug: "sari",
+        name: "sari",
+        icon: "twemoji:sari",
+      },
+      {
+        slug: "one-piece-swimsuit",
+        name: "one piece swimsuit",
+        icon: "twemoji:one-piece-swimsuit",
+      },
+      {
+        slug: "briefs",
+        name: "briefs",
+        icon: "twemoji:briefs",
+      },
+      {
+        slug: "shorts",
+        name: "shorts",
+        icon: "twemoji:shorts",
+      },
+      {
+        slug: "bikini",
+        name: "bikini",
+        icon: "twemoji:bikini",
+      },
+      {
+        slug: "womans-clothes",
+        name: "womans clothes",
+        icon: "twemoji:womans-clothes",
+      },
+      {
+        slug: "purse",
+        name: "purse",
+        icon: "twemoji:purse",
+      },
+      {
+        slug: "handbag",
+        name: "handbag",
+        icon: "twemoji:handbag",
+      },
+      {
+        slug: "shopping-bags",
+        name: "shopping bags",
+        icon: "twemoji:shopping-bags",
+      },
+      {
+        slug: "backpack",
+        name: "backpack",
+        icon: "twemoji:backpack",
+      },
+      {
+        slug: "thong-sandal",
+        name: "thong sandal",
+        icon: "twemoji:thong-sandal",
+      },
+      {
+        slug: "mans-shoe",
+        name: "mans-shoe",
+        icon: "twemoji:mans-shoe",
+      },
+      {
+        slug: "running-shoe",
+        name: "running shoe",
+        icon: "twemoji:running-shoe",
+      },
+      {
+        slug: "hiking-boot",
+        name: "hiking boot",
+        icon: "twemoji:hiking-boot",
+      },
+      {
+        slug: "flat-shoe",
+        name: "flat shoe",
+        icon: "twemoji:flat-shoe",
+      },
+      {
+        slug: "womans-sandal",
+        name: "womans sandal",
+        icon: "twemoji:womans-sandal",
+      },
+      {
+        slug: "ballet-shoes",
+        name: "ballet shoes",
+        icon: "twemoji:ballet-shoes",
+      },
+      {
+        slug: "womans-boot",
+        name: "womans boot",
+        icon: "twemoji:womans-boot",
+      },
+      {
+        slug: "crown",
+        name: "crown",
+        icon: "twemoji:crown",
+      },
+      {
+        slug: "womans-hat",
+        name: "womans hat",
+        icon: "twemoji:womans-hat",
+      },
+      {
+        slug: "top-hat",
+        name: "top-hat",
+        icon: "twemoji:top-hat",
+      },
+      {
+        slug: "graduation-cap",
+        name: "graduation cap",
+        icon: "twemoji:graduation-cap",
+      },
+      {
+        slug: "billed-cap",
+        name: "billed cap",
+        icon: "twemoji:billed-cap",
+      },
+      {
+        slug: "military-helmet",
+        name: "military helmet",
+        icon: "twemoji:military-helmet",
+      },
+      {
+        slug: "rescue-workers-helmet",
+        name: "rescue workers helmet",
+        icon: "twemoji:rescue-workers-helmet",
+      },
+      {
+        slug: "prayer-beads",
+        name: "prayer beads",
+        icon: "twemoji:prayer-beads",
+      },
+      {
+        slug: "lipstick",
+        name: "lipstick",
+        icon: "twemoji:lipstick",
+      },
+      {
+        slug: "ring",
+        name: "ring",
+        icon: "twemoji:ring",
+      },
+      {
+        slug: "gem-stone",
+        name: "gem stone",
+        icon: "twemoji:gem-stone",
+      },
+      {
+        slug: "muted-speaker",
+        name: "muted speaker",
+        icon: "twemoji:muted-speaker",
+      },
+      {
+        slug: "speaker-low-volume",
+        name: "speaker low volume",
+        icon: "twemoji:speaker-low-volume",
+      },
+      {
+        slug: "speaker-medium-volume",
+        name: "speaker medium volume",
+        icon: "twemoji:speaker-medium-volume",
+      },
+      {
+        slug: "speaker-high-volume",
+        name: "speaker high volume",
+        icon: "twemoji:speaker-high-volume",
+      },
+      {
+        slug: "loudspeaker",
+        name: "loudspeaker",
+        icon: "twemoji:loudspeaker",
+      },
+      {
+        slug: "megaphone",
+        name: "megaphone",
+        icon: "twemoji:megaphone",
+      },
+      {
+        slug: "postal-horn",
+        name: "postal horn",
+        icon: "twemoji:postal-horn",
+      },
+      {
+        slug: "bell",
+        name: "bell",
+        icon: "twemoji:bell",
+      },
+      {
+        slug: "bell-with-slash",
+        name: "bell with slash",
+        icon: "twemoji:bell-with-slash",
+      },
+      {
+        slug: "musical-score",
+        name: "musical score",
+        icon: "twemoji:musical-score",
+      },
+      {
+        slug: "musical-note",
+        name: "musical note",
+        icon: "twemoji:musical-note",
+      },
+      {
+        slug: "musical-notes",
+        name: "musical notes",
+        icon: "twemoji:musical-notes",
+      },
+      {
+        slug: "studio-microphone",
+        name: "studio microphone",
+        icon: "twemoji:studio-microphone",
+      },
+      {
+        slug: "level-slider",
+        name: "level slider",
+        icon: "twemoji:level-slider",
+      },
+      {
+        slug: "control-knobs",
+        name: "control knobs",
+        icon: "twemoji:control-knobs",
+      },
+      {
+        slug: "microphone",
+        name: "microphone",
+        icon: "twemoji:microphone",
+      },
+      {
+        slug: "headphone",
+        name: "headphone",
+        icon: "twemoji:headphone",
+      },
+      {
+        slug: "radio",
+        name: "radio",
+        icon: "twemoji:radio",
+      },
+      {
+        slug: "accordion",
+        name: "accordion",
+        icon: "twemoji:accordion",
+      },
+      {
+        slug: "guitar",
+        name: "guitar",
+        icon: "twemoji:guitar",
+      },
+      {
+        slug: "musical-keyboard",
+        name: "musical keyboard",
+        icon: "twemoji:musical-keyboard",
+      },
+      {
+        slug: "trumpet",
+        name: "trumpet",
+        icon: "twemoji:trumpet",
+      },
+      {
+        slug: "violin",
+        name: "violin",
+        icon: "twemoji:violin",
+      },
+      {
+        slug: "banjo",
+        name: "banjo",
+        icon: "twemoji:banjo",
+      },
+      {
+        slug: "drum",
+        name: "drum",
+        icon: "twemoji:drum",
+      },
+      {
+        slug: "long-drum",
+        name: "long drum",
+        icon: "twemoji:long-drum",
+      },
+      {
+        slug: "mobile-phone",
+        name: "mobile phone",
+        icon: "twemoji:mobile-phone",
+      },
+      {
+        slug: "mobile-phone-with-arrow",
+        name: "mobile phone with arrow",
+        icon: "twemoji:mobile-phone-with-arrow",
+      },
+      {
+        slug: "telephone",
+        name: "telephone",
+        icon: "twemoji:telephone",
+      },
+      {
+        slug: "telephone-receiver",
+        name: "telephone receiver",
+        icon: "twemoji:telephone-receiver",
+      },
+      {
+        slug: "pager",
+        name: "pager",
+        icon: "twemoji:pager",
+      },
+      {
+        slug: "fax-machine",
+        name: "fax machine",
+        icon: "twemoji:fax-machine",
+      },
+      {
+        slug: "battery",
+        name: "battery",
+        icon: "twemoji:battery",
+      },
+      {
+        slug: "low-battery",
+        name: "low battery",
+        icon: "twemoji:low-battery",
+      },
+      {
+        slug: "electric-plug",
+        name: "electric plug",
+        icon: "twemoji:electric-plug",
+      },
+      {
+        slug: "laptop",
+        name: "laptop",
+        icon: "twemoji:laptop",
+      },
+      {
+        slug: "desktop-computer",
+        name: "desktop computer",
+        icon: "twemoji:desktop-computer",
+      },
+      {
+        slug: "printer",
+        name: "printer",
+        icon: "twemoji:printer",
+      },
+      {
+        slug: "keyboard",
+        name: "keyboard",
+        icon: "twemoji:keyboard",
+      },
+      {
+        slug: "computer-mouse",
+        name: "computer mouse",
+        icon: "twemoji:computer-mouse",
+      },
+      {
+        slug: "trackball",
+        name: "trackball",
+        icon: "twemoji:trackball",
+      },
+      {
+        slug: "computer-disk",
+        name: "computer disk",
+        icon: "twemoji:computer-disk",
+      },
+      {
+        slug: "floppy-disk",
+        name: "floppy disk",
+        icon: "twemoji:floppy-disk",
+      },
+      {
+        slug: "optical-disk",
+        name: "optical disk",
+        icon: "twemoji:optical-disk",
+      },
+      {
+        slug: "dvd",
+        name: "dvd",
+        icon: "twemoji:dvd",
+      },
+      {
+        slug: "abacus",
+        name: "abacus",
+        icon: "twemoji:abacus",
+      },
+      {
+        slug: "movie-camera",
+        name: "movie camera",
+        icon: "twemoji:movie-camera",
+      },
+      {
+        slug: "film-frames",
+        name: "film frames",
+        icon: "twemoji:film-frames",
+      },
+      {
+        slug: "film-projector",
+        name: "film projector",
+        icon: "twemoji:film-projector",
+      },
+      {
+        slug: "clapper-board",
+        name: "clapper board",
+        icon: "twemoji:clapper-board",
+      },
+      {
+        slug: "television",
+        name: "television",
+        icon: "twemoji:television",
+      },
+      {
+        slug: "camera",
+        name: "camera",
+        icon: "twemoji:camera",
+      },
+      {
+        slug: "camera-with-flash",
+        name: "camera with flash",
+        icon: "twemoji:camera-with-flash",
+      },
+      {
+        slug: "video-camera",
+        name: "video camera",
+        icon: "twemoji:video-camera",
+      },
+      {
+        slug: "videocassette",
+        name: "videocassette",
+        icon: "twemoji:videocassette",
+      },
+      {
+        slug: "magnifying-glass-tilted-left",
+        name: "magnifying glass tilted left",
+        icon: "twemoji:magnifying-glass-tilted-left",
+      },
+      {
+        slug: "magnifying-glass-tilted-right",
+        name: "magnifying glass tilted right",
+        icon: "twemoji:magnifying-glass-tilted-right",
+      },
+      {
+        slug: "candle",
+        name: "candle",
+        icon: "twemoji:candle",
+      },
+      {
+        slug: "light-bulb",
+        name: "light bulb",
+        icon: "twemoji:light-bulb",
+      },
+      {
+        slug: "flashlight",
+        name: "flashlight",
+        icon: "twemoji:flashlight",
+      },
+      {
+        slug: "red-paper-lantern",
+        name: "red paper-lantern",
+        icon: "twemoji:red-paper-lantern",
+      },
+      {
+        slug: "diya-lamp",
+        name: "diya lamp",
+        icon: "twemoji:diya-lamp",
+      },
+      {
+        slug: "notebook-with-decorative-cover",
+        name: "notebook with decorative cover",
+        icon: "twemoji:notebook-with-decorative-cover",
+      },
+      {
+        slug: "closed-book",
+        name: "closed book",
+        icon: "twemoji:closed-book",
+      },
+      {
+        slug: "open-book",
+        name: "open book",
+        icon: "twemoji:open-book",
+      },
+      {
+        slug: "green-book",
+        name: "green book",
+        icon: "twemoji:green-book",
+      },
+      {
+        slug: "blue-book",
+        name: "blue book",
+        icon: "twemoji:blue-book",
+      },
+      {
+        slug: "orange-book",
+        name: "orange book",
+        icon: "twemoji:orange-book",
+      },
+      {
+        slug: "books",
+        name: "books",
+        icon: "twemoji:books",
+      },
+      {
+        slug: "notebook",
+        name: "notebook",
+        icon: "twemoji:notebook",
+      },
+      {
+        slug: "ledger",
+        name: "ledger",
+        icon: "twemoji:ledger",
+      },
+      {
+        slug: "page-with-curl",
+        name: "page with curl",
+        icon: "twemoji:page-with-curl",
+      },
+      {
+        slug: "scroll",
+        name: "scroll",
+        icon: "twemoji:scroll",
+      },
+      {
+        slug: "page-facing-up",
+        name: "page facing up",
+        icon: "twemoji:page-facing-up",
+      },
+      {
+        slug: "newspaper",
+        name: "newspaper",
+        icon: "twemoji:newspaper",
+      },
+      {
+        slug: "rolled-up-newspaper",
+        name: "rolled up newspaper",
+        icon: "twemoji:rolled-up-newspaper",
+      },
+      {
+        slug: "bookmark-tabs",
+        name: "bookmark tabs",
+        icon: "twemoji:bookmark-tabs",
+      },
+      {
+        slug: "bookmark",
+        name: "bookmark",
+        icon: "twemoji:bookmark",
+      },
+      {
+        slug: "label",
+        name: "label",
+        icon: "twemoji:label",
+      },
+      {
+        slug: "money-bag",
+        name: "money bag",
+        icon: "twemoji:money-bag",
+      },
+      {
+        slug: "coin",
+        name: "coin",
+        icon: "twemoji:coin",
+      },
+      {
+        slug: "yen-banknote",
+        name: "yen banknote",
+        icon: "twemoji:yen-banknote",
+      },
+      {
+        slug: "dollar-banknote",
+        name: "dollar banknote",
+        icon: "twemoji:dollar-banknote",
+      },
+      {
+        slug: "euro-banknote",
+        name: "euro banknote",
+        icon: "twemoji:euro-banknote",
+      },
+      {
+        slug: "pound-banknote",
+        name: "pound banknote",
+        icon: "twemoji:pound-banknote",
+      },
+      {
+        slug: "money-with-wings",
+        name: "money with wings",
+        icon: "twemoji:money-with-wings",
+      },
+      {
+        slug: "credit-card",
+        name: "credit card",
+        icon: "twemoji:credit-card",
+      },
+      {
+        slug: "receipt",
+        name: "receipt",
+        icon: "twemoji:receipt",
+      },
+      {
+        slug: "chart-increasing-with-yen",
+        name: "chart increasing with yen",
+        icon: "twemoji:chart-increasing-with-yen",
+      },
+      {
+        slug: "envelope",
+        name: "envelope",
+        icon: "twemoji:envelope",
+      },
+      {
+        slug: "e-mail",
+        name: "e mail",
+        icon: "twemoji:e-mail",
+      },
+      {
+        slug: "incoming-envelope",
+        name: "incoming envelope",
+        icon: "twemoji:incoming-envelope",
+      },
+      {
+        slug: "envelope-with-arrow",
+        name: "envelope with arrow",
+        icon: "twemoji:envelope-with-arrow",
+      },
+      {
+        slug: "outbox-tray",
+        name: "outbox tray",
+        icon: "twemoji:outbox-tray",
+      },
+      {
+        slug: "inbox-tray",
+        name: "inbox tray",
+        icon: "twemoji:inbox-tray",
+      },
+      {
+        slug: "package",
+        name: "package",
+        icon: "twemoji:package",
+      },
+      {
+        slug: "closed-mailbox-with-raised-flag",
+        name: "closed mailbox with raised flag",
+        icon: "twemoji:closed-mailbox-with-raised-flag",
+      },
+      {
+        slug: "closed-mailbox-with-lowered-flag",
+        name: "closed mailbox-with-lowered-flag",
+        icon: "twemoji:closed-mailbox-with-lowered-flag",
+      },
+      {
+        slug: "open-mailbox-with-raised-flag",
+        name: "open mailbox with raised flag",
+        icon: "twemoji:open-mailbox-with-raised-flag",
+      },
+      {
+        slug: "open-mailbox-with-lowered-flag",
+        name: "open mailbox with lowered flag",
+        icon: "twemoji:open-mailbox-with-lowered-flag",
+      },
+      {
+        slug: "postbox",
+        name: "postbox",
+        icon: "twemoji:postbox",
+      },
+      {
+        slug: "ballot-box-with-ballot",
+        name: "ballot box with ballot",
+        icon: "twemoji:ballot-box-with-ballot",
+      },
+      {
+        slug: "pencil",
+        name: "pencil",
+        icon: "twemoji:pencil",
+      },
+      {
+        slug: "black-nib",
+        name: "black-nib",
+        icon: "twemoji:black-nib",
+      },
+      {
+        slug: "fountain-pen",
+        name: "fountain pen",
+        icon: "twemoji:fountain-pen",
+      },
+      {
+        slug: "pen",
+        name: "pen",
+        icon: "twemoji:pen",
+      },
+      {
+        slug: "paintbrush",
+        name: "paintbrush",
+        icon: "twemoji:paintbrush",
+      },
+      {
+        slug: "crayon",
+        name: "crayon",
+        icon: "twemoji:crayon",
+      },
+      {
+        slug: "memo",
+        name: "memo",
+        icon: "twemoji:memo",
+      },
+      {
+        slug: "briefcase",
+        name: "briefcase",
+        icon: "twemoji:briefcase",
+      },
+      {
+        slug: "file-folder",
+        name: "file folder",
+        icon: "twemoji:file-folder",
+      },
+      {
+        slug: "open-file-folder",
+        name: "open file folder",
+        icon: "twemoji:open-file-folder",
+      },
+      {
+        slug: "card-index-dividers",
+        name: "card index dividers",
+        icon: "twemoji:card-index-dividers",
+      },
+      {
+        slug: "calendar",
+        name: "calendar",
+        icon: "twemoji:calendar",
+      },
+      {
+        slug: "tear-off-calendar",
+        name: "tear off calendar",
+        icon: "twemoji:tear-off-calendar",
+      },
+      {
+        slug: "spiral-notepad",
+        name: "spiral notepad",
+        icon: "twemoji:spiral-notepad",
+      },
+      {
+        slug: "spiral-calendar",
+        name: "spiral calendar",
+        icon: "twemoji:spiral-calendar",
+      },
+      {
+        slug: "card-index",
+        name: "card index",
+        icon: "twemoji:card-index",
+      },
+      {
+        slug: "chart-increasing",
+        name: "chart increasing",
+        icon: "twemoji:chart-increasing",
+      },
+      {
+        slug: "chart-decreasing",
+        name: "chart decreasing",
+        icon: "twemoji:chart-decreasing",
+      },
+      {
+        slug: "bar-chart",
+        name: "bar chart",
+        icon: "twemoji:bar-chart",
+      },
+      {
+        slug: "clipboard",
+        name: "clipboard",
+        icon: "twemoji:clipboard",
+      },
+      {
+        slug: "pushpin",
+        name: "pushpin",
+        icon: "twemoji:pushpin",
+      },
+      {
+        slug: "round-pushpin",
+        name: "round pushpin",
+        icon: "twemoji:round-pushpin",
+      },
+      {
+        slug: "paperclip",
+        name: "paperclip",
+        icon: "twemoji:paperclip",
+      },
+      {
+        slug: "linked-paperclips",
+        name: "linked paperclips",
+        icon: "twemoji:linked-paperclips",
+      },
+      {
+        slug: "straight-ruler",
+        name: "straight ruler",
+        icon: "twemoji:straight-ruler",
+      },
+      {
+        slug: "triangular-ruler",
+        name: "triangular ruler",
+        icon: "twemoji:triangular-ruler",
+      },
+      {
+        slug: "scissors",
+        name: "scissors",
+        icon: "twemoji:scissors",
+      },
+      {
+        slug: "card-file-box",
+        name: "card file-box",
+        icon: "twemoji:card-file-box",
+      },
+      {
+        slug: "file-cabinet",
+        name: "file cabinet",
+        icon: "twemoji:file-cabinet",
+      },
+      {
+        slug: "wastebasket",
+        name: "wastebasket",
+        icon: "twemoji:wastebasket",
+      },
+      {
+        slug: "locked",
+        name: "locked",
+        icon: "twemoji:locked",
+      },
+      {
+        slug: "unlocked",
+        name: "unlocked",
+        icon: "twemoji:unlocked",
+      },
+      {
+        slug: "locked-with-pen",
+        name: "locked with pen",
+        icon: "twemoji:locked-with-pen",
+      },
+      {
+        slug: "locked-with-key",
+        name: "locked with key",
+        icon: "twemoji:locked-with-key",
+      },
+      {
+        slug: "key",
+        name: "key",
+        icon: "twemoji:key",
+      },
+      {
+        slug: "old-key",
+        name: "old key",
+        icon: "twemoji:old-key",
+      },
+      {
+        slug: "hammer",
+        name: "hammer",
+        icon: "twemoji:hammer",
+      },
+      {
+        slug: "axe",
+        name: "axe",
+        icon: "twemoji:axe",
+      },
+      {
+        slug: "pick",
+        name: "pick",
+        icon: "twemoji:pick",
+      },
+      {
+        slug: "hammer-and-pick",
+        name: "hammer and pick",
+        icon: "twemoji:hammer-and-pick",
+      },
+      {
+        slug: "hammer-and-wrench",
+        name: "hammer and wrench",
+        icon: "twemoji:hammer-and-wrench",
+      },
+      {
+        slug: "dagger",
+        name: "dagger",
+        icon: "twemoji:dagger",
+      },
+      {
+        slug: "crossed-swords",
+        name: "crossed swords",
+        icon: "twemoji:crossed-swords",
+      },
+      {
+        slug: "water-pistol",
+        name: "water pistol",
+        icon: "twemoji:water-pistol",
+      },
+      {
+        slug: "boomerang",
+        name: "boomerang",
+        icon: "twemoji:boomerang",
+      },
+      {
+        slug: "bow-and-arrow",
+        name: "bow and arrow",
+        icon: "twemoji:bow-and-arrow",
+      },
+      {
+        slug: "shield",
+        name: "shield",
+        icon: "twemoji:shield",
+      },
+      {
+        slug: "carpentry-saw",
+        name: "carpentry saw",
+        icon: "twemoji:carpentry-saw",
+      },
+      {
+        slug: "wrench",
+        name: "wrench",
+        icon: "twemoji:wrench",
+      },
+      {
+        slug: "screwdriver",
+        name: "screwdriver",
+        icon: "twemoji:screwdriver",
+      },
+      {
+        slug: "nut-and-bolt",
+        name: "nut and bolt",
+        icon: "twemoji:nut-and-bolt",
+      },
+      {
+        slug: "gear",
+        name: "gear",
+        icon: "twemoji:gear",
+      },
+      {
+        slug: "clamp",
+        name: "clamp",
+        icon: "twemoji:clamp",
+      },
+      {
+        slug: "balance-scale",
+        name: "balance scale",
+        icon: "twemoji:balance-scale",
+      },
+      {
+        slug: "white-cane",
+        name: "white cane",
+        icon: "twemoji:white-cane",
+      },
+      {
+        slug: "link",
+        name: "link",
+        icon: "twemoji:link",
+      },
+      {
+        slug: "chains",
+        name: "chains",
+        icon: "twemoji:chains",
+      },
+      {
+        slug: "hook",
+        name: "hook",
+        icon: "twemoji:hook",
+      },
+      {
+        slug: "toolbox",
+        name: "toolbox",
+        icon: "twemoji:toolbox",
+      },
+      {
+        slug: "magnet",
+        name: "magnet",
+        icon: "twemoji:magnet",
+      },
+      {
+        slug: "ladder",
+        name: "ladder",
+        icon: "twemoji:ladder",
+      },
+      {
+        slug: "alembic",
+        name: "alembic",
+        icon: "twemoji:alembic",
+      },
+      {
+        slug: "test-tube",
+        name: "test tube",
+        icon: "twemoji:test-tube",
+      },
+      {
+        slug: "petri-dish",
+        name: "petri dish",
+        icon: "twemoji:petri-dish",
+      },
+      {
+        slug: "dna",
+        name: "dna",
+        icon: "twemoji:dna",
+      },
+      {
+        slug: "microscope",
+        name: "microscope",
+        icon: "twemoji:microscope",
+      },
+      {
+        slug: "telescope",
+        name: "telescope",
+        icon: "twemoji:telescope",
+      },
+      {
+        slug: "satellite-antenna",
+        name: "satellite antenna",
+        icon: "twemoji:satellite-antenna",
+      },
+      {
+        slug: "syringe",
+        name: "syringe",
+        icon: "twemoji:syringe",
+      },
+      {
+        slug: "drop-of-blood",
+        name: "drop of blood",
+        icon: "twemoji:drop-of-blood",
+      },
+      {
+        slug: "pill",
+        name: "pill",
+        icon: "twemoji:pill",
+      },
+      {
+        slug: "adhesive-bandage",
+        name: "adhesive bandage",
+        icon: "twemoji:adhesive-bandage",
+      },
+      {
+        slug: "crutch",
+        name: "crutch",
+        icon: "twemoji:crutch",
+      },
+      {
+        slug: "stethoscope",
+        name: "stethoscope",
+        icon: "twemoji:stethoscope",
+      },
+      {
+        slug: "x-ray",
+        name: "x ray",
+        icon: "twemoji:x-ray",
+      },
+      {
+        slug: "door",
+        name: "door",
+        icon: "twemoji:door",
+      },
+      {
+        slug: "elevator",
+        name: "elevator",
+        icon: "twemoji:elevator",
+      },
+      {
+        slug: "mirror",
+        name: "mirror",
+        icon: "twemoji:mirror",
+      },
+      {
+        slug: "window",
+        name: "window",
+        icon: "twemoji:window",
+      },
+      {
+        slug: "bed",
+        name: "bed",
+        icon: "twemoji:bed",
+      },
+      {
+        slug: "couch-and-lamp",
+        name: "couch and lamp",
+        icon: "twemoji:couch-and-lamp",
+      },
+      {
+        slug: "chair",
+        name: "chair",
+        icon: "twemoji:chair",
+      },
+      {
+        slug: "toilet",
+        name: "toilet",
+        icon: "twemoji:toilet",
+      },
+      {
+        slug: "plunger",
+        name: "plunger",
+        icon: "twemoji:plunger",
+      },
+      {
+        slug: "shower",
+        name: "shower",
+        icon: "twemoji:shower",
+      },
+      {
+        slug: "bathtub",
+        name: "bathtub",
+        icon: "twemoji:bathtub",
+      },
+      {
+        slug: "mouse-trap",
+        name: "mouse trap",
+        icon: "twemoji:mouse-trap",
+      },
+      {
+        slug: "razor",
+        name: "razor",
+        icon: "twemoji:razor",
+      },
+      {
+        slug: "lotion-bottle",
+        name: "lotion bottle",
+        icon: "twemoji:lotion-bottle",
+      },
+      {
+        slug: "safety-pin",
+        name: "safety pin",
+        icon: "twemoji:safety-pin",
+      },
+      {
+        slug: "broom",
+        name: "broom",
+        icon: "twemoji:broom",
+      },
+      {
+        slug: "basket",
+        name: "basket",
+        icon: "twemoji:basket",
+      },
+      {
+        slug: "roll-of-paper",
+        name: "roll of paper",
+        icon: "twemoji:roll-of-paper",
+      },
+      {
+        slug: "bucket",
+        name: "bucket",
+        icon: "twemoji:bucket",
+      },
+      {
+        slug: "soap",
+        name: "soap",
+        icon: "twemoji:soap",
+      },
+      {
+        slug: "bubbles",
+        name: "bubbles",
+        icon: "twemoji:bubbles",
+      },
+      {
+        slug: "toothbrush",
+        name: "toothbrush",
+        icon: "twemoji:toothbrush",
+      },
+      {
+        slug: "sponge",
+        name: "sponge",
+        icon: "twemoji:sponge",
+      },
+      {
+        slug: "fire-extinguisher",
+        name: "fire extinguisher",
+        icon: "twemoji:fire-extinguisher",
+      },
+      {
+        slug: "shopping-cart",
+        name: "shopping-cart",
+        icon: "twemoji:shopping-cart",
+      },
+      {
+        slug: "cigarette",
+        name: "cigarette",
+        icon: "twemoji:cigarette",
+      },
+      {
+        slug: "coffin",
+        name: "coffin",
+        icon: "twemoji:coffin",
+      },
+      {
+        slug: "headstone",
+        name: "headstone",
+        icon: "twemoji:headstone",
+      },
+      {
+        slug: "funeral-urn",
+        name: "funeral urn",
+        icon: "twemoji:funeral-urn",
+      },
+      {
+        slug: "moai",
+        name: "moai",
+        icon: "twemoji:moai",
+      },
+      {
+        slug: "placard",
+        name: "placard",
+        icon: "twemoji:placard",
+      },
+      {
+        slug: "identification-card",
+        name: "identification card",
+        icon: "twemoji:identification-card",
+      },
+    ],
+  },
+  {
+    label: "Symbols",
+    icon: "solar:check-circle-outline",
+    emojis: [
+      {
+        slug: "atm-sign",
+        name: "atm sign",
+        icon: "twemoji:atm-sign",
+      },  
+      {
+        slug: "litter-in-bin-sign",
+        name: "litter in bin sign",
+        icon: "twemoji:litter-in-bin-sign",
+      },  
+      {
+        slug: "potable-water",
+        name: "potable water",
+        icon: "twemoji:potable-water",
+      },  
+      {
+        slug: "wheelchair-symbol",
+        name: "wheelchair symbol",
+        icon: "twemoji:wheelchair-symbol",
+      },  
+      {
+        slug: "mens-room",
+        name: "mens room",
+        icon: "twemoji:mens-room",
+      },  
+      {
+        slug: "womens-room",
+        name: "womens room",
+        icon: "twemoji:womens-room",
+      },  
+      {
+        slug: "restroom",
+        name: "restroom",
+        icon: "twemoji:restroom",
+      },  
+      {
+        slug: "baby-symbol",
+        name: "baby symbol",
+        icon: "twemoji:baby-symbol",
+      },  
+      {
+        slug: "water-closet",
+        name: "water closet",
+        icon: "twemoji:water-closet",
+      },  
+      {
+        slug: "passport-control",
+        name: "passport control",
+        icon: "twemoji:passport-control",
+      },  
+      {
+        slug: "customs",
+        name: "customs",
+        icon: "twemoji:customs",
+      },  
+      {
+        slug: "baggage-claim",
+        name: "baggage claim",
+        icon: "twemoji:baggage-claim",
+      },  
+      {
+        slug: "left-luggage",
+        name: "left luggage",
+        icon: "twemoji:left-luggage",
+      },  
+      {
+        slug: "warning",
+        name: "warning",
+        icon: "twemoji:warning",
+      },  
+      {
+        slug: "children-crossing",
+        name: "children crossing",
+        icon: "twemoji:children-crossing",
+      },  
+      {
+        slug: "no-entry",
+        name: "no entry",
+        icon: "twemoji:no-entry",
+      },  
+      {
+        slug: "prohibited",
+        name: "prohibited",
+        icon: "twemoji:prohibited",
+      },  
+      {
+        slug: "no-bicycles",
+        name: "no bicycles",
+        icon: "twemoji:no-bicycles",
+      },  
+      {
+        slug: "no-smoking",
+        name: "no smoking",
+        icon: "twemoji:no-smoking",
+      },  
+      {
+        slug: "no-littering",
+        name: "no littering",
+        icon: "twemoji:no-littering",
+      },  
+      {
+        slug: "non-potable-water",
+        name: "non potable water",
+        icon: "twemoji:non-potable-water",
+      },  
+      {
+        slug: "no-pedestrians",
+        name: "no pedestrians",
+        icon: "twemoji:no-pedestrians",
+      },  
+      {
+        slug: "no-mobile-phones",
+        name: "no mobile phones",
+        icon: "twemoji:no-mobile-phones",
+      },  
+      {
+        slug: "no-one-under-eighteen",
+        name: "no one under eighteen",
+        icon: "twemoji:no-one-under-eighteen",
+      },  
+      {
+        slug: "radioactive",
+        name: "radioactive",
+        icon: "twemoji:radioactive",
+      },  
+      {
+        slug: "biohazard",
+        name: "biohazard",
+        icon: "twemoji:biohazard",
+      },  
+      {
+        slug: "up-arrow",
+        name: "up arrow",
+        icon: "twemoji:up-arrow",
+      },  
+      {
+        slug: "up-right-arrow",
+        name: "up right arrow",
+        icon: "twemoji:up-right-arrow",
+      },  
+      {
+        slug: "right-arrow",
+        name: "right arrow",
+        icon: "twemoji:right-arrow",
+      },  
+      {
+        slug: "down-right-arrow",
+        name: "down right arrow",
+        icon: "twemoji:down-right-arrow",
+      },  
+      {
+        slug: "down-arrow",
+        name: "down arrow",
+        icon: "twemoji:down-arrow",
+      },  
+      {
+        slug: "down-left-arrow",
+        name: "down left arrow",
+        icon: "twemoji:down-left-arrow",
+      },  
+      {
+        slug: "left-arrow",
+        name: "left arrow",
+        icon: "twemoji:left-arrow",
+      },  
+      {
+        slug: "up-left-arrow",
+        name: "up left arrow",
+        icon: "twemoji:up-left-arrow",
+      },  
+      {
+        slug: "up-down-arrow",
+        name: "up down arrow",
+        icon: "twemoji:up-down-arrow",
+      },  
+      {
+        slug: "left-right-arrow",
+        name: "left right arrow",
+        icon: "twemoji:left-right-arrow",
+      },  
+      {
+        slug: "right-arrow-curving-left",
+        name: "right arrow curving left",
+        icon: "twemoji:right-arrow-curving-left",
+      },  
+      {
+        slug: "left-arrow-curving-right",
+        name: "left arrow curving right",
+        icon: "twemoji:left-arrow-curving-right",
+      },  
+      {
+        slug: "right-arrow-curving-up",
+        name: "right arrow curving up",
+        icon: "twemoji:right-arrow-curving-up",
+      },  
+      {
+        slug: "right-arrow-curving-down",
+        name: "right arrow curving down",
+        icon: "twemoji:right-arrow-curving-down",
+      },  
+      {
+        slug: "counterclockwise-arrows-button",
+        name: "counterclockwise arrows button",
+        icon: "twemoji:counterclockwise-arrows-button",
+      },  
+      {
+        slug: "back-arrow",
+        name: "back arrow",
+        icon: "twemoji:back-arrow",
+      },  
+      {
+        slug: "end-arrow",
+        name: "end arrow",
+        icon: "twemoji:end-arrow",
+      },  
+      {
+        slug: "on-exclamation-arrow",
+        name: "on exclamation arrow",
+        icon: "twemoji:on-exclamation-arrow",
+      },  
+      {
+        slug: "soon-arrow",
+        name: "soon arrow",
+        icon: "twemoji:soon-arrow",
+      },  
+      {
+        slug: "top-arrow",
+        name: "top arrow",
+        icon: "twemoji:top-arrow",
+      },  
+      {
+        slug: "place-of-worship",
+        name: "place of worship",
+        icon: "twemoji:place-of-worship",
+      },  
+      {
+        slug: "atom-symbol",
+        name: "atom symbol",
+        icon: "twemoji:atom-symbol",
+      },  
+      {
+        slug: "om",
+        name: "om",
+        icon: "twemoji:om",
+      },  
+      {
+        slug: "star-of-david",
+        name: "star of david",
+        icon: "twemoji:star-of-david",
+      },  
+      {
+        slug: "wheel-of-dharma",
+        name: "wheel of dharma",
+        icon: "twemoji:wheel-of-dharma",
+      },  
+      {
+        slug: "yin-yang",
+        name: "yin yang",
+        icon: "twemoji:yin-yang",
+      },  
+      {
+        slug: "latin-cross",
+        name: "latin cross",
+        icon: "twemoji:latin-cross",
+      },  
+      {
+        slug: "orthodox-cross",
+        name: "orthodox cross",
+        icon: "twemoji:orthodox-cross",
+      },  
+      {
+        slug: "star-and-crescent",
+        name: "star and crescent",
+        icon: "twemoji:star-and-crescent",
+      },  
+      {
+        slug: "peace-symbol",
+        name: "peace symbol",
+        icon: "twemoji:peace-symbol",
+      },  
+      {
+        slug: "menorah",
+        name: "menorah",
+        icon: "twemoji:menorah",
+      },  
+      {
+        slug: "dotted-six-pointed-star",
+        name: "dotted six pointed star",
+        icon: "twemoji:dotted-six-pointed-star",
+      },  
+      {
+        slug: "aries",
+        name: "aries",
+        icon: "twemoji:aries",
+      },  
+      {
+        slug: "taurus",
+        name: "taurus",
+        icon: "twemoji:taurus",
+      },  
+      {
+        slug: "gemini",
+        name: "gemini",
+        icon: "twemoji:gemini",
+      },  
+      {
+        slug: "cancer",
+        name: "cancer",
+        icon: "twemoji:cancer",
+      },  
+      {
+        slug: "leo",
+        name: "leo",
+        icon: "twemoji:leo",
+      },  
+      {
+        slug: "virgo",
+        name: "virgo",
+        icon: "twemoji:virgo",
+      },  
+      {
+        slug: "libra",
+        name: "libra",
+        icon: "twemoji:libra",
+      },  
+      {
+        slug: "scorpio",
+        name: "scorpio",
+        icon: "twemoji:scorpio",
+      },  
+      {
+        slug: "sagittarius",
+        name: "sagittarius",
+        icon: "twemoji:sagittarius",
+      },  
+      {
+        slug: "capricorn",
+        name: "capricorn",
+        icon: "twemoji:capricorn",
+      },  
+      {
+        slug: "aquarius",
+        name: "aquarius",
+        icon: "twemoji:aquarius",
+      },  
+      {
+        slug: "pisces",
+        name: "pisces",
+        icon: "twemoji:pisces",
+      },  
+      {
+        slug: "ophiuchus",
+        name: "ophiuchus",
+        icon: "twemoji:ophiuchus",
+      },  
+      {
+        slug: "shuffle-tracks-button",
+        name: "shuffle tracks button",
+        icon: "twemoji:shuffle-tracks-button",
+      },  
+      {
+        slug: "repeat-button",
+        name: "repeat button",
+        icon: "twemoji:repeat-button",
+      },  
+      {
+        slug: "repeat-single-button",
+        name: "repeat single button",
+        icon: "twemoji:repeat-single-button",
+      },  
+      {
+        slug: "play-button",
+        name: "play button",
+        icon: "twemoji:play-button",
+      },  
+      {
+        slug: "fast-forward-button",
+        name: "fast forward button",
+        icon: "twemoji:fast-forward-button",
+      },  
+      {
+        slug: "next-track-button",
+        name: "next track button",
+        icon: "twemoji:next-track-button",
+      },  
+      {
+        slug: "play-or-pause-button",
+        name: "play or pause button",
+        icon: "twemoji:play-or-pause-button",
+      },  
+      {
+        slug: "reverse-button",
+        name: "reverse button",
+        icon: "twemoji:reverse-button",
+      },  
+      {
+        slug: "fast-reverse-button",
+        name: "fast reverse button",
+        icon: "twemoji:fast-reverse-button",
+      },  
+      {
+        slug: "last-track-button",
+        name: "last track button",
+        icon: "twemoji:last-track-button",
+      },  
+      {
+        slug: "upwards-button",
+        name: "upwards button",
+        icon: "twemoji:upwards-button",
+      },  
+      {
+        slug: "fast-up-button",
+        name: "fast up button",
+        icon: "twemoji:fast-up-button",
+      },  
+      {
+        slug: "downwards-button",
+        name: "downwards button",
+        icon: "twemoji:downwards-button",
+      },  
+      {
+        slug: "fast-down-button",
+        name: "fast down button",
+        icon: "twemoji:fast-down-button",
+      },  
+      {
+        slug: "pause-button",
+        name: "pause button",
+        icon: "twemoji:pause-button",
+      },  
+      {
+        slug: "stop-button",
+        name: "stop button",
+        icon: "twemoji:stop-button",
+      },  
+      {
+        slug: "record-button",
+        name: "record button",
+        icon: "twemoji:record-button",
+      },  
+      {
+        slug: "eject-button",
+        name: "eject button",
+        icon: "twemoji:eject-button",
+      },  
+      {
+        slug: "cinema",
+        name: "cinema",
+        icon: "twemoji:cinema",
+      },  
+      {
+        slug: "dim-button",
+        name: "dim button",
+        icon: "twemoji:dim-button",
+      },  
+      {
+        slug: "bright-button",
+        name: "bright button",
+        icon: "twemoji:bright-button",
+      },  
+      {
+        slug: "antenna-bars",
+        name: "antenna bars",
+        icon: "twemoji:antenna-bars",
+      },  
+      {
+        slug: "vibration-mode",
+        name: "vibration mode",
+        icon: "twemoji:vibration-mode",
+      },  
+      {
+        slug: "mobile-phone-off",
+        name: "mobile phone off",
+        icon: "twemoji:mobile-phone-off",
+      },  
+      {
+        slug: "female-sign",
+        name: "female sign",
+        icon: "twemoji:female-sign",
+      },  
+      {
+        slug: "male-sign",
+        name: "male sign",
+        icon: "twemoji:male-sign",
+      },  
+      {
+        slug: "transgender-symbol",
+        name: "transgender symbol",
+        icon: "twemoji:transgender-symbol",
+      },  
+      {
+        slug: "multiply",
+        name: "multiply",
+        icon: "twemoji:multiply",
+      },  
+      {
+        slug: "plus",
+        name: "plus",
+        icon: "twemoji:plus",
+      },  
+      {
+        slug: "minus",
+        name: "minus",
+        icon: "twemoji:minus",
+      },  
+      {
+        slug: "divide",
+        name: "divide",
+        icon: "twemoji:divide",
+      },  
+      {
+        slug: "heavy-equals-sign",
+        name: "heavy equals sign",
+        icon: "twemoji:heavy-equals-sign",
+      },  
+      {
+        slug: "infinity",
+        name: "infinity",
+        icon: "twemoji:infinity",
+      },  
+      {
+        slug: "double-exclamation-mark",
+        name: "double exclamation mark",
+        icon: "twemoji:double-exclamation-mark",
+      },  
+      {
+        slug: "exclamation-question-mark",
+        name: "exclamation questin mark",
+        icon: "twemoji:exclamation-question-mark",
+      },  
+      {
+        slug: "red-question-mark",
+        name: "red question mark",
+        icon: "twemoji:red-question-mark",
+      },  
+      {
+        slug: "white-question-mark",
+        name: "white question mark",
+        icon: "twemoji:white-question-mark",
+      },  
+      {
+        slug: "white-exclamation-mark",
+        name: "white exclamation mark",
+        icon: "twemoji:white-exclamation-mark",
+      },  
+      {
+        slug: "red-exclamation-mark",
+        name: "red exclamation mark",
+        icon: "twemoji:red-exclamation-mark",
+      },  
+      {
+        slug: "wavy-dash",
+        name: "wavy dash",
+        icon: "twemoji:wavy-dash",
+      },  
+      {
+        slug: "currency-exchange",
+        name: "currency exchange",
+        icon: "twemoji:currency-exchange",
+      },  
+      {
+        slug: "heavy-dollar-sign",
+        name: "heavy dollar sign",
+        icon: "twemoji:heavy-dollar-sign",
+      },  
+      {
+        slug: "medical-symbol",
+        name: "medical symbol",
+        icon: "twemoji:medical-symbol",
+      },  
+      {
+        slug: "recycling-symbol",
+        name: "recycling symbol",
+        icon: "twemoji:recycling-symbol",
+      },  
+      {
+        slug: "fleur-de-lis",
+        name: "fleur de lis",
+        icon: "twemoji:fleur-de-lis",
+      },  
+      {
+        slug: "trident-emblem",
+        name: "trident emblem",
+        icon: "twemoji:trident-emblem",
+      },  
+      {
+        slug: "name-badge",
+        name: "name badge",
+        icon: "twemoji:name-badge",
+      },  
+      {
+        slug: "japanese-symbol-for-beginner",
+        name: "japanese symbol for beginner",
+        icon: "twemoji:japanese-symbol-for-beginner",
+      },  
+      {
+        slug: "hollow-red-circle",
+        name: "hollow red circle",
+        icon: "twemoji:hollow-red-circle",
+      },  
+      {
+        slug: "check-mark-button",
+        name: "check mark button",
+        icon: "twemoji:check-mark-button",
+      },  
+      {
+        slug: "check-box-with-check",
+        name: "check box with check",
+        icon: "twemoji:check-box-with-check",
+      },  
+      {
+        slug: "check-mark",
+        name: "check mark",
+        icon: "twemoji:check-mark",
+      },  
+      {
+        slug: "cross-mark",
+        name: "cross mark",
+        icon: "twemoji:cross-mark",
+      },  
+      {
+        slug: "cross-mark-button",
+        name: "cross mark button",
+        icon: "twemoji:cross-mark-button",
+      },  
+      {
+        slug: "curly-loop",
+        name: "curly loop",
+        icon: "twemoji:curly-loop",
+      },  
+      {
+        slug: "part-alternation-mark",
+        name: "part alternation mark",
+        icon: "twemoji:part-alternation-mark",
+      },  
+      {
+        slug: "eight-spoked-asterisk",
+        name: "eight spoked asterisk",
+        icon: "twemoji:eight-spoked-asterisk",
+      },  
+      {
+        slug: "eight-pointed-star",
+        name: "eight pointed star",
+        icon: "twemoji:eight-pointed-star",
+      },  
+      {
+        slug: "sparkle",
+        name: "sparkle",
+        icon: "twemoji:sparkle",
+      },  
+      {
+        slug: "copyright",
+        name: "copyright",
+        icon: "twemoji:copyright",
+      },  
+      {
+        slug: "registered",
+        name: "registered",
+        icon: "twemoji:registered",
+      },  
+      {
+        slug: "trade-mark",
+        name: "trade mark",
+        icon: "twemoji:trade-mark",
+      },  
+      {
+        slug: "keycap-pound",
+        name: "keycap pound",
+        icon: "twemoji:keycap-pound",
+      },  
+      {
+        slug: "keycap-asterisk",
+        name: "keycap asterisk",
+        icon: "twemoji:keycap-asterisk",
+      },  
+      {
+        slug: "keycap-0",
+        name: "keycap 0",
+        icon: "twemoji:keycap-0",
+      },  
+      {
+        slug: "keycap-1",
+        name: "keycap 1",
+        icon: "twemoji:keycap-1",
+      },  
+      {
+        slug: "keycap-2",
+        name: "keycap 2",
+        icon: "twemoji:keycap-2",
+      },  
+      {
+        slug: "keycap-3",
+        name: "keycap 3",
+        icon: "twemoji:keycap-3",
+      },  
+      {
+        slug: "keycap-4",
+        name: "keycap 4",
+        icon: "twemoji:keycap-4",
+      },  
+      {
+        slug: "keycap-5",
+        name: "keycap 5",
+        icon: "twemoji:keycap-5",
+      },  
+      {
+        slug: "keycap-6",
+        name: "keycap 6",
+        icon: "twemoji:keycap-6",
+      },  
+      {
+        slug: "keycap-7",
+        name: "keycap 7",
+        icon: "twemoji:keycap-7",
+      },  
+      {
+        slug: "keycap-8",
+        name: "keycap 8",
+        icon: "twemoji:keycap-8",
+      },  
+      {
+        slug: "keycap-9",
+        name: "keycap 9",
+        icon: "twemoji:keycap-9",
+      },  
+      {
+        slug: "keycap-10",
+        name: "keycap 10",
+        icon: "twemoji:keycap-10",
+      },  
+      {
+        slug: "letter-a",
+        name: "letter a",
+        icon: "twemoji:letter-a",
+      },  
+      {
+        slug: "letter-b",
+        name: "letter b",
+        icon: "twemoji:letter-b",
+      },  
+      {
+        slug: "letter-c",
+        name: "letter c",
+        icon: "twemoji:letter-c",
+      },  
+      {
+        slug: "letter-d",
+        name: "letter d",
+        icon: "twemoji:letter-d",
+      },  
+      {
+        slug: "letter-e",
+        name: "letter e",
+        icon: "twemoji:letter-e",
+      },  
+      {
+        slug: "letter-f",
+        name: "letter f",
+        icon: "twemoji:letter-f",
+      },  
+      {
+        slug: "letter-g",
+        name: "letter g",
+        icon: "twemoji:letter-g",
+      },  
+      {
+        slug: "letter-h",
+        name: "letter h",
+        icon: "twemoji:letter-h",
+      },  
+      {
+        slug: "letter-i",
+        name: "letter i",
+        icon: "twemoji:letter-i",
+      },  
+      {
+        slug: "letter-j",
+        name: "letter j",
+        icon: "twemoji:letter-j",
+      },  
+      {
+        slug: "letter-k",
+        name: "letter k",
+        icon: "twemoji:letter-k",
+      },  
+      {
+        slug: "letter-l",
+        name: "letter l",
+        icon: "twemoji:letter-l",
+      },  
+      {
+        slug: "letter-m",
+        name: "letter m",
+        icon: "twemoji:letter-m",
+      },  
+      {
+        slug: "letter-n",
+        name: "letter n",
+        icon: "twemoji:letter-n",
+      },  
+      {
+        slug: "letter-o",
+        name: "letter o ",
+        icon: "twemoji:letter-o",
+      },  
+      {
+        slug: "letter-p",
+        name: "letter p",
+        icon: "twemoji:letter-p",
+      },  
+      {
+        slug: "letter-q",
+        name: "letter q",
+        icon: "twemoji:letter-q",
+      },  
+      {
+        slug: "letter-r",
+        name: "letter r",
+        icon: "twemoji:letter-r",
+      },  
+      {
+        slug: "letter-s",
+        name: "letter s",
+        icon: "twemoji:letter-s",
+      },  
+      {
+        slug: "letter-t",
+        name: "letter t",
+        icon: "twemoji:letter-t",
+      },  
+      {
+        slug: "letter-u",
+        name: "letter u",
+        icon: "twemoji:letter-u",
+      },  
+      {
+        slug: "letter-v",
+        name: "letter v",
+        icon: "twemoji:letter-v",
+      },  
+      {
+        slug: "letter-w",
+        name: "letter w",
+        icon: "twemoji:letter-w",
+      },  
+      {
+        slug: "letter-x",
+        name: "letter x",
+        icon: "twemoji:letter-x",
+      },  
+      {
+        slug: "letter-y",
+        name: "letter y",
+        icon: "twemoji:letter-y",
+      },  
+      {
+        slug: "letter-z",
+        name: "letter z",
+        icon: "twemoji:letter-z",
+      },  
+      {
+        slug: "input-latin-uppercase",
+        name: "input latin uppercase",
+        icon: "twemoji:input-latin-uppercase",
+      },  
+      {
+        slug: "input-latin-lowercase",
+        name: "input latin lowercase",
+        icon: "twemoji:input-latin-lowercase",
+      },  
+      {
+        slug: "input-numbers",
+        name: "input numbers",
+        icon: "twemoji:input-numbers",
+      },  
+      {
+        slug: "input-symbols",
+        name: "input symbols",
+        icon: "twemoji:input-symbols",
+      },  
+      {
+        slug: "input-latin-letters",
+        name: "input latin letters",
+        icon: "twemoji:input-latin-letters",
+      },  
+      {
+        slug: "a-button-blood-type",
+        name: "a button blood type",
+        icon: "twemoji:a-button-blood-type",
+      },  
+      {
+        slug: "ab-button-blood-type",
+        name: "ab button blood type",
+        icon: "twemoji:ab-button-blood-type",
+      },  
+      {
+        slug: "b-button-blood-type",
+        name: "b button blood type",
+        icon: "twemoji:b-button-blood-type",
+      },  
+      {
+        slug: "cl-button",
+        name: "cl button",
+        icon: "twemoji:cl-button",
+      },  
+      {
+        slug: "cool-button",
+        name: "cool button",
+        icon: "twemoji:cool-button",
+      },  
+      {
+        slug: "free-button",
+        name: "free button",
+        icon: "twemoji:free-button",
+      },  
+      {
+        slug: "information",
+        name: "information",
+        icon: "twemoji:information",
+      },  
+      {
+        slug: "id-button",
+        name: "id button",
+        icon: "twemoji:id-button",
+      },  
+      {
+        slug: "circled-m",
+        name: "circled m",
+        icon: "twemoji:circled-m",
+      },  
+      {
+        slug: "new-button",
+        name: "new button",
+        icon: "twemoji:new-button",
+      },  
+      {
+        slug: "ng-button",
+        name: "ng button",
+        icon: "twemoji:ng-button",
+      },  
+      {
+        slug: "o-button-blood-type",
+        name: "o button blood type",
+        icon: "twemoji:o-button-blood-type",
+      },  
+      {
+        slug: "ok-button",
+        name: "ok button",
+        icon: "twemoji:ok-button",
+      },  
+      {
+        slug: "p-button",
+        name: "p button",
+        icon: "twemoji:p-button",
+      },  
+      {
+        slug: "sos-button",
+        name: "sos button",
+        icon: "twemoji:sos-button",
+      },  
+      {
+        slug: "up-exclamation-button",
+        name: "up exclamation button",
+        icon: "twemoji:up-exclamation-button",
+      },  
+      {
+        slug: "vs-button",
+        name: "vs button",
+        icon: "twemoji:vs-button",
+      },  
+      {
+        slug: "japanese-here-button",
+        name: "japanese here button",
+        icon: "twemoji:japanese-here-button",
+      },  
+      {
+        slug: "japanese-service-charge-button",
+        name: "japanese service charge button",
+        icon: "twemoji:japanese-service-charge-button",
+      },  
+      {
+        slug: "japanese-monthly-amount-button",
+        name: "japanese monthly amount button",
+        icon: "twemoji:japanese-monthly-amount-button",
+      },  
+      {
+        slug: "japanese-not-free-of-charge-button",
+        name: "japanese not free of charge button",
+        icon: "twemoji:japanese-not-free-of-charge-button",
+      },  
+      {
+        slug: "japanese-reserved-button",
+        name: "japanese reserved button",
+        icon: "twemoji:japanese-reserved-button",
+      },  
+      {
+        slug: "japanese-bargain-button",
+        name: "japanese bargain button",
+        icon: "twemoji:japanese-bargain-button",
+      },  
+      {
+        slug: "japanese-discount-button",
+        name: "japanese discount button",
+        icon: "twemoji:japanese-discount-button",
+      },  
+      {
+        slug: "japanese-free-of-charge-button",
+        name: "japanese free of charge button",
+        icon: "twemoji:japanese-free-of-charge-button",
+      },  
+      {
+        slug: "japanese-prohibited-button",
+        name: "japanese prohibited button",
+        icon: "twemoji:japanese-prohibited-button",
+      },  
+      {
+        slug: "japanese-acceptable-button",
+        name: "japanese acceptable button",
+        icon: "twemoji:japanese-acceptable-button",
+      },  
+      {
+        slug: "japanese-application-button",
+        name: "japanese application button",
+        icon: "twemoji:japanese-application-button",
+      },  
+      {
+        slug: "japanese-passing-grade-button",
+        name: "japanese passing grade button",
+        icon: "twemoji:japanese-passing-grade-button",
+      },  
+      {
+        slug: "japanese-vacancy-button",
+        name: "japanese vacancy button",
+        icon: "twemoji:japanese-vacancy-button",
+      },  
+      {
+        slug: "japanese-congratulations-button",
+        name: "japanese congratulations button",
+        icon: "twemoji:japanese-congratulations-button",
+      },  
+      {
+        slug: "japanese-secret-button",
+        name: "japanese secret button",
+        icon: "twemoji:japanese-secret-button",
+      },  
+      {
+        slug: "japanese-open-for-business-button",
+        name: "japanese open for business button",
+        icon: "twemoji:japanese-open-for-business-button",
+      },  
+      {
+        slug: "japanese-no-vacancy-button",
+        name: "japanese no vacancy button",
+        icon: "twemoji:japanese-no-vacancy-button",
+      },  
+      {
+        slug: "red-circle",
+        name: "red circle",
+        icon: "twemoji:red-circle",
+      },  
+      {
+        slug: "orange-circle",
+        name: "orange circle",
+        icon: "twemoji:orange-circle",
+      },  
+      {
+        slug: "yellow-circle",
+        name: "yellow circle",
+        icon: "twemoji:yellow-circle",
+      },  
+      {
+        slug: "green-circle",
+        name: "green circle",
+        icon: "twemoji:green-circle",
+      },  
+      {
+        slug: "blue-circle",
+        name: "blue circle",
+        icon: "twemoji:blue-circle",
+      },  
+      {
+        slug: "purple-circle",
+        name: "purple circle",
+        icon: "twemoji:purple-circle",
+      },  
+      {
+        slug: "brown-circle",
+        name: "brown circle",
+        icon: "twemoji:brown-circle",
+      },  
+      {
+        slug: "black-circle",
+        name: "black circle",
+        icon: "twemoji:black-circle",
+      },  
+      {
+        slug: "white-circle",
+        name: "white circle",
+        icon: "twemoji:white-circle",
+      },  
+      {
+        slug: "red-square",
+        name: "red square",
+        icon: "twemoji:red-square",
+      },  
+      {
+        slug: "orange-square",
+        name: "orange square",
+        icon: "twemoji:orange-square",
+      },  
+      {
+        slug: "yellow-square",
+        name: "yellow square",
+        icon: "twemoji:yellow-square",
+      },  
+      {
+        slug: "green-square",
+        name: "green square",
+        icon: "twemoji:green-square",
+      },  
+      {
+        slug: "blue-square",
+        name: "blue square",
+        icon: "twemoji:blue-square",
+      },  
+      {
+        slug: "purple-square",
+        name: "purple square",
+        icon: "twemoji:purple-square",
+      },  
+      {
+        slug: "brown-square",
+        name: "brown square",
+        icon: "twemoji:brown-square",
+      },  
+      {
+        slug: "black-large-square",
+        name: "black large square",
+        icon: "twemoji:black-large-square",
+      },  
+      {
+        slug: "white-large-square",
+        name: "white large square",
+        icon: "twemoji:white-large-square",
+      },  
+      {
+        slug: "black-medium-square",
+        name: "black medium square",
+        icon: "twemoji:black-medium-square",
+      },  
+      {
+        slug: "white-medium-square",
+        name: "white medium square",
+        icon: "twemoji:white-medium-square",
+      },  
+      {
+        slug: "black-medium-small-square",
+        name: "black medium small square",
+        icon: "twemoji:black-medium-small-square",
+      },  
+      {
+        slug: "white-medium-small-square",
+        name: "white medium small square",
+        icon: "twemoji:white-medium-small-square",
+      },  
+      {
+        slug: "black-small-square",
+        name: "black small square",
+        icon: "twemoji:black-small-square",
+      },  
+      {
+        slug: "white-small-square",
+        name: "white small square",
+        icon: "twemoji:white-small-square",
+      },  
+      {
+        slug: "large-orange-diamond",
+        name: "large orange diamond",
+        icon: "twemoji:large-orange-diamond",
+      },  
+      {
+        slug: "large-blue-diamond",
+        name: "large blue diamond",
+        icon: "twemoji:large-blue-diamond",
+      },  
+      {
+        slug: "small-orange-diamond",
+        name: "small orange diamond",
+        icon: "twemoji:small-orange-diamond",
+      },  
+      {
+        slug: "small-blue-diamond",
+        name: "small blue diamond",
+        icon: "twemoji:small-blue-diamond",
+      },  
+      {
+        slug: "red-triangle-pointed-up",
+        name: "red triangle pointed up",
+        icon: "twemoji:red-triangle-pointed-up",
+      },  
+      {
+        slug: "red-triangle-pointed-down",
+        name: "red triangle pointed down",
+        icon: "twemoji:red-triangle-pointed-down",
+      },  
+      {
+        slug: "diamond-with-a-dot",
+        name: "diamond with a dot",
+        icon: "twemoji:diamond-with-a-dot",
+      },  
+      {
+        slug: "radio-button",
+        name: "radio button",
+        icon: "twemoji:radio-button",
+      },  
+      {
+        slug: "white-square-button",
+        name: "white square button",
+        icon: "twemoji:white-square-button",
+      },  
+      {
+        slug: "black-square-button",
+        name: "black square button",
+        icon: "twemoji:black-square-button",
+      },  
+    ]
+  },
+  {
+    label: "Flags",
+    icon: "solar:flag-outline",
+    emojis: [
+      {
+        slug: "chequered-flag",
+        name: "chequered flag",
+        icon: "twemoji:chequered-flag",
+      },
+      {
+        slug: "triangular-flag",
+        name: "triangular flag",
+        icon: "twemoji:triangular-flag",
+      },
+      {
+        slug: "crossed-flags",
+        name: "crossed flags",
+        icon: "twemoji:crossed-flags",
+      },
+      {
+        slug: "black-flag",
+        name: "black flag",
+        icon: "twemoji:black-flag",
+      },
+      {
+        slug: "white-flag",
+        name: "white flag",
+        icon: "twemoji:white-flag",
+      },
+      {
+        slug: "rainbow-flag",
+        name: "rainbow flag",
+        icon: "twemoji:rainbow-flag",
+      },
+      {
+        slug: "transgender-flag",
+        name: "transgender flag",
+        icon: "twemoji:transgender-flag",
+      },
+      {
+        slug: "pirate-flag",
+        name: "pirate flag",
+        icon: "twemoji:pirate-flag",
+      },
+      {
+        slug: "flag-ascension-island",
+        name: "flag ascension island",
+        icon: "twemoji:flag-ascension-island",
+      },
+      {
+        slug: "flag-andorra",
+        name: "flag andorra",
+        icon: "twemoji:flag-andorra",
+      },
+      {
+        slug: "flag-united-arab-emirates",
+        name: "flag united arab emirates",
+        icon: "twemoji:flag-united-arab-emirates",
+      },
+      {
+        slug: "flag-afghanistan",
+        name: "flag afghanistan",
+        icon: "twemoji:flag-afghanistan",
+      },
+      {
+        slug: "flag-antigua-and-barbuda",
+        name: "flag antigua and barbuda",
+        icon: "twemoji:flag-antigua-and-barbuda",
+      },
+      {
+        slug: "flag-anguilla",
+        name: "flag anguilla",
+        icon: "twemoji:flag-anguilla",
+      },
+      {
+        slug: "flag-albania",
+        name: "flag albania",
+        icon: "twemoji:flag-albania",
+      },
+      {
+        slug: "flag-armenia",
+        name: "flag armenia",
+        icon: "twemoji:flag-armenia",
+      },
+      {
+        slug: "flag-angola",
+        name: "flag angola",
+        icon: "twemoji:flag-angola",
+      },
+      {
+        slug: "flag-antarctica",
+        name: "flag antarctica",
+        icon: "twemoji:flag-antarctica",
+      },
+      {
+        slug: "flag-argentina",
+        name: "flag argentina",
+        icon: "twemoji:flag-argentina",
+      },
+      {
+        slug: "flag-american-samoa",
+        name: "flag american samoa",
+        icon: "twemoji:flag-american-samoa",
+      },
+      {
+        slug: "flag-austria",
+        name: "flag austria",
+        icon: "twemoji:flag-austria",
+      },
+      {
+        slug: "flag-australia",
+        name: "flag australia",
+        icon: "twemoji:flag-australia",
+      },
+      {
+        slug: "flag-aruba",
+        name: "flag aruba",
+        icon: "twemoji:flag-aruba",
+      },
+      {
+        slug: "flag-aland-islands",
+        name: "flag aland islands",
+        icon: "twemoji:flag-aland-islands",
+      },
+      {
+        slug: "flag-azerbaijan",
+        name: "flag azerbaijan",
+        icon: "twemoji:flag-azerbaijan",
+      },
+      {
+        slug: "flag-bosnia-and-herzegovina",
+        name: "flag bosnia and herzegovina",
+        icon: "twemoji:flag-bosnia-and-herzegovina",
+      },
+      {
+        slug: "flag-barbados",
+        name: "flag barbados",
+        icon: "twemoji:flag-barbados",
+      },
+      {
+        slug: "flag-bangladesh",
+        name: "flag bangladesh",
+        icon: "twemoji:flag-bangladesh",
+      },
+      {
+        slug: "flag-belgium",
+        name: "flag belgium",
+        icon: "twemoji:flag-belgium",
+      },
+      {
+        slug: "flag-burkina-faso",
+        name: "flag burkina faso",
+        icon: "twemoji:flag-burkina-faso",
+      },
+      {
+        slug: "flag-bahrain",
+        name: "flag bahrain",
+        icon: "twemoji:flag-bahrain",
+      },
+      {
+        slug: "flag-burundi",
+        name: "flag burundi",
+        icon: "twemoji:flag-burundi",
+      },
+      {
+        slug: "flag-benin",
+        name: "flag benin",
+        icon: "twemoji:flag-benin",
+      },
+      {
+        slug: "flag-st-barthelemy",
+        name: "flag st barthelemy",
+        icon: "twemoji:flag-st-barthelemy",
+      },
+      {
+        slug: "flag-bermuda",
+        name: "flag bermuda",
+        icon: "twemoji:flag-bermuda",
+      },
+      {
+        slug: "flag-brunei",
+        name: "flag brunei",
+        icon: "twemoji:flag-brunei",
+      },
+      {
+        slug: "flag-bolivia",
+        name: "flag bolivia",
+        icon: "twemoji:flag-bolivia",
+      },
+      {
+        slug: "flag-caribbean-netherlands",
+        name: "flag caribbean netherlands",
+        icon: "twemoji:flag-caribbean-netherlands",
+      },
+      {
+        slug: "flag-brazil",
+        name: "flag brazil",
+        icon: "twemoji:flag-brazil",
+      },
+      {
+        slug: "flag-bahamas",
+        name: "flag-bahamas",
+        icon: "twemoji:flag-bahamas",
+      },
+      {
+        slug: "flag-bhutan",
+        name: "flag bhutan",
+        icon: "twemoji:flag-bhutan",
+      },
+      {
+        slug: "flag-bouvet-island",
+        name: "flag bouvet-island",
+        icon: "twemoji:flag-bouvet-island",
+      },
+      {
+        slug: "flag-botswana",
+        name: "flag botswana",
+        icon: "twemoji:flag-botswana",
+      },
+      {
+        slug: "flag-belarus",
+        name: "flag belarus",
+        icon: "twemoji:flag-belarus",
+      },
+      {
+        slug: "flag-belize",
+        name: "flag belize",
+        icon: "twemoji:flag-belize",
+      },
+      {
+        slug: "flag-canada",
+        name: "flag canada",
+        icon: "twemoji:flag-canada",
+      },
+      {
+        slug: "flag-cocos-keeling-islands",
+        name: "flag cocos keeling islands",
+        icon: "twemoji:flag-cocos-keeling-islands",
+      },
+      {
+        slug: "flag-congo-kinshasa",
+        name: "flag congo kinshasa",
+        icon: "twemoji:flag-congo-kinshasa",
+      },
+      {
+        slug: "flag-central-african-republic",
+        name: "flag central african republic",
+        icon: "twemoji:flag-central-african-republic",
+      },
+      {
+        slug: "flag-congo-brazzaville",
+        name: "flag congo brazzaville",
+        icon: "twemoji:flag-congo-brazzaville",
+      },
+      {
+        slug: "flag-switzerland",
+        name: "flag switzerland",
+        icon: "twemoji:flag-switzerland",
+      },
+      {
+        slug: "flag-cote-divoire",
+        name: "flag cote divoire",
+        icon: "twemoji:flag-cote-divoire",
+      },
+      {
+        slug: "flag-cook-islands",
+        name: "flag cook islands",
+        icon: "twemoji:flag-cook-islands",
+      },
+      {
+        slug: "flag-chile",
+        name: "flag chile",
+        icon: "twemoji:flag-chile",
+      },
+      {
+        slug: "flag-cameroon",
+        name: "flag cameroon",
+        icon: "twemoji:flag-cameroon",
+      },
+      {
+        slug: "flag-china",
+        name: "flag china",
+        icon: "twemoji:flag-china",
+      },
+      {
+        slug: "flag-colombia",
+        name: "flag colombia",
+        icon: "twemoji:flag-colombia",
+      },
+      {
+        slug: "flag-clipperton-island",
+        name: "flag clipperton island",
+        icon: "twemoji:flag-clipperton-island",
+      },
+      {
+        slug: "flag-costa-rica",
+        name: "flag costa rica",
+        icon: "twemoji:flag-costa-rica",
+      },
+      {
+        slug: "flag-cuba",
+        name: "flag cuba",
+        icon: "twemoji:flag-cuba",
+      },
+      {
+        slug: "flag-cape-verde",
+        name: "flag cape verde",
+        icon: "twemoji:flag-cape-verde",
+      },
+      {
+        slug: "flag-curacao",
+        name: "flag curacao",
+        icon: "twemoji:flag-curacao",
+      },
+      {
+        slug: "flag-christmas-island",
+        name: "flag christmas island",
+        icon: "twemoji:flag-christmas-island",
+      },
+      {
+        slug: "flag-cyprus",
+        name: "flag cyprus",
+        icon: "twemoji:flag-cyprus",
+      },
+      {
+        slug: "flag-czechia",
+        name: "flag czechia",
+        icon: "twemoji:flag-czechia",
+      },
+      {
+        slug: "flag-germany",
+        name: "flag germany",
+        icon: "twemoji:flag-germany",
+      },
+      {
+        slug: "flag-diego-garcia",
+        name: "flag diego garcia",
+        icon: "twemoji:flag-diego-garcia",
+      },
+      {
+        slug: "flag-djibouti",
+        name: "flag djibouti",
+        icon: "twemoji:flag-djibouti",
+      },
+      {
+        slug: "flag-denmark",
+        name: "flag denmark",
+        icon: "twemoji:flag-denmark",
+      },
+      {
+        slug: "flag-dominica",
+        name: "flag dominica",
+        icon: "twemoji:flag-dominica",
+      },
+      {
+        slug: "flag-dominican-republic",
+        name: "flag dominican republic",
+        icon: "twemoji:flag-dominican-republic",
+      },
+      {
+        slug: "flag-algeria",
+        name: "flag algeria",
+        icon: "twemoji:flag-algeria",
+      },
+      {
+        slug: "flag-ceuta-and-melilla",
+        name: "flag ceuta and melilla",
+        icon: "twemoji:flag-ceuta-and-melilla",
+      },
+      {
+        slug: "flag-ecuador",
+        name: "flag ecuador",
+        icon: "twemoji:flag-ecuador",
+      },
+      {
+        slug: "flag-estonia",
+        name: "flag estonia",
+        icon: "twemoji:flag-estonia",
+      },
+      {
+        slug: "flag-egypt",
+        name: "flag egypt",
+        icon: "twemoji:flag-egypt",
+      },
+      {
+        slug: "flag-western-sahara",
+        name: "flag western sahara",
+        icon: "twemoji:flag-western-sahara",
+      },
+      {
+        slug: "flag-eritrea",
+        name: "flag eritrea",
+        icon: "twemoji:flag-eritrea",
+      },
+      {
+        slug: "flag-spain",
+        name: "flag spain",
+        icon: "twemoji:flag-spain",
+      },
+      {
+        slug: "flag-ethiopia",
+        name: "flag ethiopia",
+        icon: "twemoji:flag-ethiopia",
+      },
+      {
+        slug: "flag-european-union",
+        name: "flag european union",
+        icon: "twemoji:flag-european-union",
+      },
+      {
+        slug: "flag-finland",
+        name: "flag finland",
+        icon: "twemoji:flag-finland",
+      },
+      {
+        slug: "flag-fiji",
+        name: "flag fiji",
+        icon: "twemoji:flag-fiji",
+      },
+      {
+        slug: "flag-falkland-islands",
+        name: "flag falkland islands",
+        icon: "twemoji:flag-falkland-islands",
+      },
+      {
+        slug: "flag-micronesia",
+        name: "flag micronesia",
+        icon: "twemoji:flag-micronesia",
+      },
+      {
+        slug: "flag-faroe-islands",
+        name: "flag faroe islands",
+        icon: "twemoji:flag-faroe-islands",
+      },
+      {
+        slug: "flag-france",
+        name: "flag france",
+        icon: "twemoji:flag-france",
+      },
+      {
+        slug: "flag-gabon",
+        name: "flag gabon",
+        icon: "twemoji:flag-gabon",
+      },
+      {
+        slug: "flag-united-kingdom",
+        name: "flag united kingdom",
+        icon: "twemoji:flag-united-kingdom",
+      },
+      {
+        slug: "flag-grenada",
+        name: "flag grenada",
+        icon: "twemoji:flag-grenada",
+      },
+      {
+        slug: "flag-georgia",
+        name: "flag georgia",
+        icon: "twemoji:flag-georgia",
+      },
+      {
+        slug: "flag-french-guiana",
+        name: "flag french guiana",
+        icon: "twemoji:flag-french-guiana",
+      },
+      {
+        slug: "flag-guernsey",
+        name: "flag guernsey",
+        icon: "twemoji:flag-guernsey",
+      },
+      {
+        slug: "flag-ghana",
+        name: "flag ghana",
+        icon: "twemoji:flag-ghana",
+      },
+      {
+        slug: "flag-gibraltar",
+        name: "flag gibraltar",
+        icon: "twemoji:flag-gibraltar",
+      },
+      {
+        slug: "flag-greenland",
+        name: "flag greenland",
+        icon: "twemoji:flag-greenland",
+      },
+      {
+        slug: "flag-gambia",
+        name: "flag gambia",
+        icon: "twemoji:flag-gambia",
+      },
+      {
+        slug: "flag-guinea",
+        name: "flag guinea",
+        icon: "twemoji:flag-guinea",
+      },
+      {
+        slug: "flag-guadeloupe",
+        name: "flag guadeloupe",
+        icon: "twemoji:flag-guadeloupe",
+      },
+      {
+        slug: "flag-equatorial-guinea",
+        name: "flag equatorial guinea",
+        icon: "twemoji:flag-equatorial-guinea",
+      },
+      {
+        slug: "flag-greece",
+        name: "flag greece",
+        icon: "twemoji:flag-greece",
+      },
+      {
+        slug: "flag-south-georgia-and-south-sandwich-islands",
+        name: "flag south georgia and south sandwich islands",
+        icon: "twemoji:flag-south-georgia-and-south-sandwich-islands",
+      },
+      {
+        slug: "flag-guatemala",
+        name: "flag guatemala",
+        icon: "twemoji:flag-guatemala",
+      },
+      {
+        slug: "flag-guam",
+        name: "flag guam",
+        icon: "twemoji:flag-guam",
+      },
+      {
+        slug: "flag-guinea-bissau",
+        name: "flag guinea bissau",
+        icon: "twemoji:flag-guinea-bissau",
+      },
+      {
+        slug: "flag-guyana",
+        name: "flag guyana",
+        icon: "twemoji:flag-guyana",
+      },
+      {
+        slug: "flag-hong-kong-sar-china",
+        name: "flag hong kong sar china",
+        icon: "twemoji:flag-hong-kong-sar-china",
+      },
+      {
+        slug: "flag-heard-and-mcdonald-islands",
+        name: "flag heard and mcdonald islands",
+        icon: "twemoji:flag-heard-and-mcdonald-islands",
+      },
+      {
+        slug: "flag-honduras",
+        name: "flag honduras",
+        icon: "twemoji:flag-honduras",
+      },
+      {
+        slug: "flag-croatia",
+        name: "flag croatia",
+        icon: "twemoji:flag-croatia",
+      },
+      {
+        slug: "flag-haiti",
+        name: "flag haiti",
+        icon: "twemoji:flag-haiti",
+      },
+      {
+        slug: "flag-hungary",
+        name: "flag hungary",
+        icon: "twemoji:flag-hungary",
+      },
+      {
+        slug: "flag-canary-islands",
+        name: "flag canary islands",
+        icon: "twemoji:flag-canary-islands",
+      },
+      {
+        slug: "flag-indonesia",
+        name: "flag indonesia",
+        icon: "twemoji:flag-indonesia",
+      },
+      {
+        slug: "flag-ireland",
+        name: "flag ireland",
+        icon: "twemoji:flag-ireland",
+      },
+      {
+        slug: "flag-israel",
+        name: "flag israel",
+        icon: "twemoji:flag-israel",
+      },
+      {
+        slug: "flag-isle-of-man",
+        name: "flag isle of man",
+        icon: "twemoji:flag-isle-of-man",
+      },
+      {
+        slug: "flag-india",
+        name: "flag india",
+        icon: "twemoji:flag-india",
+      },
+      {
+        slug: "flag-british-indian-ocean-territory",
+        name: "flag british indian ocean territory",
+        icon: "twemoji:flag-british-indian-ocean-territory",
+      },
+      {
+        slug: "flag-iraq",
+        name: "flag iraq",
+        icon: "twemoji:flag-iraq",
+      },
+      {
+        slug: "flag-iran",
+        name: "flag iran",
+        icon: "twemoji:flag-iran",
+      },
+      {
+        slug: "flag-iceland",
+        name: "flag iceland",
+        icon: "twemoji:flag-iceland",
+      },
+      {
+        slug: "flag-italy",
+        name: "flag italy",
+        icon: "twemoji:flag-italy",
+      },
+      {
+        slug: "flag-jersey",
+        name: "flag jersey",
+        icon: "twemoji:flag-jersey",
+      },
+      {
+        slug: "flag-jamaica",
+        name: "flag jamaica",
+        icon: "twemoji:flag-jamaica",
+      },
+      {
+        slug: "flag-jordan",
+        name: "flag jordan",
+        icon: "twemoji:flag-jordan",
+      },
+      {
+        slug: "flag-japan",
+        name: "flag japan",
+        icon: "twemoji:flag-japan",
+      },
+      {
+        slug: "flag-kenya",
+        name: "flag kenya",
+        icon: "twemoji:flag-kenya",
+      },
+      {
+        slug: "flag-kyrgyzstan",
+        name: "flag kyrgyzstan",
+        icon: "twemoji:flag-kyrgyzstan",
+      },
+      {
+        slug: "flag-cambodia",
+        name: "flag cambodia",
+        icon: "twemoji:flag-cambodia",
+      },
+      {
+        slug: "flag-kiribati",
+        name: "flag kiribati",
+        icon: "twemoji:flag-kiribati",
+      },
+      {
+        slug: "flag-comoros",
+        name: "flag comoros",
+        icon: "twemoji:flag-comoros",
+      },
+      {
+        slug: "flag-st-kitts-and-nevis",
+        name: "flag st kitts and nevis",
+        icon: "twemoji:flag-st-kitts-and-nevis",
+      },
+      {
+        slug: "flag-north-korea",
+        name: "flag north korea",
+        icon: "twemoji:flag-north-korea",
+      },
+      {
+        slug: "flag-south-korea",
+        name: "flag south korea",
+        icon: "twemoji:flag-south-korea",
+      },
+      {
+        slug: "flag-kuwait",
+        name: "flag kuwait",
+        icon: "twemoji:flag-kuwait",
+      },
+      {
+        slug: "flag-cayman-islands",
+        name: "flag cayman islands",
+        icon: "twemoji:flag-cayman-islands",
+      },
+      {
+        slug: "flag-kazakhstan",
+        name: "flag kazakhstan",
+        icon: "twemoji:flag-kazakhstan",
+      },
+      {
+        slug: "flag-laos",
+        name: "flag laos",
+        icon: "twemoji:flag-laos",
+      },
+      {
+        slug: "flag-lebanon",
+        name: "flag lebanon",
+        icon: "twemoji:flag-lebanon",
+      },
+      {
+        slug: "flag-st-lucia",
+        name: "flag st lucia",
+        icon: "twemoji:flag-st-lucia",
+      },
+      {
+        slug: "flag-liechtenstein",
+        name: "flag liechtenstein",
+        icon: "twemoji:flag-liechtenstein",
+      },
+      {
+        slug: "flag-sri-lanka",
+        name: "flag sri lanka",
+        icon: "twemoji:flag-sri-lanka",
+      },
+      {
+        slug: "flag-liberia",
+        name: "flag liberia",
+        icon: "twemoji:flag-liberia",
+      },
+      {
+        slug: "flag-lesotho",
+        name: "flag lesotho",
+        icon: "twemoji:flag-lesotho",
+      },
+      {
+        slug: "flag-lithuania",
+        name: "flag lithuania",
+        icon: "twemoji:flag-lithuania",
+      },
+      {
+        slug: "flag-luxembourg",
+        name: "flag luxembourg",
+        icon: "twemoji:flag-luxembourg",
+      },
+      {
+        slug: "flag-latvia",
+        name: "flag latvia",
+        icon: "twemoji:flag-latvia",
+      },
+      {
+        slug: "flag-libya",
+        name: "flag libya",
+        icon: "twemoji:flag-libya",
+      },
+      {
+        slug: "flag-morocco",
+        name: "flag morocco",
+        icon: "twemoji:flag-morocco",
+      },
+      {
+        slug: "flag-monaco",
+        name: "flag monaco",
+        icon: "twemoji:flag-monaco",
+      },
+      {
+        slug: "flag-moldova",
+        name: "flag moldova",
+        icon: "twemoji:flag-moldova",
+      },
+      {
+        slug: "flag-montenegro",
+        name: "flag montenegro",
+        icon: "twemoji:flag-montenegro",
+      },
+      {
+        slug: "flag-st-martin",
+        name: "flag st martin",
+        icon: "twemoji:flag-st-martin",
+      },
+      {
+        slug: "flag-madagascar",
+        name: "flag madagascar",
+        icon: "twemoji:flag-madagascar",
+      },
+      {
+        slug: "flag-marshall-islands",
+        name: "flag marshall islands",
+        icon: "twemoji:flag-marshall-islands",
+      },
+      {
+        slug: "flag-north-macedonia",
+        name: "flag north macedonia",
+        icon: "twemoji:flag-north-macedonia",
+      },
+      {
+        slug: "flag-mali",
+        name: "flag mali",
+        icon: "twemoji:flag-mali",
+      },
+      {
+        slug: "flag-myanmar-burma",
+        name: "flag myanmar burma",
+        icon: "twemoji:flag-myanmar-burma",
+      },
+      {
+        slug: "flag-mongolia",
+        name: "flag mongolia",
+        icon: "twemoji:flag-mongolia",
+      },
+      {
+        slug: "flag-macao-sar-china",
+        name: "flag macao sar china",
+        icon: "twemoji:flag-macao-sar-china",
+      },
+      {
+        slug: "flag-northern-mariana-islands",
+        name: "flag northern mariana islands",
+        icon: "twemoji:flag-northern-mariana-islands",
+      },
+      {
+        slug: "flag-martinique",
+        name: "flag martinique",
+        icon: "twemoji:flag-martinique",
+      },
+      {
+        slug: "flag-mauritania",
+        name: "flag mauritania",
+        icon: "twemoji:flag-mauritania",
+      },
+      {
+        slug: "flag-montserrat",
+        name: "flag montserrat",
+        icon: "twemoji:flag-montserrat",
+      },
+      {
+        slug: "flag-malta",
+        name: "flag malta",
+        icon: "twemoji:flag-malta",
+      },
+      {
+        slug: "flag-mauritius",
+        name: "flag mauritius",
+        icon: "twemoji:flag-mauritius",
+      },
+      {
+        slug: "flag-maldives",
+        name: "flag maldives",
+        icon: "twemoji:flag-maldives",
+      },
+      {
+        slug: "flag-malawi",
+        name: "flag malawi",
+        icon: "twemoji:flag-malawi",
+      },
+      {
+        slug: "flag-mexico",
+        name: "flag mexico",
+        icon: "twemoji:flag-mexico",
+      },
+      {
+        slug: "flag-malaysia",
+        name: "flag malaysia",
+        icon: "twemoji:flag-malaysia",
+      },
+      {
+        slug: "flag-mozambique",
+        name: "flag mozambique",
+        icon: "twemoji:flag-mozambique",
+      },
+      {
+        slug: "flag-namibia",
+        name: "flag namibia",
+        icon: "twemoji:flag-namibia",
+      },
+      {
+        slug: "flag-new-caledonia",
+        name: "flag new caledonia",
+        icon: "twemoji:flag-new-caledonia",
+      },
+      {
+        slug: "flag-niger",
+        name: "flag niger",
+        icon: "twemoji:flag-niger",
+      },
+      {
+        slug: "flag-norfolk-island",
+        name: "flag norfolk island",
+        icon: "twemoji:flag-norfolk-island",
+      },
+      {
+        slug: "flag-nigeria",
+        name: "flag nigeria",
+        icon: "twemoji:flag-nigeria",
+      },
+      {
+        slug: "flag-nicaragua",
+        name: "flag nicaragua",
+        icon: "twemoji:flag-nicaragua",
+      },
+      {
+        slug: "flag-netherlands",
+        name: "flag netherlands",
+        icon: "twemoji:flag-netherlands",
+      },
+      {
+        slug: "flag-norway",
+        name: "flag norway",
+        icon: "twemoji:flag-norway",
+      },
+      {
+        slug: "flag-nepal",
+        name: "flag nepal",
+        icon: "twemoji:flag-nepal",
+      },
+      {
+        slug: "flag-nauru",
+        name: "flag nauru",
+        icon: "twemoji:flag-nauru",
+      },
+      {
+        slug: "flag-niue",
+        name: "flag niue",
+        icon: "twemoji:flag-niue",
+      },
+      {
+        slug: "flag-new-zealand",
+        name: "flag new zealand",
+        icon: "twemoji:flag-new-zealand",
+      },
+      {
+        slug: "flag-oman",
+        name: "flag oman",
+        icon: "twemoji:flag-oman",
+      },
+      {
+        slug: "flag-panama",
+        name: "flag panama",
+        icon: "twemoji:flag-panama",
+      },
+      {
+        slug: "flag-peru",
+        name: "flag peru",
+        icon: "twemoji:flag-peru",
+      },
+      {
+        slug: "flag-french-polynesia",
+        name: "flag french polynesia",
+        icon: "twemoji:flag-french-polynesia",
+      },
+      {
+        slug: "flag-papua-new-guinea",
+        name: "flag papua new guinea",
+        icon: "twemoji:flag-papua-new-guinea",
+      },
+      {
+        slug: "flag-philippines",
+        name: "flag philippines",
+        icon: "twemoji:flag-philippines",
+      },
+      {
+        slug: "flag-pakistan",
+        name: "flag pakistan",
+        icon: "twemoji:flag-pakistan",
+      },
+      {
+        slug: "flag-poland",
+        name: "flag poland",
+        icon: "twemoji:flag-poland",
+      },
+      {
+        slug: "flag-st-pierre-and-miquelon",
+        name: "flag st pierre and miquelon",
+        icon: "twemoji:flag-st-pierre-and-miquelon",
+      },
+      {
+        slug: "flag-pitcairn-islands",
+        name: "flag pitcairn islands",
+        icon: "twemoji:flag-pitcairn-islands",
+      },
+      {
+        slug: "flag-puerto-rico",
+        name: "flag puerto rico",
+        icon: "twemoji:flag-puerto-rico",
+      },
+      {
+        slug: "flag-palestinian-territories",
+        name: "flag palestinian territories",
+        icon: "twemoji:flag-palestinian-territories",
+      },
+      {
+        slug: "flag-portugal",
+        name: "flag portugal",
+        icon: "twemoji:flag-portugal",
+      },
+      {
+        slug: "flag-palau",
+        name: "flag palau",
+        icon: "twemoji:flag-palau",
+      },
+      {
+        slug: "flag-paraguay",
+        name: "flag paraguay",
+        icon: "twemoji:flag-paraguay",
+      },
+      {
+        slug: "flag-qatar",
+        name: "flag qatar",
+        icon: "twemoji:flag-qatar",
+      },
+      {
+        slug: "flag-reunion",
+        name: "flag reunion",
+        icon: "twemoji:flag-reunion",
+      },
+      {
+        slug: "flag-romania",
+        name: "flag romania",
+        icon: "twemoji:flag-romania",
+      },
+      {
+        slug: "flag-serbia",
+        name: "flag serbia",
+        icon: "twemoji:flag-serbia",
+      },
+      {
+        slug: "flag-russia",
+        name: "flag russia",
+        icon: "twemoji:flag-russia",
+      },
+      {
+        slug: "flag-rwanda",
+        name: "flag rwanda",
+        icon: "twemoji:flag-rwanda",
+      },
+      {
+        slug: "flag-saudi-arabia",
+        name: "flag saudi arabia",
+        icon: "twemoji:flag-saudi-arabia",
+      },
+      {
+        slug: "flag-solomon-islands",
+        name: "flag solomon islands",
+        icon: "twemoji:flag-solomon-islands",
+      },
+      {
+        slug: "flag-seychelles",
+        name: "flag seychelles",
+        icon: "twemoji:flag-seychelles",
+      },
+      {
+        slug: "flag-sudan",
+        name: "flag sudan",
+        icon: "twemoji:flag-sudan",
+      },
+      {
+        slug: "flag-sweden",
+        name: "flag sweden",
+        icon: "twemoji:flag-sweden",
+      },
+      {
+        slug: "flag-singapore",
+        name: "flag singapore",
+        icon: "twemoji:flag-singapore",
+      },
+      {
+        slug: "flag-st-helena",
+        name: "flag st helena",
+        icon: "twemoji:flag-st-helena",
+      },
+      {
+        slug: "flag-slovenia",
+        name: "flag slovenia",
+        icon: "twemoji:flag-slovenia",
+      },
+      {
+        slug: "flag-svalbard-and-jan-mayen",
+        name: "flag svalbard and jan mayen",
+        icon: "twemoji:flag-svalbard-and-jan-mayen",
+      },
+      {
+        slug: "flag-slovakia",
+        name: "flag slovakia",
+        icon: "twemoji:flag-slovakia",
+      },
+      {
+        slug: "flag-sierra-leone",
+        name: "flag sierra leone",
+        icon: "twemoji:flag-sierra-leone",
+      },
+      {
+        slug: "flag-san-marino",
+        name: "flag san marino",
+        icon: "twemoji:flag-san-marino",
+      },
+      {
+        slug: "flag-senegal",
+        name: "flag senegal",
+        icon: "twemoji:flag-senegal",
+      },
+      {
+        slug: "flag-somalia",
+        name: "flag somalia",
+        icon: "twemoji:flag-somalia",
+      },
+      {
+        slug: "flag-suriname",
+        name: "flag suriname",
+        icon: "twemoji:flag-suriname",
+      },
+      {
+        slug: "flag-south-sudan",
+        name: "flag south sudan",
+        icon: "twemoji:flag-south-sudan",
+      },
+      {
+        slug: "flag-sao-tome-and-principe",
+        name: "flag sao tome and principe",
+        icon: "twemoji:flag-sao-tome-and-principe",
+      },
+      {
+        slug: "flag-el-salvador",
+        name: "flag el salvador",
+        icon: "twemoji:flag-el-salvador",
+      },
+      {
+        slug: "flag-sint-maarten",
+        name: "flag sint maarten",
+        icon: "twemoji:flag-sint-maarten",
+      },
+      {
+        slug: "flag-syria",
+        name: "flag syria",
+        icon: "twemoji:flag-syria",
+      },
+      {
+        slug: "flag-eswatini",
+        name: "flag eswatini",
+        icon: "twemoji:flag-eswatini",
+      },
+      {
+        slug: "flag-tristan-da-cunha",
+        name: "flag tristan da cunha",
+        icon: "twemoji:flag-tristan-da-cunha",
+      },
+      {
+        slug: "flag-turks-and-caicos-islands",
+        name: "flag turks and caicos islands",
+        icon: "twemoji:flag-turks-and-caicos-islands",
+      },
+      {
+        slug: "flag-chad",
+        name: "flag chad",
+        icon: "twemoji:flag-chad",
+      },
+      {
+        slug: "flag-french-southern-territories",
+        name: "flag french southern territories",
+        icon: "twemoji:flag-french-southern-territories",
+      },
+      {
+        slug: "flag-togo",
+        name: "flag togo",
+        icon: "twemoji:flag-togo",
+      },
+      {
+        slug: "flag-thailand",
+        name: "flag thailand",
+        icon: "twemoji:flag-thailand",
+      },
+      {
+        slug: "flag-tajikistan",
+        name: "flag tajikistan",
+        icon: "twemoji:flag-tajikistan",
+      },
+      {
+        slug: "flag-tokelau",
+        name: "flag tokelau",
+        icon: "twemoji:flag-tokelau",
+      },
+      {
+        slug: "flag-timor-leste",
+        name: "flag timor leste",
+        icon: "twemoji:flag-timor-leste",
+      },
+      {
+        slug: "flag-turkmenistan",
+        name: "flag turkmenistan",
+        icon: "twemoji:flag-turkmenistan",
+      },
+      {
+        slug: "flag-tunisia",
+        name: "flag tunisia",
+        icon: "twemoji:flag-tunisia",
+      },
+      {
+        slug: "flag-tonga",
+        name: "flag tonga",
+        icon: "twemoji:flag-tonga",
+      },
+      {
+        slug: "flag-turkiye",
+        name: "flag turkiye",
+        icon: "twemoji:flag-turkiye",
+      },
+      {
+        slug: "flag-trinidad-and-tobago",
+        name: "flag trinidad and tobago",
+        icon: "twemoji:flag-trinidad-and-tobago",
+      },
+      {
+        slug: "flag-tuvalu",
+        name: "flag tuvalu",
+        icon: "twemoji:flag-tuvalu",
+      },
+      {
+        slug: "flag-taiwan",
+        name: "flag taiwan",
+        icon: "twemoji:flag-taiwan",
+      },
+      {
+        slug: "flag-tanzania",
+        name: "flag tanzania",
+        icon: "twemoji:flag-tanzania",
+      },
+      {
+        slug: "flag-ukraine",
+        name: "flag ukraine",
+        icon: "twemoji:flag-ukraine",
+      },
+      {
+        slug: "flag-uganda",
+        name: "flag uganda",
+        icon: "twemoji:flag-uganda",
+      },
+      {
+        slug: "flag-us-outlying-islands",
+        name: "flag us outlying islands",
+        icon: "twemoji:flag-us-outlying-islands",
+      },
+      {
+        slug: "flag-united-nations",
+        name: "flag united nations",
+        icon: "twemoji:flag-united-nations",
+      },
+      {
+        slug: "flag-united-states",
+        name: "flag united states",
+        icon: "twemoji:flag-united-states",
+      },
+      {
+        slug: "flag-uruguay",
+        name: "flag uruguay",
+        icon: "twemoji:flag-uruguay",
+      },
+      {
+        slug: "flag-uzbekistan",
+        name: "flag uzbekistan",
+        icon: "twemoji:flag-uzbekistan",
+      },
+      {
+        slug: "flag-vatican-city",
+        name: "flag vatican city",
+        icon: "twemoji:flag-vatican-city",
+      },
+      {
+        slug: "flag-st-vincent-and-grenadines",
+        name: "flag st vincent and grenadines",
+        icon: "twemoji:flag-st-vincent-and-grenadines",
+      },
+      {
+        slug: "flag-venezuela",
+        name: "flag venezuela",
+        icon: "twemoji:flag-venezuela",
+      },
+      {
+        slug: "flag-british-virgin-islands",
+        name: "flag british virgin islands",
+        icon: "twemoji:flag-british-virgin-islands",
+      },
+      {
+        slug: "flag-vietnam",
+        name: "flag vietnam",
+        icon: "twemoji:flag-vietnam",
+      },
+      {
+        slug: "flag-vanuatu",
+        name: "flag vanuatu",
+        icon: "twemoji:flag-vanuatu",
+      },
+      {
+        slug: "flag-wallis-and-futuna",
+        name: "flag wallis and futuna",
+        icon: "twemoji:flag-wallis-and-futuna",
+      },
+      {
+        slug: "flag-samoa",
+        name: "flag samoa",
+        icon: "twemoji:flag-samoa",
+      },
+      {
+        slug: "flag-kosovo",
+        name: "flag kosovo",
+        icon: "twemoji:flag-kosovo",
+      },
+      {
+        slug: "flag-yemen",
+        name: "flag yemen",
+        icon: "twemoji:flag-yemen",
+      },
+      {
+        slug: "flag-mayotte",
+        name: "flag mayotte",
+        icon: "twemoji:flag-mayotte",
+      },
+      {
+        slug: "flag-south-africa",
+        name: "flag south africa",
+        icon: "twemoji:flag-south-africa",
+      },
+      {
+        slug: "flag-zambia",
+        name: "flag zambia",
+        icon: "twemoji:flag-zambia",
+      },
+      {
+        slug: "flag-zimbabwe",
+        name: "flag zimbabwe",
+        icon: "twemoji:flag-zimbabwe",
+      },
+      {
+        slug: "flag-england",
+        name: "flag england",
+        icon: "twemoji:flag-england",
+      },
+      {
+        slug: "flag-scotland",
+        name: "flag scotland",
+        icon: "twemoji:flag-scotland",
+      },
+      {
+        slug: "flag-wales",
+        name: "flag wales",
+        icon: "twemoji:flag-wales",
+      },
     ]
   }
 ]
