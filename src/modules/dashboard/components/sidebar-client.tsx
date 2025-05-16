@@ -19,7 +19,7 @@ import { UserButton } from "@/modules/auth/components/user-button";
 import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
 
 import { useSidebarStore } from "@/modules/dashboard/store/use-sidebar-store";
-import { Button } from "@/components/ui/button";
+import { OrganizationSwitcher } from "@/modules/organization/ui/components/organization-switcher";
 
 interface Props {
   organizationId: string;
@@ -47,19 +47,12 @@ export const SidebarClient = ({ organizationId }: Props) => {
   return (  
     <Sidebar {...sidebar}>
       <SidebarContent>
-        {/* TODO: Organization switcher */}
-        <Button variant="item" className="w-full hover:bg-[#00000008]">
-          Organization
-        </Button>
+        <OrganizationSwitcher organizationId={organizationId} />
       </SidebarContent>
       <SidebarContent>
         <SidebarMenuItem>
           <SidebarIcon icon="solar:magnifer-bold-duotone" />
           Search
-        </SidebarMenuItem>
-        <SidebarMenuItem>
-          <SidebarIcon icon="solar:face-scan-square-bold-duotone" />
-          Opal AI
         </SidebarMenuItem>
         <SidebarMenuItem>
           <SidebarIcon icon="solar:home-angle-bold-duotone" />

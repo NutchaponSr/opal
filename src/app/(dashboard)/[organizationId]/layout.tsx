@@ -28,6 +28,7 @@ const Layout = async ({ children, params }: Props) => {
 
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(trpc.groups.getMany.queryOptions({ organizationId }));
+  void queryClient.prefetchQuery(trpc.organizations.getMany.queryOptions());
 
   return (
     <div className={cn(sfPro.className, "w-screen h-full relative flex bg-white")}>

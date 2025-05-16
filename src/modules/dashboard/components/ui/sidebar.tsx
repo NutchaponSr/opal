@@ -59,7 +59,7 @@ const Sidebar = ({
         variant="ghost"
         onClick={collapse} 
         className={cn(
-          "size-6 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] opacity-0 group-hover:opacity-100 transition-opacity absolute right-2 top-2 z-[110]",
+          "size-6 hover:bg-[#37352f0f] dark:hover:bg-[#ffffff0e] opacity-0 group-hover:opacity-100 transition-opacity absolute right-2 top-2.5 z-[110]",
           isMobile && "opacity-100"
         )}
       >

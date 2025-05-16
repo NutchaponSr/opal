@@ -45,9 +45,9 @@ export const OrganizationForm = () => {
       onSubmit={onFormSubmit}
       className="w-full flex flex-col gap-4"
     >
-      <h1 className="text-3xl lg:text-4xl font-semibold mb-4">
+      {/* <h1 className="text-3xl lg:text-4xl font-semibold mb-4">
         Create organization
-      </h1>
+      </h1> */}
       <FormGenerator 
         register={register}
         name="name"

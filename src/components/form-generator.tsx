@@ -51,6 +51,7 @@ export const FormGenerator = ({
           <Input 
             id={`input-${label}`}
             type={type}
+            scale="md"
             placeholder={placeholder}
             className={className}
             disabled={disabled}

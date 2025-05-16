@@ -10,11 +10,12 @@ const inputVariant = cva(
   {
     variants: {
       variant: {
-        default: "bg-background border",
+        default: "bg-background border shadow-xs",
         search: "bg-[#f2f1ee99] shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)]",
       },
       scale: {
-        sm: "text-sm h-7 leading-5 rounded-sm px-2"
+        sm: "text-sm h-7 leading-5 rounded-sm px-2",
+        md: "text-sm h-8 rounded-md px-3 py-1.5",
       },
       input: {
         setup: "placeholder:text-[#b9b9b6] outline-none font-light text-primary"
@@ -148,7 +149,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
         onChange={handleChange}
         data-slot="input"
         className={cn(
-          "shadow-none border-none w-full bg-transparent",
+          "w-full bg-transparent",
           inputVariant({ variant, scale }),
           className,
         )}
