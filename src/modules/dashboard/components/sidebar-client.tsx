@@ -1,8 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect, useState } from "react";
 
@@ -24,7 +21,11 @@ import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
 import { useSidebarStore } from "@/modules/dashboard/store/use-sidebar-store";
 import { Button } from "@/components/ui/button";
 
-export const SidebarClient = () => {
+interface Props {
+  organizationId: string;
+}
+
+export const SidebarClient = ({ organizationId }: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const { resetWidth, collapse } = useSidebarStore();
@@ -74,7 +75,7 @@ export const SidebarClient = () => {
           <SidebarGroup>
             <SidebarGroupLabel onOpen={() => setOpen(prev => ({ ...prev, workspace: !prev.workspace }))}>Workspace</SidebarGroupLabel>
             <SidebarGroupContent isOpen={open.workspace}>
-              <GroupWorkspace />
+              <GroupWorkspace organizationId={organizationId} />
               <SidebarSubMenuItem>
                 <SidebarIcon sub icon="solar:file-text-bold-duotone" variant="orange" />
                 Competency

@@ -13,7 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
   id String @id @default(uuid())
   clerkId String @unique @map("clerkId")
@@ -47,12 +46,17 @@ model Organization {
   @@index([userId])
 }
 
+enum Role {
+  ADMIN
+  MEMBER
+}
+
 model Member {
-  id  String @id @default(uuid())
-  role  String @default("member")
+  id String @id @default(uuid())
+  role Role @default(MEMBER)
 
   userId String 
-  user User  @relation(fields: [userId], references: [clerkId], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [clerkId], onDelete: Cascade)
 
   organizationId String 
   organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
@@ -69,14 +73,16 @@ model Group {
   name String
   year String
   cover String?
-  icon String?
+  icon String
+  inTrash Boolean @default(false)
+
   createdAt DateTime @default(now())
   createdBy String 
   updatedBy String
   updatedAt DateTime @updatedAt()
 
-  origanizationId String? 
-  origanization Organization? @relation(fields: [origanizationId], references: [id], onDelete: Cascade)
+  organizationId String? 
+  organization Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
-  @@index([origanizationId])
+  @@index([organizationId])
 }

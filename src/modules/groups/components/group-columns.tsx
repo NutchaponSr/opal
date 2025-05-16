@@ -43,8 +43,7 @@ export const columns: ColumnDef<Group>[] = [
     header: "Name",
     cell: ({ row }) => (
       <div className="flex items-center gap-2">
-        {/* <Icon icon={row.original.icon ?? "lucide:file"} className="size-4" /> */}
-        <LucideFile className="size-4 stroke-[1.75]" />
+        <Icon icon={row.original.icon ?? "hugeicons:file-empty-02"} className="size-4" />
         {row.original.name}
       </div>
     ),

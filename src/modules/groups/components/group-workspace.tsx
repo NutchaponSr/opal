@@ -1,14 +1,32 @@
 "use client";
 
-import { SidebarIcon, SidebarMenuItem, SidebarSub, SidebarSubContent, SidebarSubMenuItem } from "@/modules/dashboard/components/ui/sidebar";
-import { useTRPC } from "@/trpc/client";
-import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
-import { PlusIcon } from "lucide-react";
-import { useState } from "react";
+import { 
+  useMutation, 
+  useQueryClient, 
+  useSuspenseQuery 
+} from "@tanstack/react-query";
 import { toast } from "sonner";
+import { useState } from "react";
+import { PlusIcon } from "lucide-react";
 import { useToggle } from "usehooks-ts";
 
-export const GroupWorkspace = () => {
+import { useTRPC } from "@/trpc/client";
+
+import { 
+  SidebarIcon, 
+  SidebarMenuItem, 
+  SidebarSub, 
+  SidebarSubContent, 
+  SidebarSubMenuItem 
+} from "@/modules/dashboard/components/ui/sidebar";
+
+import { GroupItem } from "@/modules/groups/components/group-item";
+
+interface Props {
+  organizationId: string;
+}
+
+export const GroupWorkspace = ({ organizationId }: Props) => {
   const currentYear = new Date().getFullYear();
 
   const trpc = useTRPC();
@@ -16,12 +34,11 @@ export const GroupWorkspace = () => {
 
   const [isToggled, toggle] = useToggle(false);
   const [toggledYears, setToggledYears] = useState<Record<string, boolean>>({});
-  const [toggledGroups, setToggledGroups] = useState<Record<string, boolean>>({});
 
-  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions());
+  const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
   const createGroup = useMutation(trpc.groups.craete.mutationOptions({
     onSuccess: () => {
-      queryClient.invalidateQueries(trpc.groups.getMany.queryOptions());
+      queryClient.invalidateQueries(trpc.groups.getMany.queryOptions({ organizationId }));
       toast.success("Group created");
     }
   }));
@@ -32,13 +49,6 @@ export const GroupWorkspace = () => {
     setToggledYears((prev) => ({
       ...prev,
       [year]: !prev[year],
-    }));
-  };
-
-  const toggleGroup = (groupId: string) => {
-    setToggledGroups((prev) => ({
-      ...prev,
-      [groupId]: !prev[groupId],
     }));
   };
 
@@ -65,9 +75,10 @@ export const GroupWorkspace = () => {
                 icon="solar:calendar-bold-duotone" 
               />
               {year}
+
               <button 
                 onClick={() => {
-                  createGroup.mutate({ year });
+                  createGroup.mutate({ year, organizationId });
                 }}
                 className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-6 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
               >
@@ -76,28 +87,12 @@ export const GroupWorkspace = () => {
             </SidebarSubMenuItem>
             <SidebarSubContent isOpen={toggledYears[year]}>
               {data?.filter((f) => f.year === year)
-                .map((item) => (
-                  <SidebarSub key={item.id}>
-                    <SidebarSubMenuItem indent={24}>
-                      <SidebarIcon 
-                        sub
-                        isOpen={toggledGroups[item.id]}
-                        onClick={() => toggleGroup(item.id)}
-                        icon="lucide:file"
-                      />
-                      {item.name}
-                    </SidebarSubMenuItem>
-                    <SidebarSubContent isOpen={toggledGroups[item.id]}>
-                      <SidebarMenuItem indent={32}>
-                        <SidebarIcon icon="radix-icons:dot-filled" />
-                        Competency
-                      </SidebarMenuItem>
-                      <SidebarMenuItem indent={32}>
-                        <SidebarIcon icon="radix-icons:dot-filled" />
-                        Employee
-                      </SidebarMenuItem>
-                    </SidebarSubContent>
-                  </SidebarSub>
+                .map((group) => (
+                  <GroupItem 
+                    key={group.id} 
+                    group={group}
+                    organizationId={organizationId} 
+                  />
                 ))
               }
             </SidebarSubContent>
