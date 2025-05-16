@@ -10,18 +10,18 @@ import {
   SidebarSubMenuItem 
 } from "@/modules/dashboard/components/ui/sidebar";
 
+import { GroupRename } from "@/modules/groups/components/group-rename";
 import { GroupActions } from "@/modules/groups/components/group-actions";
-import { GroupRename } from "./group-rename";
 
 interface Props {
   group: Group;
+  organizationId: string;
 }
 
-export const GroupItem = ({ group }: Props) => {
+export const GroupItem = ({ group, organizationId }: Props) => {
   const [isToggled, toggle] = useToggle(false); 
 
   const [height, setHeight] = useState(0);
-  const [open, setOpen] = useState(false);
   const [isRename, setIsRename] = useState(false);
 
   const itemRef = useRef<HTMLDivElement>(null);
@@ -37,15 +37,13 @@ export const GroupItem = ({ group }: Props) => {
     <SidebarSub>
       <div ref={itemRef} />
       <SidebarSubMenuItem indent={24}>
-        <SidebarIcon sub isOpen={isToggled} onClick={toggle} icon="lucide:file" />
+        <SidebarIcon sub isOpen={isToggled} onClick={toggle} icon={group.icon} />
         {group.name}
 
         <GroupActions 
           group={group} 
-          open={open}
-          onClose={() => setOpen(false)}
-          onOpen={() => setOpen(true)}
-          onRename={() => setIsRename(true)}
+          organizationId={organizationId}
+          onRenameAction={() => setTimeout(() => { setIsRename(true) }, 200)}
         />
       </SidebarSubMenuItem>
       <SidebarSubContent isOpen={isToggled}>
@@ -63,7 +61,7 @@ export const GroupItem = ({ group }: Props) => {
         group={group}
         height={height} 
         isRename={isRename} 
-        itemRef={itemRef}
+        organizationId={organizationId}
         onClose={() => setIsRename(false)}
       />
     </SidebarSub>

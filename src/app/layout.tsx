@@ -8,6 +8,8 @@ import { TRPCReactProvider } from "@/trpc/client";
 
 import { Toaster } from "@/components/ui/sonner";
 
+import { DropdownProvider } from "@/providers/dropdown-provider";
+
 import "./globals.css";
 
 const font = Inter({
@@ -29,8 +31,10 @@ export default function RootLayout({
       <html lang="en">
         <body className={cn(font.className, "antialiased h-screen")}>
           <TRPCReactProvider>
-            {children}
-            <Toaster richColors position="top-center" />
+            <DropdownProvider>
+              {children}
+              <Toaster richColors position="top-center" />
+            </DropdownProvider>
           </TRPCReactProvider>
         </body>
       </html>

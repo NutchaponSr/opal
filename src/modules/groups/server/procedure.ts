@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 
 import { TRPCError } from "@trpc/server";
 import { createTRPCRouter, protectedProcedure } from "@/trpc/init";
+import { groupSchema } from "../schema";
 
 export const groupProcedure = createTRPCRouter({
   getMany: protectedProcedure
@@ -18,6 +19,9 @@ export const groupProcedure = createTRPCRouter({
           inTrash: false,
           organizationId: input.organizationId,
         },
+        orderBy: {
+          updatedAt: "desc",
+        }
       });
 
       const populatedData = await Promise.all(
@@ -53,11 +57,74 @@ export const groupProcedure = createTRPCRouter({
         data: {
           name: "Untitled",
           year: input.year,
-          icon: "lucide:file",
+          icon: "hugeicons:file-empty-02",
           createdBy: ctx.user.clerkId,
           updatedBy: ctx.user.clerkId,
           organizationId: input.organizationId,
         }
+      });
+
+      return data;
+    }),
+  rename: protectedProcedure
+    .input(
+      z.object({
+        id: z.string(),
+        icon: z.string(),
+        name: z.string(),
+      })
+    )
+    .mutation(async ({ ctx, input }) => {
+      const data = await db.group.update({
+        where: {
+          id: input.id,
+        },
+        data: {
+          name: input.name,
+          icon: input.icon,
+          updatedBy: ctx.user.clerkId,
+        },
+      });
+
+      return data;
+    }),
+  copy: protectedProcedure
+    .input(groupSchema.omit({ id: true }))
+    .mutation(async ({ ctx, input }) => {
+      console.log(ctx);
+
+      const data = await db.group.create({
+        data: {
+          ...input,
+          createdBy: ctx.user.clerkId,
+          updatedBy: ctx.user.clerkId,
+        },
+      });
+
+      return data;
+    }),
+  trash: protectedProcedure
+    .input(groupSchema.pick({ id: true }))
+    .mutation(async ({ ctx, input }) => {
+      const data = await db.group.update({
+        where: {
+          id: input.id,
+        },
+        data: {
+          inTrash: true,
+          updatedBy: ctx.user.clerkId,
+        },
+      });
+
+      return data;
+    }),
+  delete: protectedProcedure
+    .input(groupSchema.pick({ id: true }))
+    .mutation(async ({ input }) => {
+      const data = await db.group.delete({
+        where: {
+          id: input.id,
+        },
       });
 
       return data;

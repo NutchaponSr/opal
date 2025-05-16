@@ -88,7 +88,11 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
             <SidebarSubContent isOpen={toggledYears[year]}>
               {data?.filter((f) => f.year === year)
                 .map((group) => (
-                  <GroupItem key={group.id} group={group} />
+                  <GroupItem 
+                    key={group.id} 
+                    group={group}
+                    organizationId={organizationId} 
+                  />
                 ))
               }
             </SidebarSubContent>
