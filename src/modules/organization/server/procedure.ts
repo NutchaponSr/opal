@@ -5,6 +5,16 @@ import { organizationSchema } from "@/schema";
 import { createTRPCRouter, protectedProcedure } from "@/trpc/init";
 
 export const organizationRouter = createTRPCRouter({
+  getMany: protectedProcedure
+    .query(async ({ ctx }) => {
+      const organizations = await db.organization.findMany({
+        where: {
+          userId: ctx.user.clerkId,
+        },
+      });
+
+      return organizations;
+    }),
   getOne: protectedProcedure
     .query(async ({ ctx }) => {
       const organization = await db.organization.findFirst({

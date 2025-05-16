@@ -11,6 +11,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { DropdownProvider } from "@/providers/dropdown-provider";
 
 import "./globals.css";
+import { ModalProvider } from "@/providers/modals-provider";
 
 const font = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           <TRPCReactProvider>
             <DropdownProvider>
               {children}
+              <ModalProvider />
               <Toaster richColors position="top-center" />
             </DropdownProvider>
           </TRPCReactProvider>
