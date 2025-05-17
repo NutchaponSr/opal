@@ -17,7 +17,8 @@ const buttonVariants = cva(
         ghost: "hover:bg-[#00000008] hover:text-primary dark:hover:bg-accent/50",
         item: "hover:bg-accent text-[#787774] hover:text-[#787774] justify-start font-normal dark:hover:bg-accent/50 w-full",
         link: "text-primary underline-offset-4 hover:underline",
-        primary: "bg-marine hover:bg-[#0077d4] text-white shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1),0_1px_2px_rgba(15,15,15,0.1)]"
+        primary: "bg-marine hover:bg-[#0077d4] text-white shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1),0_1px_2px_rgba(15,15,15,0.1)]",
+        icon: "text-[#9B9A97] hover:bg-[#00000008]"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

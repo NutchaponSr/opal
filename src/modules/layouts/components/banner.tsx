@@ -45,7 +45,7 @@ export const Banner = ({ workspace }: Props) => {
               <Icon icon={workspace.icon} className={cn(iconVariant({ text: workspace.text }), "size-9")} />
             </div>
             <div className="text-[32px] leading-[1.2] flex items-center">
-              <h1 className="font-bold text-primary w-full whitespace-pre-wrap break-words">
+              <h1 className="font-bold text-primary w-full whitespace-pre-wrap break-words tracking-wide">
                 {workspace.label}
               </h1>
             </div>
@@ -53,9 +53,9 @@ export const Banner = ({ workspace }: Props) => {
           {show && (
             <div className="max-w-full overflow-hidden mb-3">
               <div className="w-[780px] whitespace-pre-wrap break-words text-sm px-1.5 py-1">
-                <span className="font-semibold text-primary">
+                <p className="font-semibold text-primary tracking-wide">
                   {workspace.description}
-                </span>
+                </p>
               </div>
             </div>
           )}

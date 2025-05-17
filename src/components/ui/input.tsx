@@ -11,9 +11,11 @@ const inputVariant = cva(
     variants: {
       variant: {
         default: "bg-background border shadow-xs",
+        none: "border-none",
         search: "bg-[#f2f1ee99] shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)]",
       },
       scale: {
+        none: "text-xs h-7 leading-6 px-0",
         sm: "text-sm h-7 leading-5 rounded-sm px-2",
         md: "text-sm h-8 rounded-md px-3 py-1.5",
       },
@@ -34,23 +36,20 @@ interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onCha
   scale?: VariantProps<typeof inputVariant>["scale"];
   input?: VariantProps<typeof inputVariant>["input"];
   reset?: boolean;
+  showSearch?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = React.forwardRef<HTMLInputElement, Props>(
-  function Input({ className, type, reset, variant, scale, input, onChange, value: controlledValue, ...props }, forwardedRef) {
-    // สร้าง internal ref สำหรับ input element
+  function Input({ className, type, reset, variant, scale, showSearch, input, onChange, value: controlledValue, ...props }, forwardedRef) {
     const inputRef = React.useRef<HTMLInputElement>(null);
     
-    // ตรวจสอบว่าเป็น controlled หรือ uncontrolled component
     const isControlled = controlledValue !== undefined;
     const [uncontrolledValue, setUncontrolledValue] = React.useState("");
     
-    // ค่า value ที่จะแสดงใน input
     const displayValue = isControlled ? controlledValue : uncontrolledValue;
     
     React.useEffect(() => {
-      // อัพเดต internal state เมื่อ controlledValue เปลี่ยน (เฉพาะ controlled mode)
       if (isControlled && controlledValue !== undefined) {
         if (typeof controlledValue === 'string') {
           setUncontrolledValue(controlledValue);
@@ -60,10 +59,8 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
       }
     }, [controlledValue, isControlled]);
 
-    // จัดการ ref จากภายนอกและภายใน
     const mergedRef = useMergedRef(forwardedRef, inputRef);
-    
-    // จัดการการเปลี่ยนแปลงค่าใน input
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       if (!isControlled) {
         setUncontrolledValue(e.target.value);
@@ -74,7 +71,6 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
       }
     };
 
-    // ล้างค่าใน input
     const handleClear = (e: React.MouseEvent) => {
       e.stopPropagation();
       
@@ -83,7 +79,6 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
       }
       
       if (onChange) {
-        // ส่ง proper synthetic event object
         onChange({
           target: { value: "" },
           currentTarget: inputRef.current,
@@ -92,7 +87,6 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
         } as React.ChangeEvent<HTMLInputElement>);
       }
       
-      // โฟกัสกลับไปที่ input
       setTimeout(() => {
         inputRef.current?.focus();
       }, 0);
@@ -109,7 +103,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
             )}
             onClick={() => inputRef.current?.focus()}
           >
-            <SearchIcon className="size-4 shrink-0 text-[#787774]" />
+            {showSearch && <SearchIcon className="size-4 shrink-0 text-[#787774]" />}
             
             <input 
               ref={mergedRef}
@@ -118,7 +112,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
               onChange={handleChange}
               data-slot="input"
               className={cn(
-                inputVariant({ input }), 
+                inputVariant({ input, scale }), 
                 "shadow-none border-none w-full bg-transparent"
               )}
               {...props}

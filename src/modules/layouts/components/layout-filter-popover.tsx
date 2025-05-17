@@ -28,8 +28,8 @@ export const LayoutFilterPopover = <T,>({ columns }: Props<T>) => {
       <PopoverTrigger asChild>
         <Button
           size="smIcon"
-          variant="ghost"
-          className={cn("text-[#9B9A97] hover:text-[#9B9A97]", hasActiveFilters && "text-marine hover:text-marine")}
+          variant="icon"
+          className={cn(hasActiveFilters && "text-marine hover:text-marine")}
         >
           <FilterIcon />
         </Button>
