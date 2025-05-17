@@ -1,6 +1,7 @@
 "use client";
 
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { useTRPC } from "@/trpc/client";
@@ -15,12 +16,15 @@ import { FormGenerator } from "@/components/form-generator";
 
 export const OrganizationForm = () => {
   const trpc = useTRPC();
+  const router = useRouter();
   const queryClient = useQueryClient();
 
   const createOrganization = useMutation(trpc.organizations.create.mutationOptions({
-    onSuccess: () => {
+    onSuccess: ({ id }) => {
       toast.success("Organization created");
       queryClient.invalidateQueries(trpc.organizations.getOne.queryOptions());
+
+      router.push(`/${id}`);
     },
     onError: () => {
       toast.error("Something went wrong");
@@ -55,7 +59,6 @@ export const OrganizationForm = () => {
         errors={errors}
         inputType="input"
         type="text"
-        className="h-10 bg-white"
         disabled={createOrganization.isPending}
         />
       <FormGenerator 
@@ -65,10 +68,9 @@ export const OrganizationForm = () => {
         errors={errors}
         inputType="input"
         type="text"
-        className="h-10 bg-white"
         disabled={createOrganization.isPending}
       />
-      <Button size="lg" disabled={createOrganization.isPending}>
+      <Button size="md" variant="primary" disabled={createOrganization.isPending}>
         Continue
       </Button>
     </form>

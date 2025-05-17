@@ -42,7 +42,7 @@ export const Banner = ({ workspace }: Props) => {
         <div className="pr-24 mb-2 w-full">
           <div className="flex justify-start gap-1.5">
             <div className="flex items-center justify-center size-9">
-              <Icon icon={workspace.icon} className={cn(iconVariant({ color: workspace.color }), "size-9")} />
+              <Icon icon={workspace.icon} className={cn(iconVariant({ text: workspace.text }), "size-9")} />
             </div>
             <div className="text-[32px] leading-[1.2] flex items-center">
               <h1 className="font-bold text-primary w-full whitespace-pre-wrap break-words">

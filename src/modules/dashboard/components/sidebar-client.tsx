@@ -15,7 +15,6 @@ import {
   SidebarMenuItem, 
   SidebarSubMenuItem 
 } from "@/modules/dashboard/components/ui/sidebar";
-import { UserButton } from "@/modules/auth/components/user-button";
 import { GroupWorkspace } from "@/modules/groups/components/group-workspace";
 
 import { useSidebarStore } from "@/modules/dashboard/store/use-sidebar-store";
@@ -51,15 +50,15 @@ export const SidebarClient = ({ organizationId }: Props) => {
       </SidebarContent>
       <SidebarContent>
         <SidebarMenuItem>
-          <SidebarIcon icon="solar:magnifer-bold-duotone" />
+          <SidebarIcon text="gray" icon="solar:magnifer-bold-duotone" />
           Search
         </SidebarMenuItem>
         <SidebarMenuItem>
-          <SidebarIcon icon="solar:home-angle-bold-duotone" />
+          <SidebarIcon text="gray" icon="solar:home-angle-bold-duotone" />
           Home
         </SidebarMenuItem>
         <SidebarMenuItem>
-          <SidebarIcon icon="solar:inbox-line-bold-duotone" />
+          <SidebarIcon text="gray" icon="solar:inbox-line-bold-duotone" />
           Inbox
         </SidebarMenuItem>
       </SidebarContent>
@@ -70,20 +69,17 @@ export const SidebarClient = ({ organizationId }: Props) => {
             <SidebarGroupContent isOpen={open.workspace}>
               <GroupWorkspace organizationId={organizationId} />
               <SidebarSubMenuItem>
-                <SidebarIcon sub icon="solar:file-text-bold-duotone" variant="orange" />
+                <SidebarIcon sub icon="solar:file-text-bold" background="orange" size="workspace" />
                 Competency
               </SidebarSubMenuItem>
               <SidebarSubMenuItem>
-                <SidebarIcon sub icon="solar:users-group-rounded-bold-duotone" variant="primary" />
+                <SidebarIcon sub icon="solar:users-group-rounded-bold" background="primary" size="workspace" />
                 Employee
               </SidebarSubMenuItem>
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
       </ScrollArea>
-      <SidebarContent>
-        <UserButton />
-      </SidebarContent>
     </Sidebar>
   );
 }

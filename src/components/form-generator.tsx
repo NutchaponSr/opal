@@ -44,7 +44,7 @@ export const FormGenerator = ({
     case "input":
       return (
         <Label
-          className="flex flex-col gap-2 items-start"
+          className="flex flex-col gap-1.5 items-start"
           htmlFor={`input-${label}`}
         >
           {label && label}
@@ -61,7 +61,7 @@ export const FormGenerator = ({
             errors={errors}
             name={name}
             render={({ message }) => (
-              <p className="text-destructive mt-2">
+              <p className="text-destructive text-xs">
                 {message === "Required" ? "" : message}
               </p>
             )}

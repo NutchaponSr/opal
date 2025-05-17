@@ -1,7 +1,10 @@
 import { Column, Table } from "@tanstack/react-table";
 
+import { Button } from "@/components/ui/button";
+
 import { LayoutFilterPopover } from "./layout-filter-popover";
 import { LayoutSortPopover } from "./layout-sort-popover";
+import { SearchIcon, ZapIcon } from "lucide-react";
 
 interface Props<T> {
   columns: Column<T>[];
@@ -17,6 +20,20 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
         <div className="flex items-center justify-end gap-px">
           <LayoutFilterPopover {...props} />
           <LayoutSortPopover {...props} />
+          <Button
+            size="smIcon"
+            variant="ghost"
+            className="text-[#9B9A97] hover:text-[#9B9A97]"
+          >
+            <ZapIcon />
+          </Button>
+          <Button
+            size="smIcon"
+            variant="ghost"
+            className="text-[#9B9A97] hover:text-[#9B9A97]"
+          >
+            <SearchIcon />
+          </Button>
         </div>
       </div>
     </section>
