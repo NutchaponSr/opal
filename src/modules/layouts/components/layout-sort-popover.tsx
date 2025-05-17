@@ -87,11 +87,7 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
   return (
     <Popover onOpenChange={() => setTimeout(() => setToggle(true), 100)}>
       <PopoverTrigger asChild>
-        <Button
-          size="smIcon"
-          variant="ghost"
-          className="text-[#9B9A97] hover:text-[#9B9A97]"
-        >
+        <Button size="smIcon" variant="icon">
           <ArrowUpDownIcon />
         </Button>
       </PopoverTrigger>

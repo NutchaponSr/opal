@@ -62,6 +62,7 @@ export const IconsPicker = ({ children, onChange } : Props) => {
             <div className="my-2 px-2 flex items-center gap-2 w-full leading-[120%] min-h-7">
               <Input 
                 reset
+                showSearch
                 variant="search" 
                 value={searchTerm}
                 placeholder="Filter by..."
