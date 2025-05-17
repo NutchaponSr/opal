@@ -54,7 +54,7 @@ const WorkspaceCard = ({
         <div className="relative mb-4">
           <div className={cn("h-11", workspace.className)} />
           <div className="flex items-center justify-center rounded-e-sm absolute -bottom-3.5 left-4">
-            <Icon icon={workspace.icon} className={cn(iconVariant({ color: workspace.color }), "size-8")} />
+            <Icon icon={workspace.icon} className={cn(iconVariant({ text: workspace.text }), "size-8")} />
           </div>
         </div>
         <div className="w-full min-h-20 py-2.5 px-4 relative flex flex-col justify-start gap-2 grow">

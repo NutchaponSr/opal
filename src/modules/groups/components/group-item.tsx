@@ -37,7 +37,7 @@ export const GroupItem = ({ group, organizationId }: Props) => {
     <SidebarSub>
       <div ref={itemRef} />
       <SidebarSubMenuItem indent={24}>
-        <SidebarIcon sub isOpen={isToggled} onClick={toggle} icon={group.icon} />
+        <SidebarIcon sub isOpen={isToggled} onClick={toggle} icon={group.icon} size="item" text="gray" />
         {group.name}
 
         <GroupActions 
@@ -48,11 +48,11 @@ export const GroupItem = ({ group, organizationId }: Props) => {
       </SidebarSubMenuItem>
       <SidebarSubContent isOpen={isToggled}>
         <SidebarMenuItem indent={32}>
-          <SidebarIcon icon="radix-icons:dot-filled" />
+          <SidebarIcon icon="radix-icons:dot-filled" text="gray" size="dot" />
           Competency
         </SidebarMenuItem>
         <SidebarMenuItem indent={32}>
-          <SidebarIcon icon="radix-icons:dot-filled" />
+          <SidebarIcon icon="radix-icons:dot-filled" text="gray" size="dot" />
           Employee
         </SidebarMenuItem>
       </SidebarSubContent>

@@ -14,27 +14,27 @@ export const group: Workspace = {
   label: "Group",
   href: "groups",
   description: "Combining diverse skills to achieve shared goals.",
-  icon: "solar:library-bold-duotone",
+  icon: "solar:library-bold",
   className: "bg-[#f5e0e9] dark:bg-[#4e2c3c]",
-  color: "pink",
+  text: "pink",
 };
 
 export const competency: Workspace = {
   label: "Competency",
   href: "competencies",
   description: "Diverse skills and competencies to achieve shared goals.",
-  icon: "solar:bookmark-square-bold-duotone",
+  icon: "solar:file-text-bold",
   className: "bg-[#fadec9] dark:bg-[#5c3b23]",
-  color: "orange",
+  text: "orange",
 }
 
 export const employee: Workspace = {
   label: "Employee",
   href: "employees",
   description: "Manage employees with diverse competencies to achieve goals.",
-  icon: "solar:users-group-rounded-bold-duotone",
+  icon: "solar:users-group-rounded-bold",
   className: "bg-[#d8e5ee] dark:bg-[#143a4e]",
-  color: "primary",
+  text: "primary",
 }
 
 export const workspaces: Workspace[] = [group, competency, employee] as const;

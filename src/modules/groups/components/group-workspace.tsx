@@ -58,8 +58,9 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
         <SidebarIcon 
           sub 
           icon="solar:library-bold-duotone" 
-          variant="pink" 
           onClick={toggle} 
+          background="pink"
+          size="workspace"
           isOpen={isToggled}
         />
         Group
@@ -70,9 +71,11 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
             <SidebarSubMenuItem indent={16}>
               <SidebarIcon 
                 sub
+                size="dot"
+                text="gray"
                 isOpen={toggledYears[year]}
                 onClick={() => toggleYear(year)}
-                icon="solar:calendar-bold-duotone" 
+                icon="radix-icons:dot-filled" 
               />
               {year}
 
@@ -80,9 +83,9 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
                 onClick={() => {
                   createGroup.mutate({ year, organizationId });
                 }}
-                className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-6 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
+                className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-5 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
               >
-                <PlusIcon className="text-[#91918e] size-5 stroke-[1.5]" />
+                <PlusIcon className="text-[#91918e] size-4 stroke-[1.5]" />
               </button>
             </SidebarSubMenuItem>
             <SidebarSubContent isOpen={toggledYears[year]}>

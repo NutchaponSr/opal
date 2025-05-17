@@ -15,19 +15,20 @@ const buttonVariants = cva(
         outline: "bg-background hover:bg-[#f2f1ee99] shadow-[inset_0_0_0_1px_rgba(55,53,47,0.16)]",
         secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost: "hover:bg-[#00000008] hover:text-primary dark:hover:bg-accent/50",
-        item: "hover:bg-accent text-[#787774] hover:text-[#787774] justify-start font-normal dark:hover:bg-accent/50",
+        item: "hover:bg-accent text-[#787774] hover:text-[#787774] justify-start font-normal dark:hover:bg-accent/50 w-full",
         link: "text-primary underline-offset-4 hover:underline",
         primary: "bg-marine hover:bg-[#0077d4] text-white shadow-[inset_0_0_0_1px_rgba(15,15,15,0.1),0_1px_2px_rgba(15,15,15,0.1)]"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         md: "h-8 rounded-sm px-2 py-1 text-sm",
-        sm: "h-7 rounded-sm gap-1.5 px-3 has-[>svg]:px-2.5 text-sm",
-        xs: "h-6 rounded-sm gap-1.5 px-3 has-[>svg]:px-2 text-xs",
+        sm: "h-7 rounded-sm gap-1 px-2 has-[>svg]:px-2 text-xs",
+        xs: "h-6 rounded-sm gap-1 px-3 has-[>svg]:px-2 text-xs",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         maxIcon: "size-8 rounded-md",
         smIcon: "size-7 rounded-sm",
         icon: "size-6 rounded-sm",
+        item: "h-7 rounded-sm px-2 has-[>svg]:px-2 text-xs gap-2",
         xsIcon: "size-5 rounded-sm",
         group: "h-7 rounded-none p-0 px-2 text-xs"
       },
