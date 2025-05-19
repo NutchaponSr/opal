@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useToggle } from "usehooks-ts";
+import { createPortal } from "react-dom";
 import { Column, Table } from "@tanstack/react-table";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { MoreHorizontalIcon, SearchIcon, ZapIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -12,7 +13,8 @@ import { Button } from "@/components/ui/button";
 import { LayoutSortPopover } from "@/modules/layouts/components/layout-sort-popover";
 import { LayoutFilterPopover } from "@/modules/layouts/components/layout-filter-popover";
 import { ViewSettingsSidebar } from "@/modules/layouts/components/view-settings-sidebar";
-import { createPortal } from "react-dom";
+
+import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
 
 interface Props<T> {
   columns: Column<T>[];
@@ -22,13 +24,20 @@ interface Props<T> {
 }
 
 export const Toolbar = <T,>({ ...props }: Props<T>) => {
-  const [position, setPosition] = useState({ top: 0, left: 0 })
+  const { onBack } = useViewSettingsStore()
+
+  const [position, setPosition] = useState({ top: 0, left: 0 });
 
   const [searchOpen, toggleSearch] = useToggle(false);
   const [sidebarOpen, toggleSidebar, setSidebar] = useToggle(false);
 
   const triggerRef = useRef<HTMLButtonElement>(null);
   const containnerRef = useRef<HTMLDivElement>(null);
+
+  const handleClose = useCallback(() => {
+    onBack();
+    setSidebar(false);
+  }, [onBack, setSidebar]);
 
   useEffect(() => {
     if (sidebarOpen && triggerRef.current) {
@@ -52,13 +61,13 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
         triggerRef.current &&
         !triggerRef.current.contains(event.target as Node)
       ) {
-        setSidebar(false)
+        handleClose();
       }
     }
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setSidebar(false)
+        handleClose();
       }
     }
 
@@ -71,11 +80,11 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
       document.removeEventListener("mousedown", handleClickOutside)
       document.removeEventListener("keydown", handleEscape)
     }
-  }, [setSidebar, sidebarOpen])
+  }, [handleClose, sidebarOpen]);
 
   return (
     <section className="min-h-10 px-24 sticky left-0 shrink-0 z-86">
-      <div className="flex justify-between items-center h-10 shadow-[0_1px_0_rgb(233,233,231)] w-full">
+      <div className="flex justify-between items-center h-10 w-full">
         <div className="flex items-center h-full grow-0" />
         
         <div className="flex items-center justify-end gap-px">
@@ -107,7 +116,7 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
             ref={triggerRef}
             size="smIcon" 
             variant="icon" 
-            onClick={toggleSidebar}
+            onClick={!sidebarOpen ? toggleSidebar : handleClose}
           >
             <MoreHorizontalIcon />
           </Button>
@@ -117,7 +126,7 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
       {sidebarOpen && createPortal(
         <ViewSettingsSidebar 
           ref={containnerRef} 
-          onClose={() => setSidebar(false)} 
+          onClose={handleClose} 
           position={position}
         />,
         document.body

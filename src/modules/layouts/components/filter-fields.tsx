@@ -253,9 +253,10 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
       {hasActiveFilters && (
         <ScrollArea className="flex flex-1 flex-col overflow-auto p-1 h-full">
           <div className="my-1 flex w-full items-center gap-2">
-              <div className="shrink-0 min-w-16 text-center box-border">
-                <span className="text-sm text-primary px-1">Where</span>
-              </div>
+            <div className="shrink-0 min-w-16 text-center box-border">
+              <span className="text-sm text-primary px-1 font-medium">Where</span>
+            </div>
+
             {allFilters[0] && (
               "column" in allFilters[0] ? (
               <LayoutFilterProvider 

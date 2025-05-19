@@ -1,8 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { 
+  getCoreRowModel, 
+  getFilteredRowModel, 
+  getSortedRowModel, 
+  Row, 
+  SortingState,
+   useReactTable 
+  } from "@tanstack/react-table";
+import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { getCoreRowModel, getFilteredRowModel, getSortedRowModel, Row, SortingState, useReactTable } from "@tanstack/react-table";
 
 import { Group } from "@prisma/client";
 
@@ -13,11 +20,12 @@ import { FilterGroup } from "@/types/columns";
 
 import { Banner } from "@/modules/layouts/components/banner";
 import { Toolbar } from "@/modules/layouts/components/toolbar";
-
 import { columns } from "@/modules/groups/components/group-columns";
 import { LayoutProvider } from "@/modules/layouts/components/layout-provider";
-import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
+
 import { compareValues } from "@/modules/layouts/utils";
+
+import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
 
 interface Props {
   organizationId: string;
@@ -26,21 +34,11 @@ interface Props {
 export const GroupView = ({ organizationId }: Props) => {
   const trpc = useTRPC();
   const { filterGroup } = useLayoutFilterStore();
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState("");
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const isFilterGroupEmpty = (group: FilterGroup<Group>): boolean => {
     return group.filters.length === 0 && group.groups.length === 0;
@@ -113,7 +111,7 @@ export const GroupView = ({ organizationId }: Props) => {
   });
 
   return (
-    <div className="flex flex-col grow relative overflow-auto" style={{ height: `${windowHeight - 64}px` }}>
+    <div className="flex flex-col grow relative overflow-auto">
       <Banner workspace={group} />
       <Toolbar 
         table={table} 

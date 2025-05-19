@@ -19,7 +19,7 @@ export const Workspaces = ({ ...props }: Props) => {
   return (
     <div className="min-w-0 col-start-2 select-none">
       <div className="shrink-0 flex justify-between items-center h-12 ml-2">
-        <div className="flex items-center text-xs font-medium text-[#7f7f7f] shrink-0 max-w-full gap-2">
+        <div className="flex items-center text-xs font-medium text-muted-foreground dark:text-muted shrink-0 max-w-full gap-2">
           <div className="flex items-center justify-center">
             <SquareDashedKanbanIcon className="size-4 stroke-[1.75]" />
           </div>
@@ -61,7 +61,7 @@ const WorkspaceCard = ({
           <h2 className="whitespace-pre-wrap overflow-hidden text-ellipsis font-semibold text-sm text-primary w-auto">
             {workspace.label}
           </h2>
-          <p className="text-xs text-[#787774] dark:text-[#7f7f7f] line-clamp-2">
+          <p className="text-xs text-muted-foreground dark:text-muted line-clamp-2">
             {workspace.description}
           </p>
         </div>

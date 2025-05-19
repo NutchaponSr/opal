@@ -1,0 +1,1 @@
+export type LayoutType = "table" | "kanban" | "calendar" | "list" | "gallery" | "chart";

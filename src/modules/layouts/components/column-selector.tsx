@@ -53,7 +53,7 @@ export const SortSelector = <T,>({
             onSelect={() => onSelect(item)}
             className="flex items-center gap-2 px-2 py-1 text-sm text-primary rounded-sm h-7 data-[selected=true]:bg-[#37352f0f] capitalize cursor-pointer"
           >
-            {Icon && <Icon className="size-5 stroke-[1.5]" />}
+            {Icon && <Icon className="size-4.5 stroke-[1.75]" />}
             {item.id}
           </Command.Item>
         );
