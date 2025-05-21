@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useToggle } from "usehooks-ts";
-import { createPortal } from "react-dom";
 import { Column, Table } from "@tanstack/react-table";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MoreHorizontalIcon, SearchIcon, ZapIcon } from "lucide-react";
@@ -15,6 +14,7 @@ import { LayoutFilterPopover } from "@/modules/layouts/components/layout-filter-
 import { ViewSettingsSidebar } from "@/modules/layouts/components/view-settings-sidebar";
 
 import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
+import { Popover, PopoverTrigger } from "@/components/ui/popover";
 
 interface Props<T> {
   columns: Column<T>[];
@@ -29,14 +29,13 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
   const [position, setPosition] = useState({ top: 0, left: 0 });
 
   const [searchOpen, toggleSearch] = useToggle(false);
-  const [sidebarOpen, toggleSidebar, setSidebar] = useToggle(false);
+  const [sidebarOpen,, setSidebar] = useToggle(false);
 
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const containnerRef = useRef<HTMLDivElement>(null);
 
   const handleClose = useCallback(() => {
-    onBack();
     setSidebar(false);
+    setTimeout(() => onBack(), 100);
   }, [onBack, setSidebar]);
 
   useEffect(() => {
@@ -52,35 +51,6 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
       });
     }
   }, [sidebarOpen]);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        containnerRef.current &&
-        !containnerRef.current.contains(event.target as Node) &&
-        triggerRef.current &&
-        !triggerRef.current.contains(event.target as Node)
-      ) {
-        handleClose();
-      }
-    }
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        handleClose();
-      }
-    }
-
-    if (sidebarOpen) {
-      document.addEventListener("mousedown", handleClickOutside)
-      document.addEventListener("keydown", handleEscape)
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-      document.removeEventListener("keydown", handleEscape)
-    }
-  }, [handleClose, sidebarOpen]);
 
   return (
     <section className="min-h-10 px-24 sticky left-0 shrink-0 z-86">
@@ -112,25 +82,34 @@ export const Toolbar = <T,>({ ...props }: Props<T>) => {
             />
           </motion.div>
 
-          <Button 
-            ref={triggerRef}
-            size="smIcon" 
-            variant="icon" 
-            onClick={!sidebarOpen ? toggleSidebar : handleClose}
-          >
-            <MoreHorizontalIcon />
-          </Button>
+          <Popover modal open={sidebarOpen} onOpenChange={handleClose}>
+            <PopoverTrigger asChild>
+              <Button 
+                ref={triggerRef}
+                size="smIcon" 
+                variant="icon" 
+                onClick={() => {
+                  setTimeout(() => {
+                    if (sidebarOpen) {
+                      setSidebar(false);
+                    } else {
+                      setSidebar(true);
+                    }
+                  }, 100)
+                }}
+              >
+                <MoreHorizontalIcon />
+              </Button>
+            </PopoverTrigger>
+            <ViewSettingsSidebar 
+              {...props}
+              onClose={handleClose} 
+              position={position}
+            />
+          </Popover>
         </div>
       </div>
-      
-      {sidebarOpen && createPortal(
-        <ViewSettingsSidebar 
-          ref={containnerRef} 
-          onClose={handleClose} 
-          position={position}
-        />,
-        document.body
-      )}
+  
     </section>
   );
 }

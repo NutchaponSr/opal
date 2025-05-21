@@ -43,8 +43,10 @@ export const columns: ColumnDef<Group>[] = [
         </TableAction>
       </div>
     ),
+    enableHiding: false
   },
   {
+    id: "name",
     accessorKey: "name",
     header: "Name",
     cell: ({ row }) => (
@@ -54,15 +56,18 @@ export const columns: ColumnDef<Group>[] = [
       </div>
     ),
     filterFn: "custom",
+    enableHiding: false,
     enableColumnFilter: true,
     meta: {
       width: "w-[256px]",
       icon: columnIcons["text"],
       variant: "text",
       options: columnFilterOptions["text"],
-    }
+      isLocked: true,
+    },
   },
   {
+    id: "year",
     accessorKey: "year",
     header: "Year",
     cell: (info) => info.getValue() as number,
@@ -73,6 +78,6 @@ export const columns: ColumnDef<Group>[] = [
       icon: columnIcons["numeric"],
       variant: "numeric",
       options: columnFilterOptions["numeric"],
-    }
+    },
   },
 ]

@@ -56,7 +56,7 @@ export const MainContent = ({ ...props }: Props) => {
           icon={ListIcon}
           label="Properties"
           description="1 Shown"
-          onClick={() => {}}
+          onClick={() => onOpen("properties")}
         />
         <OptionButton 
           icon={FilterIcon}

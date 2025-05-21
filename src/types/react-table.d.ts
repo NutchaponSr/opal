@@ -9,6 +9,7 @@ declare module "@tanstack/react-table" {
     icon?: LucideIcon;
     variant: ColumnType;
     options?: string[];
+    isLocked?: boolean;
   }
 
   interface FilterFns {

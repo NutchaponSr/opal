@@ -17,7 +17,10 @@ import {
   SortableContext,
   verticalListSortingStrategy
 } from "@dnd-kit/sortable";
-import { restrictToFirstScrollableAncestor, restrictToVerticalAxis } from "@dnd-kit/modifiers"
+import { 
+  restrictToFirstScrollableAncestor, 
+  restrictToVerticalAxis 
+} from "@dnd-kit/modifiers"
 import { useToggle } from "usehooks-ts";
 import { Column, Table } from "@tanstack/react-table";
 

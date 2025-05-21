@@ -1,8 +1,7 @@
-
 import { Command } from "cmdk";
+import { Column } from "@tanstack/react-table";
 
 import { ColumnType } from "@/types/columns";
-import { Column } from "@tanstack/react-table";
 
 interface ColumnSelectorProps<T> {
   data: Column<T>[];

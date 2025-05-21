@@ -1,20 +1,24 @@
 "use client";
 
-import { RefObject, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Table } from "@tanstack/react-table";
+
+import { PopoverContent } from "@/components/ui/popover";
 
 import { MainContent } from "@/modules/layouts/components/main-content";
 import { LayoutContent } from "@/modules/layouts/components/layout-content";
+import { PropertiesContent } from "@/modules/layouts/components/properties-content";
 
-interface Props {
+interface Props<T> {
   position: {
     top: number;
     left: number;
   };
-  ref: RefObject<HTMLDivElement | null>;
+  table: Table<T>;
   onClose: () => void;
 }
 
-export const ViewSettingsSidebar = ({ ref, position, ...props }: Props) => {
+export const ViewSettingsSidebar = <T,>({ position, ...props }: Props<T>) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -31,21 +35,22 @@ export const ViewSettingsSidebar = ({ ref, position, ...props }: Props) => {
   }, [position.top]);
 
   return (
-    <div
-      ref={ref}
-      className="absolute transform -right-24 border-l mr-24 pointer-events-auto z-9999"
-      style={{
-        top: `${position.top}px`,
-        height: `${height - 1}px`,
-      }}
+    <PopoverContent
+      align="end"
+      side="bottom"
+      sideOffset={6}
+      alignOffset={-96}
+      style={{ height: `${Math.max(height-1, 300)}px`}}
+      className="border-l p-0 rounded-none shadow-none dark:shadow-none w-[calc(290px+96px)] bg-background"
     >
       <div className="flex h-full">
-        <div className="flex flex-col shadow-[inset_0_1px_0_rgb(233,233,231)] dark:shadow-[inset_0_1px_0_rgb(47,47,47)] max-w-[290px] min-w-[290px] bg-background h-full overflow-y-auto text-primary">
+        <div className="flex flex-col shadow-[inset_0_1px_0_rgb(233,233,231)] dark:shadow-[inset_0_1px_0_rgb(47,47,47)] max-w-[290px] min-w-[290px] h-full overflow-y-auto text-primary">
           <MainContent {...props} />
           <LayoutContent {...props} />
+          <PropertiesContent {...props} />
         </div>
         <div className="w-24" />  
       </div>
-    </div>
+    </PopoverContent>
   );
 }

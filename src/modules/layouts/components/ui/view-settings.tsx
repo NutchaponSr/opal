@@ -55,15 +55,19 @@ function OptionButton({
   onClick?: () => void;
 }) {
   return (
-    <Button size="item" variant="item2" onClick={onClick}>
-      {Icon && <Icon />}
+    <div 
+      role="button"
+      onClick={onClick}
+      className="flex items-center h-7 rounded-sm px-2 text-sm gap-2 hover:bg-accent text-primary justify-start font-normal w-full cursor-pointer"
+    >
+      {Icon && <Icon className="size-4 stroke-[1.75]" />}
       {label}
 
       <div className="ml-auto flex items-center gap-1.5">
         {description && <p className="text-xs text-muted">{description}</p>}
         {action ? action : <ChevronRightIcon className="size-3.5 text-muted" />}
       </div>
-    </Button>
+    </div>
   );
 }
 

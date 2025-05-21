@@ -6,8 +6,10 @@ import {
   getSortedRowModel, 
   Row, 
   SortingState,
-   useReactTable 
-  } from "@tanstack/react-table";
+  useReactTable, 
+  VisibilityState,
+  ColumnOrderState
+} from "@tanstack/react-table";
 import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
@@ -38,6 +40,8 @@ export const GroupView = ({ organizationId }: Props) => {
   const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+  const [columnOrder, setColumnOrder] = useState<ColumnOrderState>(columns.map((c) => c.id!));
   const [globalFilter, setGlobalFilter] = useState("");
 
   const isFilterGroupEmpty = (group: FilterGroup<Group>): boolean => {
@@ -95,17 +99,21 @@ export const GroupView = ({ organizationId }: Props) => {
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    onSortingChange: setSorting,
+    onGlobalFilterChange: setGlobalFilter,
+    onColumnVisibilityChange: setColumnVisibility,
+    onColumnOrderChange: setColumnOrder,
+    globalFilterFn: filterData,
     filterFns: {
       custom: (row, columnId, filterValue) => {
         const cellValue = row.getValue(columnId);
         return String(cellValue).toLowerCase().includes(String(filterValue).toLowerCase());
       }
     },
-    onSortingChange: setSorting,
-    onGlobalFilterChange: setGlobalFilter,
-    globalFilterFn: filterData,
     state: {
       sorting,
+      columnVisibility,
+      columnOrder,
       globalFilter: globalFilter || filterGroup,
     }
   });
@@ -115,7 +123,7 @@ export const GroupView = ({ organizationId }: Props) => {
       <Banner workspace={group} />
       <Toolbar 
         table={table} 
-        columns={table.getAllColumns().filter((col) => col.getCanFilter())}
+        columns={table.getAllColumns().filter((col) => col.getCanFilter() && col.getCanHide())}
         searchTerm={globalFilter}
         onChange={handleChange} 
       />

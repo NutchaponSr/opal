@@ -1,6 +1,19 @@
+import { Icon } from "@iconify/react";
+import { CircleHelpIcon } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 
-import { layouts } from "@/constants/layouts";
+import { layouts, peeks } from "@/constants/layouts";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Separator } from "@/components/ui/separator";
 
 import { 
   OptionButton,
@@ -8,21 +21,27 @@ import {
   ViewSettingsHeader 
 } from "@/modules/layouts/components/ui/view-settings";
 
-import { LayoutType } from "@/modules/layouts/types";
+import { LayoutType, PeekType } from "@/modules/layouts/types";
 
 import { useLayoutStore } from "@/modules/layouts/store/use-layout-store";
 import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
-import { Switch } from "@/components/ui/switch";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { CircleHelpIcon } from "lucide-react";
 
 interface Props {
   onClose: () => void;
 }
 
 export const LayoutContent = ({ onClose }: Props) => {
-  const { layout, onChangeLayout } = useLayoutStore();
+  const { 
+    layout, 
+    isShowIcon,
+    isShowLine,
+    peek,
+    onChangeLayout,
+    onChangeLine,
+    onChangeIcon,
+    onChangePeek
+  } = useLayoutStore();
+
   const { isOpen, content, onBack } = useViewSettingsStore(); 
 
   const open = isOpen && content === "layouts";
@@ -56,16 +75,51 @@ export const LayoutContent = ({ onClose }: Props) => {
       <ViewSettingsContent>
         <OptionButton 
           label="Show vertical lines"
-          action={<Switch />}
+          action={<Switch
+            checked={isShowLine}
+            onCheckedChange={onChangeLine} 
+          />}
         />
         <OptionButton 
           label="Show page icon"
-          action={<Switch />}
+          action={<Switch 
+            checked={isShowIcon}
+            onCheckedChange={onChangeIcon} 
+          />}
         />
-        <OptionButton 
-          label="Open page in"
-          description="Center peek"
-        />
+        
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <OptionButton 
+              label="Open page in"
+              description={peeks[peek].label}
+            />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-[250px]">
+            {Object.entries(peeks).map(([key, value]) => (
+              <DropdownMenuItem key={key} onClick={() => onChangePeek(key as PeekType)} className="h-auto hover:bg-accent">
+                <div className="flex items-center gap-2 leading-[120%] select-none min-h-7 w-full text-sm">
+                  <value.icon className="self-start size-4.5 stroke-[1.75]" />
+                  <div className="flex-1">
+                    <div className="whitespace-nowrap overflow-hidden text-ellipsis">
+                      {value.label}
+                    </div>
+                    <div className="mt-1 text-xs text-muted-foreground break-words">
+                      {value.description}
+                      {value.default && (
+                        <div className="mt-0.5 font-medium text-marine">
+                          Default for Table
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  {key === peek && <Icon icon="game-icons:check-mark" className="ml-auto self-start size-3" />}
+                </div>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
       </ViewSettingsContent>
       <Separator />
       <ViewSettingsContent>
