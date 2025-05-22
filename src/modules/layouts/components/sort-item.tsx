@@ -71,7 +71,7 @@ export const SortItem = <T,>({
       <Separator orientation="vertical" />
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="ghost" size="group" className="justify-between min-w-40">
+          <Button variant="ghost" size="group" className="justify-between max-w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
             <span className="flex items-center gap-1 whitespace-nowrap font-medium capitalize">
               {column.icon && <column.icon className="size-4" />}             
               {column.id}

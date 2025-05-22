@@ -13,7 +13,7 @@ import {
   ViewSettingsContent, 
   ViewSettingsHeader 
 } from "@/modules/layouts/components/ui/view-settings";
-import { Properties } from "@/modules/layouts/components/propertie";
+import { Property } from "@/modules/layouts/components/property";
 
 import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
 
@@ -98,25 +98,25 @@ export const PropertiesContent = <T,>({ table, ...props }: Props<T>) => {
           placeholder="Search for a property..."
           className="py-1 px-2 flex items-center"
         >
-          <Properties 
+          <Property 
             isDraggable
             onDragEnd={handleDragEnd}
             action="hidden all" 
             heading="Shown in Table" 
             onClick={() => {
               table.toggleAllColumnsVisible(false);
-              updateColumnOrder(); // Ensure column order is maintained
+              updateColumnOrder();
             }}
             onToggle={handleColumnToggle}
             data={displayableColumns.filter((f) => f.getIsVisible())} 
           />    
           {table.getAllColumns().filter((col) => !col.getIsVisible()).length > 0 && (
-            <Properties 
+            <Property
               heading="Hidden in Table" 
               action="show all" 
               onClick={() => {
                 table.toggleAllColumnsVisible(true);
-                updateColumnOrder(); // Ensure column order is maintained
+                updateColumnOrder(); 
               }}
               onToggle={handleColumnToggle}
               data={displayableColumns.filter((f) => !f.getIsVisible())} 

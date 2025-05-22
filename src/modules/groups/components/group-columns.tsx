@@ -43,7 +43,8 @@ export const columns: ColumnDef<Group>[] = [
         </TableAction>
       </div>
     ),
-    enableHiding: false
+    enableHiding: false,
+    enableSorting: false,
   },
   {
     id: "name",

@@ -123,7 +123,7 @@ export const GroupView = ({ organizationId }: Props) => {
       <Banner workspace={group} />
       <Toolbar 
         table={table} 
-        columns={table.getAllColumns().filter((col) => col.getCanFilter() && col.getCanHide())}
+        columns={table.getAllColumns().filter((col) => col.getCanFilter())}
         searchTerm={globalFilter}
         onChange={handleChange} 
       />

@@ -23,12 +23,13 @@ import {
 import { Command } from "cmdk";
 import { CSS } from "@dnd-kit/utilities";
 import { Column } from "@tanstack/react-table";
-
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { useSortable } from "@dnd-kit/sortable";
 
-interface Props<T> {
+import { cn } from "@/lib/utils";
+
+import { Button } from "@/components/ui/button";
+
+interface PropertyProps<T> {
   data: Column<T>[];
   heading: string;
   action: string;
@@ -36,6 +37,22 @@ interface Props<T> {
   onClick: () => void;
   onToggle: (columnId: string) => void;
   onDragEnd?: (event: DragEndEvent) => void;
+}
+
+interface GroupProps<T> {
+  data: Column<T>[];
+  heading: string;
+  action: string;
+  isDraggable?: boolean;
+  onClick: () => void;
+  onDragEnd?: (event: DragEndEvent) => void;
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface ItemProps<T> {
+  column: Column<T>;
+  onToggle: (columnId: string) => void;
 }
 
 function Group<T>({
@@ -47,13 +64,7 @@ function Group<T>({
   onClick,
   onDragEnd,
   ...props
-}: React.ComponentProps<typeof Command.Group> & { 
-  data: Column<T>[];
-  action: string; 
-  isDraggable?: boolean;
-  onClick: () => void; 
-  onDragEnd?: (event: DragEndEvent) => void;
-}) {
+}: GroupProps<T>) {
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -102,10 +113,7 @@ function Group<T>({
 export const Item = <T,>({ 
   column,
   onToggle,
-}: { 
-  column: Column<T>;
-  onToggle: (columnId: string) => void;
-}) => {
+}: ItemProps<T>) => {
   const Icon = column.columnDef.meta?.icon ?? (() => null);
   const isLock = column.columnDef.meta?.isLocked;
 
@@ -127,10 +135,8 @@ export const Item = <T,>({
   }
 
   const handleToggleVisibility = () => {
-    // Toggle the column visibility
     column.toggleVisibility();
     
-    // If onToggle callback provided and column is now hidden, call it
     if (onToggle && !column.getIsVisible()) {
       onToggle(column.id);
     }
@@ -143,10 +149,10 @@ export const Item = <T,>({
       style={style}
       className="transition flex w-full rounded-sm data-[selected=true]:bg-accent capitalize"
     >
-      <div className="flex items-center gap-2 leading-[120%] w-full select-none min-h-7 text-sm px-2">
+      <div className="flex items-center gap-2 leading-[120%] w-full select-none min-h-7 text-sm px-2 cursor-pointer">
         <div className="flex-1 whitespace-nowrap overflow-hidden text-ellipsis">
           <div className="flex items-center gap-2">
-            <div {...attributes} {...listeners} className="flex items-center justify-center w-3.5 h-6 shrink-0 cursor-grabbing">
+            <div {...attributes} {...listeners} className="flex items-center justify-center w-3.5 h-6 shrink-0 cursor-grab">
               <GripVerticalIcon className="size-4 text-muted-foreground" />
             </div>
             <Icon className="size-4" />
@@ -176,17 +182,16 @@ export const Item = <T,>({
   )
 }
 
-export const Properties = <T,>({ data, onDragEnd, onToggle, ...props }: Props<T>) => {
+export const Property = <T,>({ data, onToggle, ...props }: PropertyProps<T>) => {
   return (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    <Group data={data} onDragEnd={onDragEnd as any} {...props}>
-        {data.map((item) => (
-          <Item 
-            key={item.id} 
-            column={item}
-            onToggle={onToggle} 
-          />
-        ))}
+    <Group data={data} {...props}>
+      {data.map((item) => (
+        <Item 
+          key={item.id} 
+          column={item}
+          onToggle={onToggle} 
+        />
+      ))}
     </Group>
   );
 }

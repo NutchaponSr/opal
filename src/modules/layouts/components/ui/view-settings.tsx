@@ -5,8 +5,6 @@ import {
   XIcon 
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-
 function ViewSettingsHeader({ 
   children,
   onBack,

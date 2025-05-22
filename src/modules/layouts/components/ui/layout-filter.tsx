@@ -79,7 +79,7 @@ const LayoutFilter = <T,>({
       <Separator orientation="vertical" />
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="ghost" size="group">
+          <Button variant="ghost" size="group" className="max-w-[150px] text-ellipsis overflow-hidden whitespace-nowrap justify-start">
             {filter.value === "" 
               ? <MoreHorizontalIcon className="size-4" /> 
               : filter.value

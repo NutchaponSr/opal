@@ -9,6 +9,9 @@ import {
   Trash2Icon, 
   ZapIcon 
 } from "lucide-react";
+import { Table } from "@tanstack/react-table";
+
+import { layouts } from "@/constants/layouts";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -19,20 +22,33 @@ import {
   ViewSettingsHeader 
 } from "@/modules/layouts/components/ui/view-settings";
 
-import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
-import { useLayoutStore } from "../store/use-layout-store";
-import { layouts } from "@/constants/layouts";
-import { LayoutType } from "../types";
+import { LayoutType } from "@/modules/layouts/types";
 
-interface Props {
+import { useLayoutStore } from "@/modules/layouts/store/use-layout-store";
+import { useViewSettingsStore } from "@/modules/layouts/store/use-view-settings-store";
+import { useLayoutFilterStore } from "../store/use-layout-filter-store";
+
+interface Props<T> {
+  table: Table<T>;
   onClose: () => void;
 }
 
-export const MainContent = ({ ...props }: Props) => {
+export const MainContent = <T,>({ table, ...props }: Props<T>) => {
   const { layout } = useLayoutStore();
+  const { filterGroup } = useLayoutFilterStore();
   const { content, onOpen } = useViewSettingsStore();
 
+  
+
   const open = content === null;
+
+  const currentLayout = layouts.find((f) => f.slug === layout as LayoutType) || layouts[0];
+  
+  const countColumns = table.getAllColumns().filter(
+    (column) => column.getIsVisible() && column.id !== "actions"
+  ).length;
+  const countFilters = filterGroup.filters.length + filterGroup.groups.length;
+  const countSorts = table.getState().sorting.length;
 
   if (!open) return null;
 
@@ -43,9 +59,9 @@ export const MainContent = ({ ...props }: Props) => {
       </ViewSettingsHeader>
       <ViewSettingsContent>
         <OptionButton 
-          icon={layouts.filter((f) => f.slug === layout as LayoutType)[0].icon}
+          icon={currentLayout.icon}
           label="Layout"
-          description={layouts.filter((f) => f.slug === layout as LayoutType)[0].label}
+          description={currentLayout.label}
           onClick={() => onOpen("layouts")}
         />
       </ViewSettingsContent>
@@ -55,18 +71,20 @@ export const MainContent = ({ ...props }: Props) => {
         <OptionButton 
           icon={ListIcon}
           label="Properties"
-          description="1 Shown"
+          description={`${countColumns} shown`}
           onClick={() => onOpen("properties")}
         />
         <OptionButton 
           icon={FilterIcon}
           label="Filter"
-          onClick={() => {}}
+          description={`${countFilters}`}
+          onClick={() => onOpen("filter")}
         />
         <OptionButton 
           icon={ArrowUpDownIcon}
           label="Sort"
-          onClick={() => {}}
+          description={`${countSorts}`}
+          onClick={() => onOpen("sort")}
         />
         <OptionButton 
           icon={GalleryVerticalIcon}

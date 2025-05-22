@@ -169,7 +169,7 @@ const FilterGroupFields = <T,>({
   const { addGroup } = useFilterGroup(group, onUpdate);
 
   return (
-    <div className="bg-[#00000008] rounded-sm w-full px-2 py-1 border border-border flex flex-col flex-1">
+    <div className="bg-[#00000008] rounded-sm w-full px-2 py-1 border border-border flex flex-col gap-1 flex-1">
       <div className="flex items-center gap-8">
         <span className="flex-1 truncate text-xs">
           Any of the following are true...
@@ -185,7 +185,7 @@ const FilterGroupFields = <T,>({
         data={data}
         onUpdate={onUpdate}
       />
-      <div className="flex flex-row items-center gap-0.5">
+      <div className="flex flex-row items-center gap-0.5 p-1">
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="sm">
