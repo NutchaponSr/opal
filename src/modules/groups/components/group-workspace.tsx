@@ -83,9 +83,9 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
                 onClick={() => {
                   createGroup.mutate({ year, organizationId });
                 }}
-                className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-5 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
+                className="ml-auto hover:bg-accent shrink-0 grow-0 rounded-sm size-5 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
               >
-                <PlusIcon className="text-[#91918e] size-4 stroke-[1.5]" />
+                <PlusIcon className="text-[#91918e] size-4" />
               </button>
             </SidebarSubMenuItem>
             <SidebarSubContent isOpen={toggledYears[year]}>
@@ -101,7 +101,7 @@ export const GroupWorkspace = ({ organizationId }: Props) => {
             </SidebarSubContent>
           </SidebarSub>
         ))}
-        <SidebarMenuItem indent={16} className="text-xs text-[#91918e]">
+        <SidebarMenuItem indent={16} className="text-xs text-icon">
           More detail
         </SidebarMenuItem>
       </SidebarSubContent> 

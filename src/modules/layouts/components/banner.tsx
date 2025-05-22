@@ -33,7 +33,7 @@ export const Banner = ({ workspace }: Props) => {
             size="sm"
             variant="ghost"
             onClick={() => setShow((prev) => !prev)}
-            className="group-hover:opacity-100 opacity-0 transition-all text-[#b9b9b7] hover:text-[#b9b9b7]"
+            className="group-hover:opacity-100 opacity-0 transition-all text-muted hover:text-muted"
           >
             <CircleAlertIcon />
             {show ? "Hide" : "Show"} description
@@ -53,9 +53,9 @@ export const Banner = ({ workspace }: Props) => {
           {show && (
             <div className="max-w-full overflow-hidden mb-3">
               <div className="w-[780px] whitespace-pre-wrap break-words text-sm px-1.5 py-1">
-                <span className="font-semibold text-primary">
+                <p className="font-semibold text-primary">
                   {workspace.description}
-                </span>
+                </p>
               </div>
             </div>
           )}

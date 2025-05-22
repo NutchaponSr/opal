@@ -2,12 +2,15 @@ import Link from "next/link";
 
 import { 
   ChevronDownIcon, 
+  DoorOpenIcon, 
   MoreHorizontalIcon, 
   PlusIcon, 
   SettingsIcon, 
+  SunIcon, 
   UserRoundPlusIcon 
 } from "lucide-react";
 import { Icon } from "@iconify/react";
+import { useTheme } from "next-themes";
 import { useUser, useClerk } from "@clerk/nextjs";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
@@ -19,6 +22,7 @@ import {
   PopoverTrigger
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import { Separator } from "@/components/ui/separator";
 
 import { useCreateStore } from "../../store/use-create-modal";
@@ -32,6 +36,10 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
   const { user } = useUser();
   const { signOut } = useClerk();
   const { onOpen } = useCreateStore();
+  const { theme, setTheme } = useTheme();
+
+  const themeMode = theme ?? "";
+  const handleThemeChange = (checked: boolean) => setTheme(checked ? "dark" : "light");
 
   const { data: organizations } = useSuspenseQuery(trpc.organizations.getMany.queryOptions());
 
@@ -40,7 +48,7 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button size="sm" variant="item" className="w-full hover:bg-[#00000008] gap-2 text-sm px-2">
+        <Button size="sm" variant="item" className="w-full gap-2 text-sm font-medium px-2">
           <div className="size-5 rounded-sm flex items-center justify-center bg-[#347ea9] shrink-0">
             <Icon icon="heroicons:building-office-16-solid" className="size-3.5 text-white" />
           </div>
@@ -57,12 +65,12 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
               <Icon icon="heroicons:building-office-16-solid" className="size-6 text-white" />
             </div>
             <div className="flex flex-col whitespace-nowrap overflow-hidden text-ellipsis">
-              <div className="text-sm leading-5 text-primary whitespace-nowrap overflow-hidden text-ellipsis">
+              <div className="text-sm font-medium leading-5 text-primary whitespace-nowrap overflow-hidden text-ellipsis">
                 {currentOrganization.name}
               </div>
 
               {/* TODO: Plan & member of people */}
-              <div className="text-xs leading-4 text-[#73726e] whitespace-nowrap overflow-hidden text-ellipsis">
+              <div className="text-xs leading-4 text-muted-foreground whitespace-nowrap overflow-hidden text-ellipsis">
                 Free Plan · 1 member
               </div>
             </div>
@@ -81,18 +89,18 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
         
         <Separator />
         <div className="flex flex-col">
-          <div className="p-2 pb-0 flex items-center justify-between text-[#73726e]">
-            <p className="whitespace-nowrap overflow-hidden text-ellipsis text-xs">
+          <div className="p-2 pb-0 flex items-center justify-between text-muted-foreground">
+            <p className="whitespace-nowrap overflow-hidden text-ellipsis text-xs font-medium">
               {user?.emailAddresses[0].emailAddress}
             </p>
             <Button size="xsIcon" variant="ghost">
-              <MoreHorizontalIcon className="fill-[#73726e] text-[#73726e]" />
+              <MoreHorizontalIcon className="fill-muted-foreground text-muted-foreground" />
             </Button>
           </div>
 
           <div className="flex flex-col p-1 gap-px">
             {organizations.map((org) => (
-              <Button asChild key={org.id} size="item" variant="item">
+              <Button asChild key={org.id} size="item" variant="item" className="text-primary hover:text-primary">
                 <Link href={`/${org.id}/overviews`}>
                   <div className="size-5 rounded-sm flex items-center justify-center bg-[#347ea9] shrink-0">
                     <Icon icon="heroicons:building-office-16-solid" className="size-3.5 text-white" />
@@ -104,8 +112,8 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
                 </Link>
               </Button>
             ))}
-            <Button size="item" variant="item" onClick={onOpen}>
-              <div className="size-5 rounded-full border border-dashed flex items-center justify-center bg-white">
+            <Button size="item" variant="item" onClick={onOpen} className="text-primary hover:text-primary">
+              <div className="size-5 rounded-full border border-dashed flex items-center justify-center bg-background">
                 <PlusIcon className="size-3 text-primary" />
               </div>
               Create organization
@@ -115,8 +123,20 @@ export const OrganizationSwitcher = ({ organizationId }: Props) => {
         
         <Separator />
         <div className="flex flex-col p-1 gap-px">
+          <div className="flex items-center h-7 rounded-sm px-2 text-sm gap-2 hover:bg-accent text-muted-foreground hover:text-muted-foreground justify-start font-normal w-full cursor-pointer">
+            <SunIcon className="size-4 stroke-[1.75]" />
+            {themeMode.charAt(0).toUpperCase() + themeMode.slice(1)} mode
+            <Switch 
+              className="ml-auto" 
+              checked={theme === "dark"}
+              onCheckedChange={handleThemeChange}
+            />
+          </div>
+        </div>
+        <Separator />
+        <div className="flex flex-col p-1 gap-px">
           <Button size="item" variant="item" onClick={() => signOut()}>
-            <Icon icon="hugeicons:door-01" />
+            <DoorOpenIcon />
             Logout
           </Button>
         </div>

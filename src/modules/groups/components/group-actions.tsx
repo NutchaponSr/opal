@@ -73,9 +73,9 @@ export const GroupActions = ({
     <DropdownMenu open={isOpen} onOpenChange={handleOpenChange}>
       <DropdownMenuTrigger asChild>
         <button 
-          className="ml-auto hover:bg-[#00000008] shrink-0 grow-0 rounded-sm size-5 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
+          className="ml-auto hover:bg-accent shrink-0 grow-0 rounded-sm size-5 flex items-center justify-center cursor-pointer opacity-0 group-hover/item:opacity-100 transition-opacity"
         >
-          <MoreHorizontalIcon className="text-[#91918e] fill-[#91918e] size-4 stroke-[1.5]" />
+          <MoreHorizontalIcon className="text-icon fill-icon size-4" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" side="right" sideOffset={20} className="w-60">
@@ -107,10 +107,10 @@ export const GroupActions = ({
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <div className="p-1 flex flex-col">
-          <p className="text-[#46444073] text-xs">
+          <p className="text-muted text-xs font-light">
             Last edited by {group.updatedBy}
           </p>
-          <p className="text-[#46444073] text-xs">
+          <p className="text-muted text-xs font-light">
             {format(group.updatedAt, "MMM d, yyyy, h:mm a")}
           </p>
         </div>

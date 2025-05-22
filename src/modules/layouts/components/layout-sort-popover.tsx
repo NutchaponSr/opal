@@ -3,22 +3,9 @@ import {
   ArrowUpDownIcon, 
   PlusIcon,
 } from "lucide-react";
-import { 
-  KeyboardSensor, 
-  PointerSensor, 
-  useSensor, 
-  useSensors, 
-  DragEndEvent, 
-  DndContext,
-  closestCenter
-} from "@dnd-kit/core";
-import {
-  arrayMove,
-  SortableContext,
-  verticalListSortingStrategy
-} from "@dnd-kit/sortable";
-import { restrictToFirstScrollableAncestor, restrictToVerticalAxis } from "@dnd-kit/modifiers"
 import { useToggle } from "usehooks-ts";
+import { DragEndEvent } from "@dnd-kit/core";
+import { arrayMove } from "@dnd-kit/sortable";
 import { Column, Table } from "@tanstack/react-table";
 
 import { 
@@ -31,7 +18,7 @@ import { Separator } from "@/components/ui/separator";
 
 import { CommandSearch } from "@/components/command-search";
 
-import { SortItem } from "@/modules/layouts/components/sort-item";
+import { Sort } from "@/modules/layouts/components/sort";
 import { SortSelector } from "@/modules/layouts/components/column-selector";
 
 interface Props<T> {
@@ -59,17 +46,6 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
     setToggle(true);
   }
 
-  // Set up DnD sensors
-  const sensors = useSensors(
-    useSensor(PointerSensor, {
-      activationConstraint: {
-        distance: 5,
-      },
-    }),
-    useSensor(KeyboardSensor)
-  );
-
-  // Handle DnD end
   const onDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
@@ -87,11 +63,7 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
   return (
     <Popover onOpenChange={() => setTimeout(() => setToggle(true), 100)}>
       <PopoverTrigger asChild>
-        <Button
-          size="smIcon"
-          variant="ghost"
-          className="text-[#9B9A97] hover:text-[#9B9A97]"
-        >
+        <Button size="smIcon" variant="icon">
           <ArrowUpDownIcon />
         </Button>
       </PopoverTrigger>
@@ -99,45 +71,11 @@ export const LayoutSortPopover = <T,>({ columns, table }: Props<T>) => {
         {(isAdd && table.getState().sorting.length > 0) ? (
           <>
             <div>
-              <div className="flex flex-col p-1 gap-1 overflow-auto">
-                <DndContext 
-                  sensors={sensors}
-                  collisionDetection={closestCenter} 
-                  onDragEnd={onDragEnd}
-                  modifiers={[restrictToFirstScrollableAncestor, restrictToVerticalAxis]}
-                >
-                  <SortableContext 
-                    items={table.getState().sorting.map((s) => s.id)} 
-                    strategy={verticalListSortingStrategy}
-                  >
-                      {table.getState().sorting.map((column) => (
-                        <SortItem 
-                          key={column.id}
-                          column={column}
-                          columns={data}
-                          onSelect={(col) => {
-                            table.setSorting((currentSorting) => 
-                              currentSorting.map((item) => 
-                                item.id === column.id
-                                  ? {
-                                    id: col.id,
-                                    icon: col.columnDef.meta?.icon,
-                                    type: col.columnDef.meta?.variant ?? "text",
-                                    desc: item.desc,
-                                  } : item
-                              )
-                            )
-                          }}
-                          onChange={() => 
-                            table.setSorting((prev) => prev.map((item) => 
-                              item.id === column.id ? { ...item, desc: !item.desc } : item
-                          ))}
-                          onRemove={() => table.setSorting((prev) => prev.filter((item) => item.id !== column.id))}
-                        />
-                      ))}
-                  </SortableContext>
-                </DndContext>
-              </div>
+              <Sort 
+                table={table}
+                columns={columns}
+                onDragEnd={onDragEnd}
+              />
               <Separator orientation="horizontal" />
               <div className="flex flex-col p-1">
                 <Button variant="item" size="sm" onClick={toggle}>

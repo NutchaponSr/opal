@@ -49,7 +49,7 @@ const LayoutFilter = <T,>({
 
   return (
     <div className="flex h-7 items-center rounded-sm border border-border shadow-xs bg-background text-xs w-fit">
-      <span className="flex select-none items-center gap-1 whitespace-nowrap px-2 font-medium capitalize">
+      <span className="flex select-none items-center gap-1 whitespace-nowrap px-2 capitalize">
         <Icon className="size-4 stroke-[1.5]" />              
         {filter.column.id}
       </span>
@@ -79,7 +79,7 @@ const LayoutFilter = <T,>({
       <Separator orientation="vertical" />
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="ghost" size="group">
+          <Button variant="ghost" size="group" className="max-w-[150px] text-ellipsis overflow-hidden whitespace-nowrap justify-start">
             {filter.value === "" 
               ? <MoreHorizontalIcon className="size-4" /> 
               : filter.value

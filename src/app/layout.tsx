@@ -12,6 +12,7 @@ import { DropdownProvider } from "@/providers/dropdown-provider";
 
 import "./globals.css";
 import { ModalProvider } from "@/providers/modals-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const font = Inter({
   subsets: ["latin"],
@@ -29,15 +30,22 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/">
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={cn(font.className, "antialiased h-screen")}>
-          <TRPCReactProvider>
-            <DropdownProvider>
-              {children}
-              <ModalProvider />
-              <Toaster richColors position="top-center" />
-            </DropdownProvider>
-          </TRPCReactProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            disableTransitionOnChange
+            storageKey="opal-theme"
+          >
+            <TRPCReactProvider>
+              <DropdownProvider>
+                {children}
+                <ModalProvider />
+                <Toaster richColors position="top-center" />
+              </DropdownProvider>
+            </TRPCReactProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -70,7 +70,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       className={cn(
-        "text-foreground p-2 text-left align-middle font-medium whitespace-nowrap overflow-hidden text-sm border-border [&>[role=checkbox]]:translate-y-[2px] first:p-0 not-first:border-r",
+        "text-muted-foreground p-2 text-left align-middle font-medium whitespace-nowrap overflow-hidden text-sm border-border [&>[role=checkbox]]:translate-y-[2px] first:p-0 not-first:border-r",
         className
       )}
       {...props}
@@ -83,7 +83,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
     <td
       data-slot="table-cell"
       className={cn(
-        "p-2 align-middle whitespace-nowrap [&>[role=checkbox]]:translate-y-[2px] first:p-0 relative not-first:border-r",
+        "p-2 align-middle whitespace-nowrap [&>[role=checkbox]]:translate-y-[2px] first:p-0 relative not-first:border-r text-primary font-medium",
         className
       )}
       {...props}
@@ -109,16 +109,23 @@ function TableAction({
   className,
   position,
   isChecked,
+  isCheckbox
 }: {
   children: React.ReactNode; 
   className?: string;
   position: string;
   isChecked?: boolean;
+  isCheckbox?: boolean;
 }) {
   return (
     <div className={cn("sticky flex", position)}>
       <div className={cn("absolute", position)}>
-        <div className={cn("h-full transition opacity-0 group-hover:opacity-100", isChecked && "opacity-100")}>
+        <div className={cn(
+          "h-full transition opacity-0 group-hover:opacity-100", 
+          isChecked && "opacity-100",
+          isCheckbox && "group-hover:opacity-60 hover:opacity-100",
+          (isCheckbox && isChecked) && "group-hover:opacity-100"
+        )}>
           <div className="h-full items-center justify-center flex cursor-pointer">
             <div className={cn("flex items-center justify-center", className)}>
               {children}

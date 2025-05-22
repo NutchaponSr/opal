@@ -8,7 +8,6 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table";
-import { cn } from "@/lib/utils";
 
 interface DataTableProps<TValue> {
   table: TB<TValue>;
@@ -25,7 +24,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
               return (
                 <TableHead key={header.id} className={header.column.columnDef.meta?.width}>
                   <div className="flex items-center gap-2 h-full">
-                    {Icon && <Icon className="size-5 stroke-[1.5]" />}
+                    {Icon && <Icon className="size-4.5 stroke-[1.75]" />}
                     {header.isPlaceholder
                       ? null
                       : flexRender(header.column.columnDef.header, header.getContext())
@@ -42,7 +41,7 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
           table.getRowModel().rows.map((row) => (
             <TableRow
               key={row.id}
-              className={cn("relative", row.getIsSelected() && "bg-marine/14 rounded")}
+              className="relative"
             >
               {row.getVisibleCells().map((cell) => (
                 <TableCell key={cell.id} className={cell.column.columnDef.meta?.width}>
@@ -52,6 +51,9 @@ export const DataTable = <TValue,>({ table }: DataTableProps<TValue>) => {
                   )}
                 </TableCell>
               ))}
+              {row.getIsSelected() && (
+                <td className="bg-marine/14 absolute pointer-events-none inset-0 z-86 rounded top-[0.4px]" />
+              )}
             </TableRow>
           ))
         ) : (

@@ -12,12 +12,13 @@ export const Header = () => {
   const param = useParams<{ organizationId: string; }>();
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white/90">
+    <header className="fixed top-0 z-50 w-full bg-background">
       <div className="flex flex-row h-16 md:h-20 items-center justify-between px-6 mx-auto max-w-5xl">
         <div className="hidden md:flex flex-row gap-6 items-center">
           <Link href={`/${param.organizationId}`} className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="Logo" width={32} height={32} />
-            <span className="text-lg font-medium text-[#37352f]">Opal</span>
+            <Image src="/logo.svg" alt="Logo" width={32} height={32} className="dark:hidden block" />
+            <Image src="/logo-dark.svg" alt="Logo" width={32} height={32} className="dark:block hidden" />
+            <span className="text-lg font-medium text-primary">Opal</span>
           </Link>
           <SignedIn>
             <Button asChild variant="ghost" size="sm">

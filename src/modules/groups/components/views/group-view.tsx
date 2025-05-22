@@ -1,8 +1,17 @@
 "use client";
 
+import { 
+  getCoreRowModel, 
+  getFilteredRowModel, 
+  getSortedRowModel, 
+  Row, 
+  SortingState,
+  useReactTable, 
+  VisibilityState,
+  ColumnOrderState
+} from "@tanstack/react-table";
 import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { getCoreRowModel, getFilteredRowModel, getSortedRowModel, Row, SortingState, useReactTable } from "@tanstack/react-table";
 
 import { Group } from "@prisma/client";
 
@@ -13,11 +22,12 @@ import { FilterGroup } from "@/types/columns";
 
 import { Banner } from "@/modules/layouts/components/banner";
 import { Toolbar } from "@/modules/layouts/components/toolbar";
-
 import { columns } from "@/modules/groups/components/group-columns";
 import { LayoutProvider } from "@/modules/layouts/components/layout-provider";
-import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
+
 import { compareValues } from "@/modules/layouts/utils";
+
+import { useLayoutFilterStore } from "@/modules/layouts/store/use-layout-filter-store";
 
 interface Props {
   organizationId: string;
@@ -30,8 +40,17 @@ export const GroupView = ({ organizationId }: Props) => {
   const { data } = useSuspenseQuery(trpc.groups.getMany.queryOptions({ organizationId }));
 
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+  const [columnOrder, setColumnOrder] = useState<ColumnOrderState>(columns.map((c) => c.id!));
+  const [globalFilter, setGlobalFilter] = useState("");
+
+  const isFilterGroupEmpty = (group: FilterGroup<Group>): boolean => {
+    return group.filters.length === 0 && group.groups.length === 0;
+  };
 
   const evaluateGroup = (group: FilterGroup<Group>, row: Row<Group>): boolean => {
+    if (isFilterGroupEmpty(group)) return true;
+
     const filterResults = group.filters
       .filter((f) => f.column.id && f.operator && f.value)
       .map((filter) =>
@@ -45,17 +64,33 @@ export const GroupView = ({ organizationId }: Props) => {
 
     const groupResults = group.groups.map((subGroup) => evaluateGroup(subGroup, row));
 
-    const allResults = [...filterResults, ...groupResults];
+    const allResults = [...filterResults, ...groupResults].filter(result => result !== undefined);
 
     if (allResults.length === 0) return true;
 
-    return group.connector === 'AND'
+    return group.connector === "AND"
       ? allResults.every((result) => result)
       : allResults.some((result) => result);
   }
 
   const filterData = (row: Row<Group>) => {
-    return evaluateGroup(filterGroup, row);
+    const passesFilterGroup = evaluateGroup(filterGroup, row);
+    
+    if (!globalFilter) return passesFilterGroup;
+    
+    const passesGlobalTextFilter = Object.keys(row.original)
+      .some(key => {
+        const value = row.original[key as keyof Group];
+        if (value === null || typeof value === 'object') return false;
+        return String(value).toLowerCase().includes(globalFilter.toLowerCase());
+      });
+      
+    return passesFilterGroup && passesGlobalTextFilter;
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchValue = e.target.value;
+    setGlobalFilter(searchValue);
   }
 
   const table = useReactTable({
@@ -64,24 +99,34 @@ export const GroupView = ({ organizationId }: Props) => {
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    onSortingChange: setSorting,
+    onGlobalFilterChange: setGlobalFilter,
+    onColumnVisibilityChange: setColumnVisibility,
+    onColumnOrderChange: setColumnOrder,
+    globalFilterFn: filterData,
     filterFns: {
       custom: (row, columnId, filterValue) => {
         const cellValue = row.getValue(columnId);
         return String(cellValue).toLowerCase().includes(String(filterValue).toLowerCase());
       }
     },
-    onSortingChange: setSorting,
-    globalFilterFn: filterData,
     state: {
       sorting,
-      globalFilter: filterGroup,
+      columnVisibility,
+      columnOrder,
+      globalFilter: globalFilter || filterGroup,
     }
   });
 
   return (
     <div className="flex flex-col grow relative overflow-auto">
       <Banner workspace={group} />
-      <Toolbar table={table} columns={table.getAllColumns().filter((col) => col.getCanFilter())} />
+      <Toolbar 
+        table={table} 
+        columns={table.getAllColumns().filter((col) => col.getCanFilter())}
+        searchTerm={globalFilter}
+        onChange={handleChange} 
+      />
       <LayoutProvider table={table} />
     </div>
   );

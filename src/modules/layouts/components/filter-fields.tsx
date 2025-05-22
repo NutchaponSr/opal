@@ -169,7 +169,7 @@ const FilterGroupFields = <T,>({
   const { addGroup } = useFilterGroup(group, onUpdate);
 
   return (
-    <div className="bg-[#00000008] rounded-sm w-full px-2 py-1 border border-border flex flex-col flex-1">
+    <div className="bg-[#00000008] rounded-sm w-full px-2 py-1 border border-border flex flex-col gap-1 flex-1">
       <div className="flex items-center gap-8">
         <span className="flex-1 truncate text-xs">
           Any of the following are true...
@@ -185,7 +185,7 @@ const FilterGroupFields = <T,>({
         data={data}
         onUpdate={onUpdate}
       />
-      <div className="flex flex-row items-center gap-0.5">
+      <div className="flex flex-row items-center gap-0.5 p-1">
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="sm">
@@ -253,9 +253,10 @@ export const FilterFields = <T,>({ data }: Props<T>) => {
       {hasActiveFilters && (
         <ScrollArea className="flex flex-1 flex-col overflow-auto p-1 h-full">
           <div className="my-1 flex w-full items-center gap-2">
-              <div className="shrink-0 min-w-16 text-center box-border">
-                <span className="text-sm text-primary px-1">Where</span>
-              </div>
+            <div className="shrink-0 min-w-16 text-center box-border">
+              <span className="text-sm text-primary px-1 font-medium">Where</span>
+            </div>
+
             {allFilters[0] && (
               "column" in allFilters[0] ? (
               <LayoutFilterProvider 
